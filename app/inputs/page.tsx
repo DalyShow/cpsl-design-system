@@ -379,7 +379,7 @@ export default function InputsPage() {
 
               <div className="flex gap-3 pt-1">
                 <Button className="flex-1" size="lg">Submit Registration</Button>
-                <Button variant="outline" size="lg">Save Draft</Button>
+                <Button variant="secondary" size="lg">Save Draft</Button>
               </div>
             </div>
           </div>

@@ -23,18 +23,11 @@ const STATE_TOKENS = {
     disabled: { bg: "#7C3AED",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
   secondary: {
-    default:  { bg: "#EEF1F7",                color: "#0A0E1A", border: "none",              ring: "none" },
-    hover:    { bg: "rgba(238,241,247,0.75)",  color: "#0A0E1A", border: "none",              ring: "none" },
-    focus:    { bg: "#EEF1F7",                color: "#0A0E1A", border: "none",              ring: "0 0 0 3px rgba(0,71,255,0.5)" },
-    active:   { bg: "rgba(238,241,247,0.6)",   color: "#0A0E1A", border: "none",              ring: "none" },
-    disabled: { bg: "#EEF1F7",                color: "#0A0E1A", border: "none",              ring: "none", opacity: 0.5 },
-  },
-  outline: {
-    default:  { bg: "#F4F6FA",                color: "#0A0E1A", border: "1.5px solid #E2E8F0", ring: "none" },
-    hover:    { bg: "#EEF1F7",                color: "#0A0E1A", border: "1.5px solid #E2E8F0", ring: "none" },
-    focus:    { bg: "#F4F6FA",                color: "#0A0E1A", border: "1.5px solid #E2E8F0", ring: "0 0 0 3px rgba(0,71,255,0.5)" },
-    active:   { bg: "rgba(238,241,247,0.8)",   color: "#0A0E1A", border: "1.5px solid #E2E8F0", ring: "none" },
-    disabled: { bg: "#F4F6FA",                color: "#94A3B8", border: "1.5px solid #E2E8F0", ring: "none", opacity: 0.5 },
+    default:  { bg: "#F4F6FA",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
+    hover:    { bg: "#EEF1F7",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
+    focus:    { bg: "#F4F6FA",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "0 0 0 3px rgba(0,71,255,0.5)" },
+    active:   { bg: "rgba(238,241,247,0.8)",   color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
+    disabled: { bg: "#F4F6FA",                color: "#94A3B8", border: "1px solid #E2E8F0",  ring: "none", opacity: 0.5 },
   },
   ghost: {
     default:  { bg: "transparent",            color: "#0A0E1A", border: "none",              ring: "none" },
@@ -75,7 +68,6 @@ const VARIANT_LABELS: Record<VariantKey, string> = {
   primary:     "Primary (default)",
   purple:      "cpsl-purple",
   secondary:   "Secondary",
-  outline:     "Outline",
   ghost:       "Ghost",
   destructive: "Destructive",
 }
@@ -160,7 +152,6 @@ const cssCode = `import { Button } from "@/components/ui/button"
 <Button variant="cpsl-purple">Purple CTA</Button>
 <Button variant="cpsl-navy">Navy</Button>
 <Button variant="secondary">Secondary</Button>
-<Button variant="outline">Outline</Button>
 <Button variant="cpsl-outline">Outline Blue</Button>
 <Button variant="ghost">Ghost</Button>
 <Button variant="destructive">Destructive</Button>
@@ -185,7 +176,7 @@ export default function ButtonsPage() {
       <PageHeader
         section="04 — Components"
         title="Buttons & CTAs"
-        description="11 variants · 8 sizes · 5 interaction states. All documented with exact token values. Built on shadcn/ui CVA with CPSL design tokens."
+        description="10 variants · 8 sizes · 5 interaction states. All documented with exact token values. Built on shadcn/ui CVA with CPSL design tokens."
       />
 
       <div className="px-12 py-12">
@@ -201,7 +192,7 @@ export default function ButtonsPage() {
               <Button variant="cpsl-purple">Purple CTA</Button>
               <Button variant="cpsl-navy">Navy</Button>
               <Button variant="secondary">Secondary</Button>
-              <Button variant="outline">Outline</Button>
+              <Button variant="secondary">Secondary</Button>
               <Button variant="cpsl-outline">Outline Blue</Button>
               <Button variant="cpsl-outline-purple">Outline Purple</Button>
               <Button variant="ghost">Ghost</Button>
@@ -286,7 +277,7 @@ export default function ButtonsPage() {
               <div className="flex gap-4 p-6 rounded-xl bg-[#F4F6FA] border border-[#E2E8F0]">
                 <Button variant="default">Primary</Button>
                 <Button variant="cpsl-purple">Purple</Button>
-                <Button variant="outline">Outline</Button>
+                <Button variant="secondary">Secondary</Button>
                 <Button variant="ghost">Ghost</Button>
               </div>
               <p className="text-xs text-muted-foreground">
@@ -359,7 +350,7 @@ export default function ButtonsPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Icon Buttons</p>
               <div className="flex gap-3 items-center">
                 {(["icon-xs","icon-sm","icon","icon-lg"] as const).map((s, i) => (
-                  <Button key={s} size={s} variant={i === 0 ? "outline" : i === 1 ? "secondary" : i === 2 ? "default" : "cpsl-purple"} aria-label="Navigate">
+                  <Button key={s} size={s} variant={i === 0 ? "secondary" : i === 1 ? "ghost" : i === 2 ? "default" : "cpsl-purple"} aria-label="Navigate">
                     <svg width={10 + i * 2} height={10 + i * 2} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Button>
                 ))}
@@ -378,7 +369,7 @@ export default function ButtonsPage() {
                   Apply for Admission
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                 </Button>
-                <Button variant="outline" size="lg">Learn More</Button>
+                <Button variant="secondary" size="lg">Learn More</Button>
               </div>
             </div>
             <div>

@@ -234,7 +234,7 @@ export default function PatternsPage() {
                 <div className="flex-1 h-px bg-border" />
               </div>
 
-              <Button variant="outline" className="w-full" size="default">
+              <Button variant="secondary" className="w-full" size="default">
                 <svg width="16" height="16" viewBox="0 0 16 16">
                   <path d="M15.68 8.18c0-.57-.05-1.11-.15-1.64H8v3.1h4.3a3.67 3.67 0 01-1.6 2.41v2h2.6c1.52-1.4 2.38-3.45 2.38-5.87z" fill="#4285F4" />
                   <path d="M8 16c2.16 0 3.97-.72 5.3-1.95l-2.6-2a4.77 4.77 0 01-2.7.77c-2.08 0-3.85-1.41-4.48-3.31H.85v2.07A8 8 0 008 16z" fill="#34A853" />
