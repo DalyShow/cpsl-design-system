@@ -23,11 +23,11 @@ const STATE_TOKENS = {
     disabled: { bg: "#7C3AED",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
   secondary: {
-    default:  { bg: "#F4F6FA",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
-    hover:    { bg: "#EEF1F7",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
-    focus:    { bg: "#F4F6FA",                color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "0 0 0 3px rgba(0,71,255,0.5)" },
-    active:   { bg: "rgba(238,241,247,0.8)",   color: "#0A0E1A", border: "1px solid #E2E8F0",  ring: "none" },
-    disabled: { bg: "#F4F6FA",                color: "#94A3B8", border: "1px solid #E2E8F0",  ring: "none", opacity: 0.5 },
+    default:  { bg: "transparent",            color: "#0047FF", border: "2px solid #0047FF",  ring: "none" },
+    hover:    { bg: "#0047FF",                color: "#ffffff", border: "2px solid #0047FF",  ring: "none" },
+    focus:    { bg: "transparent",            color: "#0047FF", border: "2px solid #0047FF",  ring: "0 0 0 3px rgba(0,71,255,0.4)" },
+    active:   { bg: "rgba(0,71,255,0.90)",    color: "#ffffff", border: "2px solid #0047FF",  ring: "none" },
+    disabled: { bg: "transparent",            color: "#0047FF", border: "2px solid #0047FF",  ring: "none", opacity: 0.5 },
   },
   ghost: {
     default:  { bg: "transparent",            color: "#0A0E1A", border: "none",              ring: "none" },
@@ -152,7 +152,6 @@ const cssCode = `import { Button } from "@/components/ui/button"
 <Button variant="cpsl-purple">Purple CTA</Button>
 <Button variant="cpsl-navy">Navy</Button>
 <Button variant="secondary">Secondary</Button>
-<Button variant="cpsl-outline">Outline Blue</Button>
 <Button variant="ghost">Ghost</Button>
 <Button variant="destructive">Destructive</Button>
 <Button variant="cpsl-success">Success</Button>
@@ -192,8 +191,6 @@ export default function ButtonsPage() {
               <Button variant="cpsl-purple">Purple CTA</Button>
               <Button variant="cpsl-navy">Navy</Button>
               <Button variant="secondary">Secondary</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="cpsl-outline">Outline Blue</Button>
               <Button variant="cpsl-outline-purple">Outline Purple</Button>
               <Button variant="ghost">Ghost</Button>
               <Button variant="link">Link</Button>

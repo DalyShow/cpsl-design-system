@@ -14,8 +14,9 @@ const buttonVariants = cva(
           "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:border-ring",
         destructive:
           "bg-destructive text-white shadow-sm hover:bg-destructive/90 focus-visible:ring-destructive/30",
+        /** Blue outline — secondary action; pairs with primary blue CTA */
         secondary:
-          "border border-border bg-background shadow-xs hover:bg-secondary hover:text-secondary-foreground",
+          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground focus-visible:ring-primary/40",
         ghost:
           "hover:bg-secondary hover:text-secondary-foreground",
         link:
@@ -28,9 +29,6 @@ const buttonVariants = cva(
         /** Dark navy — primary action on light surfaces */
         "cpsl-navy":
           "bg-[#0A0E1A] text-white shadow-sm hover:bg-[#1E293B] focus-visible:ring-[#0A0E1A]/40",
-        /** Ghost with blue border — secondary action */
-        "cpsl-outline":
-          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground",
         /** Ghost with purple border — accent secondary */
         "cpsl-outline-purple":
           "border-2 border-accent text-accent bg-transparent hover:bg-accent hover:text-accent-foreground",
