@@ -45,6 +45,9 @@ export interface MobileTab {
 export interface MobileTabBarProps {
   tabs?: MobileTab[];
   defaultActive?: number;
+  /** "mobile" = max-w-sm centered card with rounded corners (default)
+   *  "full"   = edge-to-edge, no border-radius, top-border only */
+  variant?: "mobile" | "full";
 }
 
 const defaultTabs: MobileTab[] = [
@@ -54,46 +57,105 @@ const defaultTabs: MobileTab[] = [
   { label: "Profile",   icon: <UserIcon /> },
 ];
 
+// ── Shared tab button ────────────────────────────────────────────────────────
+function TabButton({
+  item,
+  isActive,
+  onClick,
+  fullWidth,
+}: {
+  item: MobileTab;
+  isActive: boolean;
+  onClick: () => void;
+  fullWidth: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`flex flex-col items-center gap-1 py-2 transition-all ${fullWidth ? "flex-1" : "px-4 py-1 rounded-xl"}`}
+      style={{
+        color: isActive ? "#4A78E8" : "#475569",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+      }}
+    >
+      {item.icon}
+      <span className="text-xs font-medium">{item.label}</span>
+      {/* Active indicator */}
+      {fullWidth ? (
+        /* Full-width variant: top-bar indicator */
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: isActive ? "28px" : "0px",
+            height: "2px",
+            background: isActive ? "#4A78E8" : "transparent",
+            borderRadius: "0 0 2px 2px",
+            transition: "width 200ms ease",
+          }}
+        />
+      ) : (
+        /* Mobile variant: dot indicator */
+        <div
+          className="w-1 h-1 rounded-full transition-all"
+          style={{ background: isActive ? "#4A78E8" : "transparent" }}
+        />
+      )}
+    </button>
+  );
+}
+
 // ── Component ───────────────────────────────────────────────────────────────
 export function MobileTabBar({
   tabs = defaultTabs,
   defaultActive = 0,
+  variant = "mobile",
 }: MobileTabBarProps) {
   const [active, setActive] = useState(defaultActive);
+  const isFull = variant === "full";
 
+  const bar = (
+    <div
+      className="flex items-center justify-around"
+      style={{
+        background: "#020B1A",
+        borderTop: "1px solid #1E2D45",
+        position: "relative",
+        padding: isFull ? "8px 0 10px" : "12px 8px",
+      }}
+    >
+      {tabs.map((item, i) => (
+        <TabButton
+          key={item.label}
+          item={item}
+          isActive={i === active}
+          onClick={() => setActive(i)}
+          fullWidth={isFull}
+        />
+      ))}
+    </div>
+  );
+
+  if (isFull) {
+    return (
+      <div style={{ width: "100%" }}>
+        {bar}
+      </div>
+    );
+  }
+
+  // Mobile (default) — centered card with rounded corners
   return (
     <div className="max-w-sm mx-auto">
-      <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#1E2D45" }}>
-        <div
-          className="flex items-center justify-around px-2 py-3"
-          style={{ background: "#020B1A" }}
-        >
-          {tabs.map((item, i) => {
-            const isActive = i === active;
-            return (
-              <button
-                key={item.label}
-                onClick={() => setActive(i)}
-                className="flex flex-col items-center gap-1 px-4 py-1 rounded-xl transition-all"
-                style={{
-                  color: isActive ? "#4A78E8" : "#475569",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                {item.icon}
-                <span className="text-xs font-medium">{item.label}</span>
-                <div
-                  className="w-1 h-1 rounded-full transition-all"
-                  style={{
-                    background: isActive ? "#4A78E8" : "transparent",
-                  }}
-                />
-              </button>
-            );
-          })}
-        </div>
+      <div
+        className="rounded-2xl overflow-hidden border"
+        style={{ borderColor: "#1E2D45" }}
+      >
+        {bar}
       </div>
     </div>
   );

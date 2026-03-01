@@ -5,26 +5,32 @@ export interface TabBarProps {
   tabs?: string[];
   variant?: "underline" | "pill";
   defaultActive?: number;
+  /** If true, tab buttons stretch to fill the full available width equally */
+  stretch?: boolean;
 }
 
 export function TabBar({
   tabs = ["Overview", "Matches", "Players", "Stats"],
   variant = "underline",
   defaultActive = 0,
+  stretch = false,
 }: TabBarProps) {
   const [active, setActive] = useState(defaultActive);
 
   if (variant === "pill") {
     return (
       <div
-        className="flex gap-1.5 p-1 rounded-xl"
-        style={{ background: "#F4F6FA", display: "inline-flex" }}
+        className={`flex gap-1.5 p-1 rounded-xl ${stretch ? "w-full" : ""}`}
+        style={{
+          background: "#F4F6FA",
+          display: stretch ? "flex" : "inline-flex",
+        }}
       >
         {tabs.map((tab, i) => (
           <button
             key={tab}
             onClick={() => setActive(i)}
-            className="px-4 py-2 rounded-lg text-sm font-semibold transition-all"
+            className={`py-2 rounded-lg text-sm font-semibold transition-all ${stretch ? "flex-1" : "px-4"}`}
             style={{
               background: i === active ? "white" : "transparent",
               color: i === active ? "#0A0E1A" : "#94A3B8",
@@ -42,12 +48,15 @@ export function TabBar({
 
   // Underline variant (default)
   return (
-    <div className="flex border-b" style={{ borderColor: "#E2E8F0" }}>
+    <div
+      className={`flex border-b ${stretch ? "w-full" : ""}`}
+      style={{ borderColor: "#E2E8F0" }}
+    >
       {tabs.map((tab, i) => (
         <button
           key={tab}
           onClick={() => setActive(i)}
-          className="px-5 py-3 text-sm font-semibold border-b-2 -mb-px transition-all"
+          className={`py-3 text-sm font-semibold border-b-2 -mb-px transition-all ${stretch ? "flex-1" : "px-5"}`}
           style={{
             color: i === active ? "#4A78E8" : "#94A3B8",
             borderColor: i === active ? "#4A78E8" : "transparent",
