@@ -13,10 +13,11 @@ const sections = [
   { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#7C3AED" },
   { num: "11", label: "Tokens & Dev Guide", href: "/tokens", desc: "tokens.json, CSS custom properties, dark mode, contribution checklist.", color: "#00875A" },
   { num: "12", label: "Hero Sections", href: "/heroes", desc: "Four production-ready hero layouts — cinematic gradient, split frame, glass card, and magazine overlap. Photo and video ready.", color: "#0047FF" },
+  { num: "13", label: "Body Modules", href: "/modules", desc: "Nine plug-and-play page sections — stats bar, tabs, standings table, club directory, news grid, player spotlight, CTA banner, and skeleton states.", color: "#00875A" },
 ];
 
 const stats = [
-  { value: "11", label: "Sections" },
+  { value: "13", label: "Sections" },
   { value: "30+", label: "Components" },
   { value: "3", label: "Patterns" },
   { value: "WCAG AA", label: "Accessibility" },
@@ -88,7 +89,7 @@ export default function Home() {
         <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
           <div>
             <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#0047FF" }}>v1.0</span></div>
-            <div className="text-xs" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
+            <div className="text-xs" style={{ color: "#475569" }}>13 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
             {["#0047FF", "#7C3AED", "#F4F6FA"].map((c) => (
