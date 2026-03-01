@@ -19,6 +19,7 @@ const components = [
 const resources = [
   { label: "Patterns", href: "/patterns", icon: "10" },
   { label: "Tokens & Dev Guide", href: "/tokens", icon: "11" },
+  { label: "Hero Sections", href: "/heroes", icon: "12" },
 ];
 
 function NavGroup({ title, items }: { title: string; items: typeof foundations }) {
