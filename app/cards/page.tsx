@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 const standingsData = [
   { team: "Charlotte FC", init: "CC", color: "#0047FF", p:18,w:14,d:2,l:2,gd:"+24",pts:44 },
-  { team: "Raleigh Athletic", init: "RA", color: "#FF5A1F", p:18,w:11,d:4,l:3,gd:"+14",pts:37 },
+  { team: "Raleigh Athletic", init: "RA", color: "#7C3AED", p:18,w:11,d:4,l:3,gd:"+14",pts:37 },
   { team: "Durham United", init: "DU", color: "#1A1A2E", p:18,w:10,d:3,l:5,gd:"+8",pts:33 },
 ];
 
@@ -43,7 +43,7 @@ export default function CardsPage() {
                     <div className="text-xs mt-1 font-semibold" style={{ color: "#00C853" }}>WIN</div>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#FF5A1F" }}>RA</div>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#7C3AED" }}>RA</div>
                     <span className="text-xs" style={{ color: "#64748B" }}>Raleigh</span>
                   </div>
                 </div>

@@ -42,7 +42,7 @@ const statCardCode = `import { StatCard } from "@/components/cpsl/StatCard"
   value={9}
   subLabel="+2 vs last season"
   trend="up"
-  accentColor="#FF5A1F"
+  accentColor="#7C3AED"
 />`
 
 const avatarCode = `import { CPSLAvatar, AvatarGroup } from "@/components/cpsl/CPSLAvatar"
@@ -103,7 +103,7 @@ export default function DataDisplayPage() {
               value={9}
               subLabel="+2 vs last season"
               trend="up"
-              accentColor="#FF5A1F"
+              accentColor="#7C3AED"
             />
             <StatCard
               label="League Position"

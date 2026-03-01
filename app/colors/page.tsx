@@ -14,9 +14,9 @@ const primaryColors = [
   { token: "--cpsl-blue-900", hex: "#001552", name: "Blue 900" },
 ];
 const accentColors = [
-  { token: "--cpsl-orange-400", hex: "#FF7A4A", name: "Orange 400" },
-  { token: "--cpsl-orange-500", hex: "#FF5A1F", name: "Orange 500", main: true },
-  { token: "--cpsl-orange-600", hex: "#E04A12", name: "Orange 600" },
+  { token: "--cpsl-purple-400", hex: "#A78BFA", name: "Purple 400" },
+  { token: "--cpsl-purple-500", hex: "#7C3AED", name: "Purple 500", main: true },
+  { token: "--cpsl-purple-600", hex: "#6D28D9", name: "Purple 600" },
 ];
 const semanticColors = [
   { token: "--cpsl-success", hex: "#00C853", name: "Success", bg: "#E8FFF2", label: "Wins, confirmations, uploads" },
@@ -44,7 +44,7 @@ export default function ColorsPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader section="01 — Foundations" title="Color System"
-        description="CPSL Blue (#0047FF) and CPSL Orange (#FF5A1F) anchor the brand. All colors ship as CSS custom properties and a design token JSON file for cross-platform consistency." />
+        description="CPSL Blue (#0047FF) and CPSL Purple (#7C3AED) anchor the brand. All colors ship as CSS custom properties and a design token JSON file for cross-platform consistency." />
       <div className="px-12 py-12">
         <Section title="Primary — CPSL Blue">
           <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
@@ -66,7 +66,7 @@ export default function ColorsPage() {
           </div>
         </Section>
 
-        <Section title="Accent — CPSL Orange">
+        <Section title="Accent — CPSL Purple">
           <div className="flex gap-4">
             {accentColors.map((c) => (
               <div key={c.hex} className="rounded-xl overflow-hidden border flex-1" style={{ borderColor: "#E2E8F0" }}>
@@ -74,7 +74,7 @@ export default function ColorsPage() {
                 <div className="p-3" style={{ background: "white" }}>
                   <div className="text-xs font-bold" style={{ color: "#0A0E1A" }}>{c.name}</div>
                   <div className="text-xs font-mono" style={{ color: "#64748B" }}>{c.hex}</div>
-                  {c.main && <div className="text-xs mt-1 font-semibold" style={{ color: "#FF5A1F" }}>Accent</div>}
+                  {c.main && <div className="text-xs mt-1 font-semibold" style={{ color: "#7C3AED" }}>Accent</div>}
                 </div>
               </div>
             ))}

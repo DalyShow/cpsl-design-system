@@ -17,9 +17,9 @@ const tokenJson = `{
       "900": "#001552"
     },
     "accent": {
-      "400": "#FF7A4A",
-      "500": "#FF5A1F",
-      "600": "#E04A12"
+      "400": "#A78BFA",
+      "500": "#7C3AED",
+      "600": "#6D28D9"
     },
     "neutral": {
       "50":  "#F4F6FA",
@@ -66,8 +66,8 @@ const cssVars = `:root {
   --cpsl-blue-900: #001552;
 
   /* Color — Accent */
-  --cpsl-orange-500: #FF5A1F;
-  --cpsl-orange-600: #E04A12;
+  --cpsl-purple-500: #7C3AED;
+  --cpsl-purple-600: #6D28D9;
 
   /* Color — Neutral */
   --cpsl-neutral-50:  #F4F6FA;
@@ -207,7 +207,7 @@ export default function TokensPage() {
             <div className="text-sm" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5 items-center">
-            {["#0047FF","#FF5A1F","#F4F6FA"].map(c => (
+            {["#0047FF","#7C3AED","#F4F6FA"].map(c => (
               <div key={c} className="w-8 h-8 rounded-full border-2" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

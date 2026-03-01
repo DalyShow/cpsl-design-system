@@ -5,12 +5,12 @@ const sections = [
   { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Anton, Barlow Condensed, and Inter. Responsive and accessible.", color: "#7C3AED" },
   { num: "03", label: "Grid & Spacing", href: "/grid", desc: "12-column grid, 5 breakpoints, 8px base spacing scale, border radius tokens.", color: "#0288D1" },
   { num: "04", label: "Buttons & CTAs", href: "/buttons", desc: "5 variants, 4 states, 3 sizes. Full anatomy, CSS tokens, and a11y specs.", color: "#00875A" },
-  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#FF5A1F" },
+  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#7C3AED" },
   { num: "06", label: "Cards & Lists", href: "/cards", desc: "Default, elevated, score, and horizontal card variants. Standings list pattern.", color: "#E65100" },
   { num: "07", label: "Navigation", href: "/navigation", desc: "Top nav, tab bar, breadcrumb, pagination, sidebar, and mobile tab bar.", color: "#7C3AED" },
   { num: "08", label: "Feedback & Overlays", href: "/feedback", desc: "Alerts, toasts, progress bars, badges, modal, tooltip, and empty states.", color: "#FF1744" },
   { num: "09", label: "Data Display", href: "/data-display", desc: "Sortable tables, avatar groups, tags, stat displays, and skeleton loading.", color: "#0047FF" },
-  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#FF5A1F" },
+  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#7C3AED" },
   { num: "11", label: "Tokens & Dev Guide", href: "/tokens", desc: "tokens.json, CSS custom properties, dark mode, contribution checklist.", color: "#00875A" },
 ];
 
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="text-xs" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
-            {["#0047FF", "#FF5A1F", "#F4F6FA"].map((c) => (
+            {["#0047FF", "#7C3AED", "#F4F6FA"].map((c) => (
               <div key={c} className="w-7 h-7 rounded-full border" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

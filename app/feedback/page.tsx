@@ -52,7 +52,7 @@ export default function FeedbackPage() {
               {[
                 { label: "Season progress", value: 75, color: "#0047FF" },
                 { label: "Registration complete", value: 100, color: "#00C853" },
-                { label: "Upload: kit assets", value: 45, color: "#FF5A1F" },
+                { label: "Upload: kit assets", value: 45, color: "#7C3AED" },
               ].map((p) => (
                 <div key={p.label}>
                   <div className="flex justify-between mb-1.5 text-xs font-medium" style={{ color: "#475569" }}>
