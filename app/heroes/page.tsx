@@ -500,6 +500,47 @@ export default function HeroesPage() {
           </div>
         </Section>
 
+        {/* ── Hero 5: Full Width Image + Headline ───────────────────────────── */}
+        <Section title="5 — Full Width Image + Headline">
+          <p className="text-xs text-muted-foreground mb-4">
+            Image-first hero — the photo takes full command, headline anchored bottom-left over a gradient scrim. Nothing else. Let the image do the work.
+          </p>
+
+          <div className="rounded-2xl overflow-hidden border border-[#E2E8F0]">
+            <div style={{ position: "relative", height: "560px" }}>
+
+              {/* ── Full-width photo slot — replace with <img> or <video> ── */}
+              <div style={{
+                position: "absolute", inset: 0,
+                background: "linear-gradient(160deg, #071A2E 0%, #0A2A50 30%, #0047FF 65%, #002299 100%)",
+              }} />
+              {/* Subtle light bloom — simulates stadium floodlights */}
+              <div style={{
+                position: "absolute", inset: 0,
+                background: "radial-gradient(ellipse at 68% 38%, rgba(255,255,255,0.06) 0%, transparent 55%)",
+              }} />
+
+              {/* Bottom-up gradient scrim for text legibility */}
+              <div style={{
+                position: "absolute", bottom: 0, left: 0, right: 0, height: "65%",
+                background: "linear-gradient(to top, rgba(2,11,26,0.94) 0%, rgba(2,11,26,0.5) 50%, transparent 100%)",
+              }} />
+
+              {/* Headline */}
+              <div style={{ position: "absolute", bottom: "52px", left: "60px" }}>
+                <h1 style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: "88px", fontWeight: 800,
+                  color: "white", lineHeight: 0.91, letterSpacing: "-2.5px",
+                  margin: 0,
+                }}>
+                  CAROLINA<br />PREMIER LEAGUE
+                </h1>
+              </div>
+            </div>
+          </div>
+        </Section>
+
         {/* ── Photo / Video Integration guide ────────────────────────────────── */}
         <Section title="Photo & Video Integration">
           <div className="grid grid-cols-2 gap-4">
