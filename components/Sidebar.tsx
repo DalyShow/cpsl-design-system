@@ -9,18 +9,18 @@ const foundations = [
   { label: "Grid & Spacing", href: "/grid", icon: "03" },
 ];
 const components = [
-  { label: "Buttons & CTAs", href: "/buttons", icon: "04" },
-  { label: "Inputs & Forms", href: "/inputs", icon: "05" },
-  { label: "Cards & Lists", href: "/cards", icon: "06" },
-  { label: "Navigation", href: "/navigation", icon: "07" },
-  { label: "Feedback & Overlays", href: "/feedback", icon: "08" },
-  { label: "Data Display", href: "/data-display", icon: "09" },
+  { label: "Buttons & CTAs",       href: "/buttons",      icon: "04" },
+  { label: "Inputs & Forms",       href: "/inputs",       icon: "05" },
+  { label: "Cards & Lists",        href: "/cards",        icon: "06" },
+  { label: "Navigation",           href: "/navigation",   icon: "07" },
+  { label: "Feedback & Overlays",  href: "/feedback",     icon: "08" },
+  { label: "Data Display",         href: "/data-display", icon: "09" },
+  { label: "Hero Sections",        href: "/heroes",       icon: "12" },
+  { label: "Body Modules",         href: "/modules",      icon: "13" },
 ];
 const resources = [
-  { label: "Patterns", href: "/patterns", icon: "10" },
-  { label: "Tokens & Dev Guide", href: "/tokens", icon: "11" },
-  { label: "Hero Sections", href: "/heroes", icon: "12" },
-  { label: "Body Modules", href: "/modules", icon: "13" },
+  { label: "Patterns",             href: "/patterns",     icon: "10" },
+  { label: "Tokens & Dev Guide",   href: "/tokens",       icon: "11" },
 ];
 
 function NavGroup({ title, items }: { title: string; items: typeof foundations }) {
