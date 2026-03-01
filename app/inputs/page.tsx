@@ -1,149 +1,391 @@
-import PageHeader from "@/components/PageHeader";
-import Section from "@/components/Section";
+"use client"
+
+import PageHeader from "@/components/PageHeader"
+import Section from "@/components/Section"
+import CodeBlock from "@/components/CodeBlock"
+import { CPSLInput } from "@/components/cpsl/CPSLInput"
+import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Switch } from "@/components/ui/switch"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { useState } from "react"
+
+const inputCode = `import { CPSLInput } from "@/components/cpsl/CPSLInput"
+
+// Default
+<CPSLInput label="Team Name" placeholder="e.g. Charlotte FC Academy" />
+
+// With left icon
+<CPSLInput
+  label="Email"
+  type="email"
+  leftIcon={<MailIcon size={14} />}
+  hint="We'll send your confirmation here"
+/>
+
+// Error state
+<CPSLInput
+  label="Email"
+  type="email"
+  error="Please enter a valid email address"
+/>
+
+// Disabled
+<CPSLInput label="League Code" value="CPSL-2025" disabled />`
+
+const selectCode = `import {
+  Select, SelectContent, SelectItem,
+  SelectTrigger, SelectValue,
+} from "@/components/ui/select"
+
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Choose division..." />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="premier">Premier Division</SelectItem>
+    <SelectItem value="elite">Elite Division</SelectItem>
+    <SelectItem value="academy">Academy Division</SelectItem>
+  </SelectContent>
+</Select>`
+
+const checkboxCode = `import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Switch } from "@/components/ui/switch"
+
+// Checkbox
+<div className="flex items-center gap-2">
+  <Checkbox id="terms" />
+  <Label htmlFor="terms">Accept terms & conditions</Label>
+</div>
+
+// Radio group
+<RadioGroup defaultValue="premier">
+  <div className="flex items-center gap-2">
+    <RadioGroupItem value="premier" id="premier" />
+    <Label htmlFor="premier">Premier Division</Label>
+  </div>
+  <div className="flex items-center gap-2">
+    <RadioGroupItem value="elite" id="elite" />
+    <Label htmlFor="elite">Elite Division</Label>
+  </div>
+</RadioGroup>
+
+// Switch
+<div className="flex items-center gap-2">
+  <Switch id="notifications" />
+  <Label htmlFor="notifications">Match alerts</Label>
+</div>`
 
 export default function InputsPage() {
+  const [switchOn, setSwitchOn] = useState(true)
+  const [switchTwo, setSwitchTwo] = useState(false)
+  const [switchThree, setSwitchThree] = useState(true)
+
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
-      <PageHeader section="05 — Components" title="Inputs & Form Controls"
-        description="Text inputs, selects, checkboxes, radios, toggles, textareas, and sliders. Every control has default, hover, focus, error, and disabled states documented." />
-      <div className="px-12 py-12">
-        <Section title="Text Input States">
-          <div className="grid grid-cols-4 gap-4">
-            {[
-              { label: "Default", borderColor: "#E2E8F0", bg: "white", value: "Enter team name...", textColor: "#94A3B8", bw: "1.5px" },
-              { label: "Focus", borderColor: "#0047FF", bg: "#FAFCFF", value: "Charlotte FC", textColor: "#0A0E1A", bw: "2px" },
-              { label: "Error", borderColor: "#FF1744", bg: "#FFF5F5", value: "bad-email@", textColor: "#0A0E1A", bw: "2px" },
-              { label: "Disabled", borderColor: "#E2E8F0", bg: "#F4F6FA", value: "Not editable", textColor: "#94A3B8", bw: "1.5px" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "#64748B" }}>{s.label}</div>
-                <div className="rounded-xl px-4 py-3 text-sm" style={{ border: `${s.bw} solid ${s.borderColor}`, background: s.bg, color: s.textColor }}>{s.value}</div>
-                {s.label === "Error" && <p className="text-xs mt-1.5" style={{ color: "#FF1744" }}>✕ Please enter a valid email</p>}
-                {s.label === "Focus" && <p className="text-xs mt-1.5" style={{ color: "#0047FF" }}>border: 2px solid #0047FF</p>}
-              </div>
-            ))}
-          </div>
-        </Section>
+      <PageHeader
+        section="05 — Components"
+        title="Inputs & Form Controls"
+        description="All controls are real interactive components — try clicking, typing, and toggling. Built on shadcn/ui + Radix UI primitives with CPSL design tokens."
+      />
 
-        <Section title="Select / Dropdown">
-          <div className="max-w-sm">
-            <div className="rounded-xl px-4 py-3 border text-sm flex items-center justify-between" style={{ background: "white", borderColor: "#E2E8F0", color: "#0A0E1A" }}>
-              <span>CPSL League</span>
-              <svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" stroke="#94A3B8" strokeWidth="1.5" fill="none" strokeLinecap="round"/></svg>
+      <div className="px-12 py-12">
+
+        {/* Text Input States */}
+        <Section title="Text Input — All States">
+          <div className="rounded-2xl p-8 border bg-white border-[#E2E8F0]">
+            <div className="grid grid-cols-2 gap-6">
+              <CPSLInput
+                label="Default"
+                placeholder="Enter team name…"
+              />
+              <CPSLInput
+                label="With hint text"
+                placeholder="e.g. Charlotte FC Academy"
+                hint="Enter your full registered club name"
+              />
+              <CPSLInput
+                label="With left icon"
+                type="email"
+                placeholder="coach@yourclub.com"
+                defaultValue=""
+                leftIcon={
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                }
+                hint="Primary contact email"
+              />
+              <CPSLInput
+                label="With right icon"
+                type="password"
+                placeholder="••••••••"
+                leftIcon={
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                  </svg>
+                }
+                rightElement={
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                }
+              />
+              <CPSLInput
+                label="Error state"
+                type="email"
+                defaultValue="not-an-email"
+                error="Please enter a valid email address"
+                leftIcon={
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                }
+              />
+              <CPSLInput
+                label="Disabled"
+                value="CPSL-2025-PRE"
+                disabled
+                hint="League code cannot be changed"
+              />
             </div>
           </div>
+          <div className="mt-4">
+            <CodeBlock code={inputCode} language="tsx" />
+          </div>
         </Section>
 
-        <Section title="Checkbox, Radio & Toggle">
-          <div className="rounded-2xl p-8 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-            <div className="flex gap-16">
-              {/* Checkbox */}
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: "#64748B" }}>Checkbox</div>
-                <div className="flex flex-col gap-4">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-5 h-5 rounded-md flex items-center justify-center" style={{ background: "#0047FF", border: "2px solid #0047FF" }}>
-                      <svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/></svg>
-                    </div>
-                    <span className="text-sm font-medium" style={{ color: "#0A0E1A" }}>Checked</span>
-                  </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-5 h-5 rounded-md border-2" style={{ borderColor: "#E2E8F0" }} />
-                    <span className="text-sm" style={{ color: "#0A0E1A" }}>Unchecked</span>
-                  </label>
-                  <label className="flex items-center gap-3 opacity-40 cursor-not-allowed">
-                    <div className="w-5 h-5 rounded-md border-2" style={{ borderColor: "#E2E8F0", background: "#F4F6FA" }} />
-                    <span className="text-sm" style={{ color: "#94A3B8" }}>Disabled</span>
-                  </label>
+        {/* Select */}
+        <Section title="Select / Dropdown">
+          <div className="rounded-2xl p-8 border bg-white border-[#E2E8F0]">
+            <div className="grid grid-cols-3 gap-6">
+              <div className="flex flex-col gap-1.5">
+                <Label className="text-sm font-semibold">Division</Label>
+                <Select>
+                  <SelectTrigger className="h-10">
+                    <SelectValue placeholder="Choose division…" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="premier">Premier Division</SelectItem>
+                    <SelectItem value="elite">Elite Division</SelectItem>
+                    <SelectItem value="academy">Academy Division</SelectItem>
+                    <SelectItem value="development">Development</SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">Default placeholder</p>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label className="text-sm font-semibold">Season</Label>
+                <Select defaultValue="2025">
+                  <SelectTrigger className="h-10">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="2026">2025–26</SelectItem>
+                    <SelectItem value="2025">2024–25</SelectItem>
+                    <SelectItem value="2024">2023–24</SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">Pre-selected value</p>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label className="text-sm font-semibold text-muted-foreground">Region (disabled)</Label>
+                <Select disabled>
+                  <SelectTrigger className="h-10">
+                    <SelectValue placeholder="North Carolina" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="nc">North Carolina</SelectItem>
+                    <SelectItem value="sc">South Carolina</SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">Disabled state</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4">
+            <CodeBlock code={selectCode} language="tsx" />
+          </div>
+        </Section>
+
+        {/* Checkbox, Radio, Switch */}
+        <Section title="Checkbox, Radio & Toggle — Interactive">
+          <div className="rounded-2xl p-8 border bg-white border-[#E2E8F0]">
+            <div className="flex gap-12">
+
+              {/* Checkbox column */}
+              <div className="flex flex-col gap-2 min-w-[180px]">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Checkbox</p>
+                <div className="flex items-center gap-2.5">
+                  <Checkbox id="cb-terms" defaultChecked />
+                  <Label htmlFor="cb-terms" className="text-sm cursor-pointer">Accept terms</Label>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Checkbox id="cb-notify" />
+                  <Label htmlFor="cb-notify" className="text-sm cursor-pointer">Match alerts</Label>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Checkbox id="cb-news" />
+                  <Label htmlFor="cb-news" className="text-sm cursor-pointer">Newsletter</Label>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Checkbox id="cb-disabled" disabled />
+                  <Label htmlFor="cb-disabled" className="text-sm text-muted-foreground cursor-not-allowed">Unavailable</Label>
                 </div>
               </div>
 
-              {/* Radio */}
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: "#64748B" }}>Radio</div>
-                <div className="flex flex-col gap-4">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-5 h-5 rounded-full border-2 flex items-center justify-center" style={{ borderColor: "#0047FF" }}>
-                      <div className="w-2.5 h-2.5 rounded-full" style={{ background: "#0047FF" }} />
-                    </div>
-                    <span className="text-sm font-medium" style={{ color: "#0A0E1A" }}>Selected</span>
-                  </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-5 h-5 rounded-full border-2" style={{ borderColor: "#E2E8F0" }} />
-                    <span className="text-sm" style={{ color: "#0A0E1A" }}>Unselected</span>
-                  </label>
-                  <label className="flex items-center gap-3 opacity-40 cursor-not-allowed">
-                    <div className="w-5 h-5 rounded-full border-2" style={{ borderColor: "#E2E8F0" }} />
-                    <span className="text-sm" style={{ color: "#94A3B8" }}>Disabled</span>
-                  </label>
+              <Separator orientation="vertical" className="h-auto" />
+
+              {/* Radio column */}
+              <div className="flex flex-col gap-2 min-w-[180px]">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Radio Group</p>
+                <RadioGroup defaultValue="premier" className="flex flex-col gap-2.5">
+                  <div className="flex items-center gap-2.5">
+                    <RadioGroupItem value="premier" id="r-premier" />
+                    <Label htmlFor="r-premier" className="text-sm cursor-pointer">Premier Division</Label>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <RadioGroupItem value="elite" id="r-elite" />
+                    <Label htmlFor="r-elite" className="text-sm cursor-pointer">Elite Division</Label>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <RadioGroupItem value="academy" id="r-academy" />
+                    <Label htmlFor="r-academy" className="text-sm cursor-pointer">Academy</Label>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <RadioGroupItem value="dev" id="r-dev" disabled />
+                    <Label htmlFor="r-dev" className="text-sm text-muted-foreground cursor-not-allowed">Development</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <Separator orientation="vertical" className="h-auto" />
+
+              {/* Switch column */}
+              <div className="flex flex-col gap-2 min-w-[200px]">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Switch / Toggle</p>
+                <div className="flex items-center justify-between gap-8">
+                  <Label htmlFor="sw-1" className="text-sm cursor-pointer">Match alerts</Label>
+                  <Switch id="sw-1" checked={switchOn} onCheckedChange={setSwitchOn} />
+                </div>
+                <div className="flex items-center justify-between gap-8">
+                  <Label htmlFor="sw-2" className="text-sm cursor-pointer">Email digest</Label>
+                  <Switch id="sw-2" checked={switchTwo} onCheckedChange={setSwitchTwo} />
+                </div>
+                <div className="flex items-center justify-between gap-8">
+                  <Label htmlFor="sw-3" className="text-sm cursor-pointer">Live updates</Label>
+                  <Switch id="sw-3" checked={switchThree} onCheckedChange={setSwitchThree} />
+                </div>
+                <div className="flex items-center justify-between gap-8">
+                  <Label htmlFor="sw-4" className="text-sm text-muted-foreground">Unavailable</Label>
+                  <Switch id="sw-4" disabled />
                 </div>
               </div>
 
-              {/* Toggle */}
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: "#64748B" }}>Toggle</div>
-                <div className="flex flex-col gap-5">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-11 h-6 rounded-full flex items-center px-0.5" style={{ background: "#0047FF" }}>
-                      <div className="w-5 h-5 bg-white rounded-full shadow ml-auto" />
-                    </div>
-                    <span className="text-sm font-medium" style={{ color: "#0A0E1A" }}>On</span>
-                  </label>
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <div className="w-11 h-6 rounded-full flex items-center px-0.5" style={{ background: "#E2E8F0" }}>
-                      <div className="w-5 h-5 bg-white rounded-full shadow" />
-                    </div>
-                    <span className="text-sm" style={{ color: "#94A3B8" }}>Off</span>
-                  </label>
-                </div>
-              </div>
+              <Separator orientation="vertical" className="h-auto" />
 
               {/* Textarea */}
-              <div className="flex-1">
-                <div className="text-xs font-semibold uppercase tracking-wide mb-4" style={{ color: "#64748B" }}>Textarea</div>
-                <div className="rounded-xl px-4 py-3 border-2 text-sm" style={{ borderColor: "#0047FF", background: "#FAFCFF", color: "#0A0E1A", minHeight: "90px", lineHeight: 1.6 }}>
-                  Match report for Charlotte FC vs Raleigh Athletic...
+              <div className="flex flex-col gap-2 flex-1">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Textarea</p>
+                <div className="flex flex-col gap-1.5">
+                  <Label htmlFor="ta-report" className="text-sm font-semibold">Match Report</Label>
+                  <Textarea
+                    id="ta-report"
+                    placeholder="Describe the match…"
+                    defaultValue="Charlotte FC dominated from the first whistle, pressing high and winning the midfield battle convincingly."
+                    className="min-h-[100px] resize-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary"
+                  />
+                  <p className="text-xs text-muted-foreground">Max 500 characters</p>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4">
+            <CodeBlock code={checkboxCode} language="tsx" />
+          </div>
+        </Section>
+
+        {/* Full form example */}
+        <Section title="Complete Form — Register a Team">
+          <div className="max-w-lg rounded-2xl p-8 border bg-white border-[#E2E8F0] shadow-sm">
+            <h3 className="text-base font-bold text-foreground mb-6">Register Team for 2025–26 Season</h3>
+            <div className="flex flex-col gap-5">
+              <CPSLInput
+                label="Team Name"
+                placeholder="e.g. Charlotte FC Academy"
+                hint="Enter your full registered club name"
+              />
+
+              <CPSLInput
+                label="Head Coach Email"
+                type="email"
+                placeholder="coach@yourclub.com"
+                leftIcon={
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                }
+              />
+
+              <div className="flex flex-col gap-1.5">
+                <Label className="text-sm font-semibold">Division</Label>
+                <Select>
+                  <SelectTrigger className="h-10">
+                    <SelectValue placeholder="Choose division…" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="premier">Premier Division</SelectItem>
+                    <SelectItem value="elite">Elite Division</SelectItem>
+                    <SelectItem value="academy">Academy Division</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label htmlFor="ta-notes" className="text-sm font-semibold">Additional Notes</Label>
+                <Textarea
+                  id="ta-notes"
+                  placeholder="Any special requirements or information…"
+                  className="resize-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary"
+                />
+              </div>
+
+              <div className="flex items-start gap-2.5 pt-1">
+                <Checkbox id="cb-agree" className="mt-0.5" />
+                <Label htmlFor="cb-agree" className="text-sm cursor-pointer leading-relaxed text-muted-foreground">
+                  I confirm this team meets all CPSL eligibility requirements and agree to the{" "}
+                  <span className="text-primary font-medium">League Rules & Code of Conduct</span>.
+                </Label>
+              </div>
+
+              <div className="flex gap-3 pt-1">
+                <Button className="flex-1" size="lg">Submit Registration</Button>
+                <Button variant="outline" size="lg">Save Draft</Button>
               </div>
             </div>
           </div>
         </Section>
 
-        <Section title="Slider">
-          <div className="rounded-2xl p-8 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-            <div className="max-w-md">
-              <div className="flex justify-between mb-2 text-xs" style={{ color: "#64748B" }}>
-                <span>Player Rating</span>
-                <span className="font-bold" style={{ color: "#0047FF" }}>87</span>
-              </div>
-              <div className="relative h-2 rounded-full" style={{ background: "#E2E8F0" }}>
-                <div className="absolute left-0 top-0 h-2 rounded-full" style={{ width: "87%", background: "#0047FF" }} />
-                <div className="absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 border-white shadow-md" style={{ left: "calc(87% - 10px)", background: "#0047FF" }} />
-              </div>
-            </div>
-          </div>
-        </Section>
-
-        <Section title="Form Anatomy">
-          <div className="rounded-2xl p-8 border max-w-lg" style={{ background: "white", borderColor: "#E2E8F0" }}>
-            <h3 className="font-bold text-base mb-5" style={{ color: "#0A0E1A" }}>Register Team</h3>
-            <div className="flex flex-col gap-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "#475569" }}>Team Name <span style={{ color: "#FF1744" }}>*</span></label>
-                <div className="rounded-xl px-4 py-3 border-2 text-sm" style={{ borderColor: "#0047FF", background: "#FAFCFF", color: "#0A0E1A" }}>Charlotte FC</div>
-              </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "#475569" }}>Division</label>
-                <div className="rounded-xl px-4 py-3 border text-sm flex items-center justify-between" style={{ borderColor: "#E2E8F0", color: "#0A0E1A" }}>
-                  <span>Premier Division</span>
-                  <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 5l4 4 4-4" stroke="#94A3B8" strokeWidth="1.5" fill="none" strokeLinecap="round"/></svg>
-                </div>
-              </div>
-              <button className="w-full py-3 rounded-xl text-sm font-bold text-white" style={{ background: "#0047FF" }}>Register Team</button>
-            </div>
-          </div>
-        </Section>
       </div>
     </div>
-  );
+  )
 }
