@@ -17,17 +17,17 @@ export default function TypographyPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader section="02 — Foundations" title="Typography"
-        description="Three typeface roles: Anton for bold display moments, Barlow Condensed for headings and live scores, and Inter for all UI body text. A 9-level scale ensures consistent hierarchy." />
+        description="Two typeface roles: Barlow Condensed is the primary headline font — used for all display text, headings, and live scores. Inter handles all UI body text and labels. A 9-level scale ensures consistent hierarchy." />
       <div className="px-12 py-12">
         <Section title="Type Specimen">
           <div className="rounded-2xl p-10 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
             <div className="mb-6 pb-6 border-b" style={{ borderColor: "#F1F5F9" }}>
-              <div style={{ fontFamily: "'Anton', sans-serif", fontSize: "80px", color: "#0A0E1A", letterSpacing: "2px", lineHeight: 1 }}>PREMIER</div>
-              <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Anton · Display · 80px</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "80px", fontWeight: 800, color: "#0A0E1A", letterSpacing: "-2px", lineHeight: 1 }}>PREMIER</div>
+              <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Barlow Condensed ExtraBold · Display · 80px</div>
             </div>
             <div className="mb-6 pb-6 border-b" style={{ borderColor: "#F1F5F9" }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", fontWeight: 800, color: "#0047FF", letterSpacing: "-1px", lineHeight: 1 }}>CAROLINA</div>
-              <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Barlow Condensed ExtraBold · H1 · 56px</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", fontWeight: 700, color: "#0047FF", letterSpacing: "-1px", lineHeight: 1 }}>CAROLINA</div>
+              <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Barlow Condensed Bold · H1 · 56px</div>
             </div>
             <div className="mb-6 pb-6 border-b" style={{ borderColor: "#F1F5F9" }}>
               <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "28px", fontWeight: 700, color: "#475569" }}>Soccer League</div>

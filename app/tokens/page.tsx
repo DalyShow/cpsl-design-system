@@ -51,7 +51,7 @@ const tokenJson = `{
   },
   "typography": {
     "family": {
-      "display": "Anton",
+      "display": "Barlow Condensed",
       "heading": "Barlow Condensed",
       "body":    "Inter"
     }
@@ -102,7 +102,7 @@ const cssVars = `:root {
   --radius-lg:   16px; --radius-pill: 100px;
 
   /* Typefaces */
-  --font-display: 'Anton', sans-serif;
+  --font-display: 'Barlow Condensed', sans-serif;
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body:    'Inter', sans-serif;
 }

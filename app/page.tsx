@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const sections = [
   { num: "01", label: "Color System", href: "/colors", desc: "Primary, accent, semantic, neutral palettes. Dark mode tokens and WCAG contrast ratios.", color: "#0047FF" },
-  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Anton, Barlow Condensed, and Inter. Responsive and accessible.", color: "#7C3AED" },
+  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#7C3AED" },
   { num: "03", label: "Grid & Spacing", href: "/grid", desc: "12-column grid, 5 breakpoints, 8px base spacing scale, border radius tokens.", color: "#0288D1" },
   { num: "04", label: "Buttons & CTAs", href: "/buttons", desc: "5 variants, 4 states, 3 sizes. Full anatomy, CSS tokens, and a11y specs.", color: "#00875A" },
   { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#7C3AED" },
