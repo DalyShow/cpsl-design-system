@@ -23,7 +23,7 @@ export default function NavigationPage() {
           <p className="text-xs text-muted-foreground mb-4">
             Dark-navy bar with brand mark, interactive nav links, live badge, and user avatar. Click any link to switch the active state. Use <code className="bg-secondary px-1.5 py-0.5 rounded">variant="card"</code> (default) inside modals, drawers, or preview frames.
           </p>
-          <TopNav variant="card" />
+          <TopNav variant="card" showLive={true} />
         </Section>
 
         {/* 2. Tab Bar Variants — card */}
@@ -88,7 +88,7 @@ export default function NavigationPage() {
           <code className="bg-secondary px-1.5 py-0.5 rounded">variant="full"</code> — bottom border only, no border-radius. Pair with a <code className="bg-secondary px-1.5 py-0.5 rounded">sticky top-0</code> wrapper in production.
         </p>
       </div>
-      <TopNav variant="full" />
+      <TopNav variant="full" showLive={true} />
 
       {/* 6. Tablet — Full-Width Tab Bar */}
       <div className="px-12 mt-8 mb-2">

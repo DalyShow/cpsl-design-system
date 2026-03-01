@@ -26,7 +26,7 @@ export function TopNav({
   ],
   logoText = "CPSL",
   userInitials = "JD",
-  showLive = true,
+  showLive = false,
   defaultActive = 0,
   variant = "card",
 }: TopNavProps) {
