@@ -50,7 +50,7 @@ export function MagazineHero({
         </div>
 
         {/* Headline */}
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(52px, 10vw, 104px)", fontWeight: 800, lineHeight: 0.88, letterSpacing: "-3px", color: "#0A0E1A", marginBottom: "28px" }}>
+        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-xl)", fontWeight: 800, lineHeight: 0.88, letterSpacing: "-3px", color: "#0A0E1A", marginBottom: "28px" }}>
           {headline}<br />
           <span style={{ color: "#0047FF" }}>{headlineAccent}</span><br />
           {headlineSub}
@@ -60,7 +60,7 @@ export function MagazineHero({
         <div className="flex flex-wrap gap-x-6 gap-y-4 mb-8 md:mb-9">
           {stats.map((s, i) => (
             <div key={s.label} className={`pr-6 ${i < stats.length - 1 ? "border-r border-[#CBD5E1]" : ""}`}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "36px", fontWeight: 800, color: "#0047FF", lineHeight: 1 }}>{s.value}</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-h2)", fontWeight: 800, color: "#0047FF", lineHeight: 1 }}>{s.value}</div>
               <div style={{ fontSize: "10px", fontWeight: 600, color: "#64748B", letterSpacing: "1.5px", textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}

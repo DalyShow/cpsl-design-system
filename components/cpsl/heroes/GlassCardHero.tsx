@@ -62,7 +62,7 @@ export function GlassCardHero({
 
             {/* Score */}
             <div style={{ textAlign: "center", flexShrink: 0 }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(48px, 10vw, 80px)", fontWeight: 800, color: "white", letterSpacing: "-4px", lineHeight: 1 }}>{homeTeam.score}–{awayTeam.score}</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-score)", fontWeight: 800, color: "white", letterSpacing: "-4px", lineHeight: 1 }}>{homeTeam.score}–{awayTeam.score}</div>
               <div style={{ color: "#00C853", fontSize: "10px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>{leadingLabel}</div>
             </div>
 

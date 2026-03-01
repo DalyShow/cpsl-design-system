@@ -94,7 +94,7 @@ export function PlayerSpotlight({
               { value: String(games),   label: "Games" },
             ].map(s => (
               <div key={s.label} className="rounded-xl p-3 text-center" style={{ background: "#F4F6FA" }}>
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "28px", fontWeight: 800, color, lineHeight: 1 }}>{s.value}</div>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-h2)", fontWeight: 800, color, lineHeight: 1 }}>{s.value}</div>
                 <div className="text-[10px] font-semibold text-[#94A3B8] mt-1 uppercase tracking-wide">{s.label}</div>
               </div>
             ))}

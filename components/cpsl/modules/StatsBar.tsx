@@ -24,7 +24,7 @@ export function StatsBar({ stats = DEFAULT_STATS, background = "#020B1A" }: Stat
       {stats.map((s, i) => (
         <div key={s.label} className="flex items-center">
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 800, color: "white", lineHeight: 1, letterSpacing: "-1.5px" }}>
+            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 1, letterSpacing: "-1.5px" }}>
               {s.value}
             </div>
             <div style={{ color: "#475569", fontSize: "10px", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginTop: "8px" }}>

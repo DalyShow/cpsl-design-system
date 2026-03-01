@@ -29,7 +29,7 @@ export function FullWidthImageHero({
 
       {/* Headline */}
       <div style={{ position: "absolute", bottom: "clamp(24px, 5vw, 52px)", left: "clamp(20px, 5vw, 60px)" }}>
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(40px, 8vw, 88px)", fontWeight: 800, color: "white", lineHeight: 0.91, letterSpacing: "-2.5px", margin: 0 }}>
+        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-lg)", fontWeight: 800, color: "white", lineHeight: 0.91, letterSpacing: "-2.5px", margin: 0 }}>
           {headline}<br />{headlineSub}
         </h1>
       </div>

@@ -54,6 +54,21 @@ const tokenJson = `{
       "display": "Barlow Condensed",
       "heading": "Barlow Condensed",
       "body":    "Inter"
+    },
+    "scale": {
+      "display-xl":  "clamp(52px, 10vw, 104px)",
+      "display-lg":  "clamp(40px, 8vw, 88px)",
+      "display":     "clamp(36px, 7vw, 76px)",
+      "display-sm":  "clamp(28px, 5vw, 56px)",
+      "score":       "clamp(48px, 10vw, 80px)",
+      "h1":          "clamp(28px, 4.5vw, 48px)",
+      "h2":          "clamp(20px, 3.5vw, 36px)",
+      "h3":          "24px",
+      "h4":          "20px",
+      "body-l":      "18px",
+      "body":        "15px",
+      "small":       "13px",
+      "caption":     "11px"
     }
   }
 }`;
@@ -100,6 +115,21 @@ const cssVars = `:root {
   /* Border radius */
   --radius-sm:   6px;  --radius-md: 10px;
   --radius-lg:   16px; --radius-pill: 100px;
+
+  /* Type scale */
+  --text-display-xl:  clamp(52px, 10vw, 104px);
+  --text-display-lg:  clamp(40px, 8vw, 88px);
+  --text-display:     clamp(36px, 7vw, 76px);
+  --text-display-sm:  clamp(28px, 5vw, 56px);
+  --text-score:       clamp(48px, 10vw, 80px);
+  --text-h1:          clamp(28px, 4.5vw, 48px);
+  --text-h2:          clamp(20px, 3.5vw, 36px);
+  --text-h3:          24px;
+  --text-h4:          20px;
+  --text-body-l:      18px;
+  --text-body:        15px;
+  --text-small:       13px;
+  --text-caption:     11px;
 
   /* Typefaces */
   --font-display: 'Barlow Condensed', sans-serif;

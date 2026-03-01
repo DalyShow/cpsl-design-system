@@ -35,7 +35,7 @@ export function SplitFrameHero({
           {eyebrow}
         </div>
 
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(32px, 6vw, 58px)", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
+        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
           {teamA}<br />
           <span style={{ color: "#7C3AED" }}>vs</span> RALEIGH<br />
           {teamB}

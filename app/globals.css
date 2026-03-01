@@ -58,6 +58,26 @@
   --radius-lg: 16px;
   --radius-pill: 100px;
 
+  /* ── Responsive type scale ── */
+  /* Barlow Condensed display — hero & scoreboard sizes */
+  --text-display-xl:  clamp(52px, 10vw, 104px); /* Magazine / super-display hero */
+  --text-display-lg:  clamp(40px, 8vw,  88px);  /* Full-width image hero */
+  --text-display:     clamp(36px, 7vw,  76px);  /* Cinematic / standard display */
+  --text-display-sm:  clamp(28px, 5vw,  56px);  /* Split hero, CTA banner, stats bar */
+  --text-score:       clamp(48px, 10vw, 80px);  /* Live scoreboard numbers */
+
+  /* Barlow Condensed heading levels */
+  --text-h1:          clamp(28px, 4.5vw, 48px);
+  --text-h2:          clamp(20px, 3.5vw, 36px);
+
+  /* Inter UI levels — fixed (fluid scaling not needed below 24px) */
+  --text-h3:     24px;
+  --text-h4:     20px;
+  --text-body-l: 18px;
+  --text-body:   15px;
+  --text-small:  13px;
+  --text-caption:11px;
+
   --font-display: 'Barlow Condensed', sans-serif;
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body: 'Inter', sans-serif;

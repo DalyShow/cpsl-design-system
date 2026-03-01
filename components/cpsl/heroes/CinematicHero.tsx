@@ -85,7 +85,7 @@ export function CinematicHero({
           </div>
 
           {/* Headline */}
-          <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(36px, 7vw, 76px)", fontWeight: 800, color: "white", lineHeight: 0.92, letterSpacing: "-2px", marginBottom: "24px" }}>
+          <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display)", fontWeight: 800, color: "white", lineHeight: 0.92, letterSpacing: "-2px", marginBottom: "24px" }}>
             {headline}<br />
             <span style={{ color: "#0047FF" }}>{headlineAccent}</span><br />
             {headlineSub}

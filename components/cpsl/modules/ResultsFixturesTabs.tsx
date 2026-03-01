@@ -57,7 +57,7 @@ export function ResultsFixturesTabs({
                 <span className="text-xs text-[#94A3B8] sm:w-20 shrink-0">{r.date}</span>
                 <div className="flex-1 flex items-center justify-between gap-3 w-full sm:w-auto">
                   <span className="text-sm font-semibold text-[#0A0E1A] flex-1 text-right truncate">{r.home}</span>
-                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "20px", fontWeight: 800, color: "#0A0E1A", letterSpacing: "-0.5px", minWidth: "52px", textAlign: "center" }}>
+                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-h4)", fontWeight: 800, color: "#0A0E1A", letterSpacing: "-0.5px", minWidth: "52px", textAlign: "center" }}>
                     {r.hScore}–{r.aScore}
                   </span>
                   <span className="text-sm font-medium text-[#64748B] flex-1 truncate">{r.away}</span>
