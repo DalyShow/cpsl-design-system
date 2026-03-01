@@ -1,119 +1,160 @@
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
+import { TopNav } from "@/components/cpsl/navigation/TopNav";
+import { TabBar } from "@/components/cpsl/navigation/TabBar";
+import { Breadcrumb } from "@/components/cpsl/navigation/Breadcrumb";
+import { Pagination } from "@/components/cpsl/navigation/Pagination";
+import { MobileTabBar } from "@/components/cpsl/navigation/MobileTabBar";
 
 export default function NavigationPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
-      <PageHeader section="07 — Components" title="Navigation"
-        description="Top navigation bar, tab bars, breadcrumbs, pagination, and sidebar patterns. All navigation is keyboard accessible with visible focus indicators and proper ARIA roles." />
+      <PageHeader
+        section="07 — Components"
+        title="Navigation"
+        description="Top nav, tab bars, breadcrumbs, pagination, and a mobile tab bar — all interactive. Click any tab, page number, or nav link to see the active state update in real time."
+      />
       <div className="px-12 py-12">
-        <Section title="Top Navigation Bar">
-          <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#1E2D45" }}>
-            <div className="flex items-center justify-between px-6 py-4" style={{ background: "#020B1A" }}>
-              <div className="flex items-center gap-8">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "#4A78E8" }}>
-                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
-                      <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="white" strokeWidth="1.5"/>
-                    </svg>
-                  </div>
-                  <span className="text-white font-bold text-sm">CPSL</span>
-                </div>
-                <nav className="flex gap-6">
-                  {["Standings", "Matches", "Teams", "Stats", "News"].map((item, i) => (
-                    <a key={item} className="text-sm font-medium pb-4 border-b-2 transition-colors cursor-pointer" style={{ color: i === 0 ? "white" : "#64748B", borderColor: i === 0 ? "#4A78E8" : "transparent" }}>
-                      {item}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold" style={{ background: "#FF1744", color: "white" }}>
-                  <span className="w-1.5 h-1.5 rounded-full bg-white" />Live
-                </div>
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#4A78E8" }}>JD</div>
-              </div>
-            </div>
-          </div>
+
+        {/* ── 1. Top Navigation Bar ── */}
+        <Section title="1 — Top Navigation Bar">
+          <p className="text-xs text-muted-foreground mb-4">
+            Dark-navy bar with brand mark, interactive nav links (click to activate), live indicator, and user avatar. Accepts custom items, logo text, and user initials via props.
+          </p>
+          <TopNav />
         </Section>
 
-        <Section title="Tab Bar Variants">
+        {/* ── 2. Tab Bar Variants ── */}
+        <Section title="2 — Tab Bar Variants">
+          <p className="text-xs text-muted-foreground mb-4">
+            Two tab styles — both fully interactive. Click any tab to switch the active state. Use <code className="bg-secondary px-1.5 py-0.5 rounded">variant="underline"</code> for content pages, <code className="bg-secondary px-1.5 py-0.5 rounded">variant="pill"</code> for filter controls.
+          </p>
           <div className="flex flex-col gap-4">
-            {/* Underline tab */}
+
+            {/* Underline */}
             <div className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>Underline (default)</div>
-              <div className="flex border-b" style={{ borderColor: "#E2E8F0" }}>
-                {["Overview", "Matches", "Players", "Stats"].map((tab, i) => (
-                  <button key={tab} className="px-5 py-3 text-sm font-semibold border-b-2 -mb-px"
-                    style={{ color: i === 0 ? "#4A78E8" : "#94A3B8", borderColor: i === 0 ? "#4A78E8" : "transparent" }}>
-                    {tab}
-                  </button>
-                ))}
+              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>
+                Underline (default)
               </div>
+              <TabBar
+                tabs={["Overview", "Matches", "Players", "Stats"]}
+                variant="underline"
+              />
             </div>
 
-            {/* Pill tab */}
+            {/* Pill */}
             <div className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>Pill tabs</div>
-              <div className="flex gap-2 p-1 rounded-xl inline-flex" style={{ background: "#F4F6FA" }}>
-                {["All", "Home", "Away", "Cup"].map((tab, i) => (
-                  <button key={tab} className="px-4 py-2 rounded-lg text-sm font-semibold transition-all"
-                    style={{ background: i === 0 ? "white" : "transparent", color: i === 0 ? "#0A0E1A" : "#94A3B8", boxShadow: i === 0 ? "0 1px 4px rgba(0,0,0,0.08)" : "none" }}>
-                    {tab}
-                  </button>
-                ))}
+              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>
+                Pill tabs
               </div>
+              <TabBar
+                tabs={["All", "Home", "Away", "Cup"]}
+                variant="pill"
+              />
             </div>
+
           </div>
         </Section>
 
-        <Section title="Breadcrumb & Pagination">
-          <div className="grid grid-cols-2 gap-4">
+        {/* ── 3. Breadcrumb & Pagination ── */}
+        <Section title="3 — Breadcrumb &amp; Pagination">
+          <p className="text-xs text-muted-foreground mb-4">
+            Breadcrumb uses chevron separators and bold final item. Pagination is fully interactive — click any page number or the arrow buttons to navigate.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <div className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>Breadcrumb</div>
-              <div className="flex items-center gap-2 text-sm flex-wrap">
-                {["CPSL", "Teams", "Charlotte FC", "Matches"].map((item, i, arr) => (
-                  <span key={item} className="flex items-center gap-2">
-                    <a className="cursor-pointer" style={{ color: i === arr.length - 1 ? "#0A0E1A" : "#4A78E8", fontWeight: i === arr.length - 1 ? 600 : 400 }}>{item}</a>
-                    {i < arr.length - 1 && <span style={{ color: "#CBD5E1" }}>/</span>}
+              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>
+                Breadcrumb
+              </div>
+              <Breadcrumb items={["CPSL", "Teams", "Charlotte FC", "Matches"]} />
+            </div>
+
+            <div className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
+              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>
+                Pagination — 8 pages
+              </div>
+              <Pagination totalPages={8} defaultPage={1} />
+            </div>
+
+          </div>
+        </Section>
+
+        {/* ── 4. Mobile Tab Bar ── */}
+        <Section title="4 — Mobile Bottom Tab Bar">
+          <p className="text-xs text-muted-foreground mb-4">
+            Fixed-bottom navigation for mobile. SVG icons swap to the active blue when selected, with a dot indicator. Click any tab to switch.
+          </p>
+          <MobileTabBar />
+        </Section>
+
+        {/* ── Component API ── */}
+        <Section title="Component API">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                title: "TopNav",
+                code: `<TopNav
+  items={[
+    { label: "Standings" },
+    { label: "Matches" },
+    { label: "Teams" },
+  ]}
+  logoText="CPSL"
+  userInitials="JD"
+  showLive={true}
+  defaultActive={0}
+/>`,
+              },
+              {
+                title: "TabBar",
+                code: `<TabBar
+  tabs={["Overview", "Matches", "Players"]}
+  variant="underline"  // or "pill"
+  defaultActive={0}
+/>`,
+              },
+              {
+                title: "Breadcrumb",
+                code: `<Breadcrumb
+  items={["CPSL", "Teams", "Charlotte FC"]}
+/>`,
+              },
+              {
+                title: "Pagination",
+                code: `<Pagination
+  totalPages={12}
+  defaultPage={1}
+/>`,
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border overflow-hidden"
+                style={{ background: "white", borderColor: "#E2E8F0" }}
+              >
+                <div
+                  className="px-4 py-2.5 border-b"
+                  style={{ background: "#FAFBFF", borderColor: "#F1F5F9" }}
+                >
+                  <span className="text-xs font-bold" style={{ color: "#0A0E1A" }}>
+                    {item.title}
                   </span>
-                ))}
+                </div>
+                <pre
+                  className="text-[11px] leading-relaxed p-4 overflow-x-auto"
+                  style={{
+                    fontFamily: "'Fira Code', 'Cascadia Code', monospace",
+                    color: "#475569",
+                  }}
+                >
+                  {item.code}
+                </pre>
               </div>
-            </div>
-            <div className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-              <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: "#94A3B8" }}>Pagination</div>
-              <div className="flex items-center gap-1.5">
-                <button className="px-3 py-2 rounded-lg text-sm border" style={{ borderColor: "#E2E8F0", color: "#94A3B8" }}>←</button>
-                {[1,2,3,"…",8].map((p, i) => (
-                  <button key={i} className="w-8 h-8 rounded-lg text-sm font-semibold"
-                    style={{ background: p === 1 ? "#4A78E8" : "transparent", color: p === 1 ? "white" : "#475569" }}>{p}</button>
-                ))}
-                <button className="px-3 py-2 rounded-lg text-sm border" style={{ borderColor: "#E2E8F0", color: "#475569" }}>→</button>
-              </div>
-            </div>
+            ))}
           </div>
         </Section>
 
-        <Section title="Mobile Tab Bar">
-          <div className="max-w-sm mx-auto">
-            <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#1E2D45" }}>
-              <div className="flex items-center justify-around px-2 py-3" style={{ background: "#020B1A", borderTop: "1px solid #1E2D45" }}>
-                {[
-                  { icon: "⌂", label: "Home", active: true },
-                  { icon: "📅", label: "Matches", active: false },
-                  { icon: "🏆", label: "Standings", active: false },
-                  { icon: "👤", label: "Profile", active: false },
-                ].map((item) => (
-                  <button key={item.label} className="flex flex-col items-center gap-1 px-3 py-1">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="text-xs font-medium" style={{ color: item.active ? "#4A78E8" : "#475569" }}>{item.label}</span>
-                    {item.active && <div className="w-1 h-1 rounded-full" style={{ background: "#4A78E8" }} />}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Section>
       </div>
     </div>
   );
