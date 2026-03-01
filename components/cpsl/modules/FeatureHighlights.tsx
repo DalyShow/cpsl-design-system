@@ -20,7 +20,7 @@ export function FeatureHighlights({ features }: FeatureHighlightsProps) {
       {features.map((f) => (
         <Card key={f.title} className="bg-white border-[#E2E8F0]">
           <CardHeader>
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3" style={{ background: "#EEF3FF" }}>
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3" style={{ background: "#EEF4FF" }}>
               {f.icon}
             </div>
             <CardTitle className="text-base text-[#0A0E1A]">{f.title}</CardTitle>

@@ -17,7 +17,7 @@ export interface CinematicHeroProps {
   liveLabel?: string
   /** First headline line */
   headline?: string
-  /** Middle line — rendered in #0047FF accent */
+  /** Middle line — rendered in #4A78E8 accent */
   headlineAccent?: string
   /** Third headline line */
   headlineSub?: string
@@ -87,7 +87,7 @@ export function CinematicHero({
           {/* Headline */}
           <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display)", fontWeight: 800, color: "white", lineHeight: 0.92, letterSpacing: "-2px", marginBottom: "24px" }}>
             {headline}<br />
-            <span style={{ color: "#0047FF" }}>{headlineAccent}</span><br />
+            <span style={{ color: "#4A78E8" }}>{headlineAccent}</span><br />
             {headlineSub}
           </h1>
 

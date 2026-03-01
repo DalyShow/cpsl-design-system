@@ -144,8 +144,8 @@ export function ScoreboardWidget({
             <span>Possession</span>
           </div>
           <div className="flex h-1 rounded-full overflow-hidden bg-white/10">
-            <div className="bg-[#0047FF]" style={{ width: "54%" }} />
-            <div className="bg-[#7C3AED]" style={{ width: "46%" }} />
+            <div className="bg-[#4A78E8]" style={{ width: "54%" }} />
+            <div className="bg-[#8B40D4]" style={{ width: "46%" }} />
           </div>
           <div className="flex justify-between text-[10px] text-white/60 mt-1">
             <span>54%</span>
@@ -172,7 +172,7 @@ function TeamLogo({ logoUrl, name }: { logoUrl?: string; name: string }) {
     .join("")
     .toUpperCase()
   return (
-    <div className="size-10 rounded-full bg-[#0047FF]/30 border border-[#0047FF]/60 flex items-center justify-center">
+    <div className="size-10 rounded-full bg-[#4A78E8]/30 border border-[#4A78E8]/60 flex items-center justify-center">
       <span className="text-xs font-bold text-white">{initials}</span>
     </div>
   )

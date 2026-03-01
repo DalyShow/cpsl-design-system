@@ -26,7 +26,7 @@ export default function TypographyPage() {
               <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Barlow Condensed ExtraBold · Display · 80px</div>
             </div>
             <div className="mb-6 pb-6 border-b" style={{ borderColor: "#F1F5F9" }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", fontWeight: 700, color: "#0047FF", letterSpacing: "-1px", lineHeight: 1 }}>CAROLINA</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", fontWeight: 700, color: "#4A78E8", letterSpacing: "-1px", lineHeight: 1 }}>CAROLINA</div>
               <div className="text-xs mt-2" style={{ color: "#94A3B8" }}>Barlow Condensed Bold · H1 · 56px</div>
             </div>
             <div className="mb-6 pb-6 border-b" style={{ borderColor: "#F1F5F9" }}>
@@ -56,7 +56,7 @@ export default function TypographyPage() {
                 {typeScale.map((t, i) => (
                   <tr key={t.level} style={{ borderBottom: "1px solid #F1F5F9", background: i % 2 === 0 ? "white" : "#FAFBFC" }}>
                     <td className="px-5 py-3 font-bold text-sm" style={{ color: "#0A0E1A" }}>{t.level}</td>
-                    <td className="px-5 py-3 font-mono text-xs font-bold" style={{ color: "#0047FF" }}>{t.size}</td>
+                    <td className="px-5 py-3 font-mono text-xs font-bold" style={{ color: "#4A78E8" }}>{t.size}</td>
                     <td className="px-5 py-3 text-xs" style={{ color: "#475569" }}>{t.weight}</td>
                     <td className="px-5 py-3 text-xs" style={{ color: "#475569" }}>{t.lh}</td>
                     <td className="px-5 py-3 font-mono text-xs" style={{ color: "#475569" }}>{t.ls}</td>
@@ -77,7 +77,7 @@ export default function TypographyPage() {
               { rule: "WCAG 4.5:1 for body text", detail: "Large text (18px+ regular or 14px+ bold) only requires 3:1. Body always requires 4.5:1." },
             ].map(r => (
               <div key={r.rule} className="rounded-xl p-5 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-                <div className="text-sm font-bold mb-2" style={{ color: "#0047FF" }}>✓ {r.rule}</div>
+                <div className="text-sm font-bold mb-2" style={{ color: "#4A78E8" }}>✓ {r.rule}</div>
                 <div className="text-xs leading-relaxed" style={{ color: "#64748B" }}>{r.detail}</div>
               </div>
             ))}
@@ -103,7 +103,7 @@ export default function TypographyPage() {
                 ].map(([level, ...sizes], i) => (
                   <tr key={level} style={{ borderBottom: "1px solid #F1F5F9", background: i % 2 === 0 ? "white" : "#FAFBFC" }}>
                     <td className="px-5 py-3 font-bold text-sm" style={{ color: "#0A0E1A" }}>{level}</td>
-                    {sizes.map((s, j) => <td key={j} className="px-5 py-3 font-mono text-xs" style={{ color: j === 2 ? "#0047FF" : "#475569" }}>{s}</td>)}
+                    {sizes.map((s, j) => <td key={j} className="px-5 py-3 font-mono text-xs" style={{ color: j === 2 ? "#4A78E8" : "#475569" }}>{s}</td>)}
                   </tr>
                 ))}
               </tbody>

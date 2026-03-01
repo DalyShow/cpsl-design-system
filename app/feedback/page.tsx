@@ -50,9 +50,9 @@ export default function FeedbackPage() {
           <div className="rounded-2xl p-6 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
             <div className="flex flex-col gap-5">
               {[
-                { label: "Season progress", value: 75, color: "#0047FF" },
+                { label: "Season progress", value: 75, color: "#4A78E8" },
                 { label: "Registration complete", value: 100, color: "#00C853" },
-                { label: "Upload: kit assets", value: 45, color: "#7C3AED" },
+                { label: "Upload: kit assets", value: 45, color: "#8B40D4" },
               ].map((p) => (
                 <div key={p.label}>
                   <div className="flex justify-between mb-1.5 text-xs font-medium" style={{ color: "#475569" }}>
@@ -77,9 +77,9 @@ export default function FeedbackPage() {
                 { label: "Postponed", bg: "#FFF3E0", color: "#E65100", border: "#FFCC80" },
                 { label: "Loss", bg: "#FFF0F0", color: "#FF1744", border: "#FFC5CC" },
                 { label: "Draw", bg: "#F4F6FA", color: "#475569", border: "#E2E8F0" },
-                { label: "Cup", bg: "#F5F0FF", color: "#7C3AED", border: "#DDD6FE" },
-                { label: "Featured", bg: "#EEF3FF", color: "#0047FF", border: "#BDCEFF" },
-                { label: "New", bg: "#EEF3FF", color: "#0047FF", border: "#BDCEFF" },
+                { label: "Cup", bg: "#F5F0FF", color: "#8B40D4", border: "#DDD6FE" },
+                { label: "Featured", bg: "#EEF4FF", color: "#4A78E8", border: "#BEDAFF" },
+                { label: "New", bg: "#EEF4FF", color: "#4A78E8", border: "#BEDAFF" },
               ].map((b) => (
                 <span key={b.label} className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border" style={{ background: b.bg, color: b.color, borderColor: b.border }}>
                   <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: b.color }} />
@@ -92,15 +92,15 @@ export default function FeedbackPage() {
 
         <Section title="Empty State">
           <div className="rounded-2xl p-12 border text-center" style={{ background: "white", borderColor: "#E2E8F0" }}>
-            <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center" style={{ background: "#EEF3FF" }}>
+            <div className="w-16 h-16 rounded-2xl mx-auto mb-4 flex items-center justify-center" style={{ background: "#EEF4FF" }}>
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <circle cx="14" cy="14" r="12" stroke="#0047FF" strokeWidth="2"/>
-                <path d="M9 14h10M14 9v10" stroke="#0047FF" strokeWidth="2" strokeLinecap="round"/>
+                <circle cx="14" cy="14" r="12" stroke="#4A78E8" strokeWidth="2"/>
+                <path d="M9 14h10M14 9v10" stroke="#4A78E8" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
             <h3 className="font-bold text-base mb-2" style={{ color: "#0A0E1A" }}>No matches scheduled</h3>
             <p className="text-sm mb-5" style={{ color: "#64748B", maxWidth: "280px", margin: "0 auto 20px" }}>There are no upcoming matches for this team. Add a match to get started.</p>
-            <button className="px-5 py-2.5 rounded-xl text-sm font-bold text-white" style={{ background: "#0047FF" }}>+ Schedule Match</button>
+            <button className="px-5 py-2.5 rounded-xl text-sm font-bold text-white" style={{ background: "#4A78E8" }}>+ Schedule Match</button>
           </div>
         </Section>
       </div>

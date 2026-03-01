@@ -5,22 +5,36 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --cpsl-blue-50: #EEF3FF;
+  /* ── CPSL Blue scale (cornflower / periwinkle primary) ── */
+  --cpsl-blue-50:  #EEF4FF;
   --cpsl-blue-100: #DDEAFF;
-  --cpsl-blue-200: #BDCEFF;
-  --cpsl-blue-300: #91AFFF;
-  --cpsl-blue-400: #5E8AFF;
-  --cpsl-blue-500: #0047FF;
-  --cpsl-blue-600: #0038CC;
-  --cpsl-blue-700: #0029A3;
-  --cpsl-blue-800: #001F7A;
-  --cpsl-blue-900: #001552;
+  --cpsl-blue-200: #BEDAFF;
+  --cpsl-blue-300: #8ABAFF;
+  --cpsl-blue-400: #6A9AF2;
+  --cpsl-blue-500: #4A78E8;
+  --cpsl-blue-600: #3761CC;
+  --cpsl-blue-700: #284BAA;
+  --cpsl-blue-800: #1B3488;
+  --cpsl-blue-900: #0F2066;
 
-  --cpsl-purple-400: #A78BFA;
-  --cpsl-purple-500: #7C3AED;
-  --cpsl-purple-600: #6D28D9;
+  /* ── CPSL Purple scale ── */
+  --cpsl-purple-400: #B08CF5;
+  --cpsl-purple-500: #8B40D4;
+  --cpsl-purple-600: #7333B8;
 
-  --cpsl-neutral-50: #F4F6FA;
+  /* ── CPSL Gold scale (championship / premium accent) ── */
+  --cpsl-gold-300: #E0C88A;
+  --cpsl-gold-400: #CDB268;
+  --cpsl-gold-500: #BFA05A;
+  --cpsl-gold-600: #A58840;
+  --cpsl-gold-700: #8C7030;
+
+  /* ── CPSL Cream (warm premium surface) ── */
+  --cpsl-cream:      #F5EFE0;
+  --cpsl-cream-dark: #EDE4CC;
+
+  /* ── CPSL Neutral scale ── */
+  --cpsl-neutral-50:  #F4F6FA;
   --cpsl-neutral-100: #EEF1F7;
   --cpsl-neutral-200: #E2E8F0;
   --cpsl-neutral-300: #CBD5E1;
@@ -33,29 +47,30 @@
 
   --cpsl-success: #00C853;
   --cpsl-warning: #FFB300;
-  --cpsl-error: #FF1744;
-  --cpsl-info: #0288D1;
+  --cpsl-error:   #FF1744;
+  --cpsl-info:    #0288D1;
 
-  --surface-1: #FFFFFF;
-  --surface-2: #F4F6FA;
-  --surface-3: #E2E8F0;
-  --text-primary: #0A0E1A;
+  --surface-1:    #FFFFFF;
+  --surface-2:    #F4F6FA;
+  --surface-3:    #E2E8F0;
+  --surface-warm: #F5EFE0;
+  --text-primary:   #0A0E1A;
   --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-muted:     #94A3B8;
   --border: oklch(0.922 0 0);
 
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
   --space-12: 48px;
   --space-16: 64px;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
   --radius-pill: 100px;
 
   /* ── Responsive type scale ── */
@@ -71,16 +86,16 @@
   --text-h2:          clamp(20px, 3.5vw, 36px);
 
   /* Inter UI levels — fixed (fluid scaling not needed below 24px) */
-  --text-h3:     24px;
-  --text-h4:     20px;
-  --text-body-l: 18px;
-  --text-body:   15px;
-  --text-small:  13px;
-  --text-caption:11px;
+  --text-h3:      24px;
+  --text-h4:      20px;
+  --text-body-l:  18px;
+  --text-body:    15px;
+  --text-small:   13px;
+  --text-caption: 11px;
 
   --font-display: 'Barlow Condensed', sans-serif;
   --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   /* ── shadcn semantic tokens → CPSL brand values ── */
   --radius: 0.625rem;
@@ -90,35 +105,35 @@
   --card-foreground: #0A0E1A;
   --popover: #FFFFFF;
   --popover-foreground: #0A0E1A;
-  --primary: #0047FF;
+  --primary: #4A78E8;
   --primary-foreground: #FFFFFF;
   --secondary: #EEF1F7;
   --secondary-foreground: #0A0E1A;
   --muted: #EEF1F7;
   --muted-foreground: #64748B;
-  --accent: #7C3AED;
+  --accent: #8B40D4;
   --accent-foreground: #FFFFFF;
   --destructive: #FF1744;
   --border: #E2E8F0;
   --input: #E2E8F0;
-  --ring: #0047FF;
+  --ring: #4A78E8;
 
   /* ── Chart colors → CPSL palette ── */
-  --chart-1: #0047FF;
-  --chart-2: #7C3AED;
+  --chart-1: #4A78E8;
+  --chart-2: #8B40D4;
   --chart-3: #00C853;
-  --chart-4: #FFB300;
+  --chart-4: #BFA05A;
   --chart-5: #0288D1;
 
   /* ── Sidebar (dark navy) ── */
   --sidebar: #0A0E1A;
   --sidebar-foreground: #F4F6FA;
-  --sidebar-primary: #0047FF;
+  --sidebar-primary: #4A78E8;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #1E2D45;
   --sidebar-accent-foreground: #F4F6FA;
   --sidebar-border: #1E2D45;
-  --sidebar-ring: #0047FF;
+  --sidebar-ring: #4A78E8;
 }
 
 * { box-sizing: border-box; }
@@ -130,7 +145,7 @@ pre { overflow-x: auto; }
 
 @theme inline {
   /* ── CPSL brand colors as Tailwind utilities ── */
-  --color-cpsl-blue-50: var(--cpsl-blue-50);
+  --color-cpsl-blue-50:  var(--cpsl-blue-50);
   --color-cpsl-blue-100: var(--cpsl-blue-100);
   --color-cpsl-blue-200: var(--cpsl-blue-200);
   --color-cpsl-blue-300: var(--cpsl-blue-300);
@@ -143,18 +158,25 @@ pre { overflow-x: auto; }
   --color-cpsl-purple-400: var(--cpsl-purple-400);
   --color-cpsl-purple-500: var(--cpsl-purple-500);
   --color-cpsl-purple-600: var(--cpsl-purple-600);
+  --color-cpsl-gold-300: var(--cpsl-gold-300);
+  --color-cpsl-gold-400: var(--cpsl-gold-400);
+  --color-cpsl-gold-500: var(--cpsl-gold-500);
+  --color-cpsl-gold-600: var(--cpsl-gold-600);
+  --color-cpsl-gold-700: var(--cpsl-gold-700);
+  --color-cpsl-cream:      var(--cpsl-cream);
+  --color-cpsl-cream-dark: var(--cpsl-cream-dark);
   --color-cpsl-success: var(--cpsl-success);
   --color-cpsl-warning: var(--cpsl-warning);
-  --color-cpsl-error: var(--cpsl-error);
-  --color-cpsl-info: var(--cpsl-info);
+  --color-cpsl-error:   var(--cpsl-error);
+  --color-cpsl-info:    var(--cpsl-info);
   --font-display: var(--font-display);
   --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+  --font-body:    var(--font-body);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm:  calc(var(--radius) - 4px);
+  --radius-md:  calc(var(--radius) - 2px);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
@@ -199,31 +221,31 @@ pre { overflow-x: auto; }
   --card-foreground: #F4F6FA;
   --popover: #1E293B;
   --popover-foreground: #F4F6FA;
-  --primary: #5E8AFF;
+  --primary: #6A9AF2;
   --primary-foreground: #0A0E1A;
   --secondary: #1E2D45;
   --secondary-foreground: #F4F6FA;
   --muted: #1E2D45;
   --muted-foreground: #94A3B8;
-  --accent: #A78BFA;
+  --accent: #B08CF5;
   --accent-foreground: #0A0E1A;
   --destructive: #FF1744;
   --border: #1E2D45;
   --input: #1E2D45;
-  --ring: #5E8AFF;
-  --chart-1: #5E8AFF;
-  --chart-2: #A78BFA;
+  --ring: #6A9AF2;
+  --chart-1: #6A9AF2;
+  --chart-2: #B08CF5;
   --chart-3: #00C853;
-  --chart-4: #FFB300;
+  --chart-4: #CDB268;
   --chart-5: #29B6F6;
   --sidebar: #020B1A;
   --sidebar-foreground: #F4F6FA;
-  --sidebar-primary: #5E8AFF;
+  --sidebar-primary: #6A9AF2;
   --sidebar-primary-foreground: #0A0E1A;
   --sidebar-accent: #1E2D45;
   --sidebar-accent-foreground: #F4F6FA;
   --sidebar-border: #1E2D45;
-  --sidebar-ring: #5E8AFF;
+  --sidebar-ring: #6A9AF2;
 }
 
 @layer base {

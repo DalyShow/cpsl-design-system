@@ -21,12 +21,12 @@ export function CTABanner({
     <div className="rounded-2xl overflow-hidden border border-[#1E2D45]" style={{ background: "#020B1A" }}>
       <div className="px-6 py-10 md:px-16 md:py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>
-          <div style={{ color: "#0047FF", fontSize: "10px", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ color: "#4A78E8", fontSize: "10px", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "12px" }}>
             {eyebrow}
           </div>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 0.95, letterSpacing: "-1.5px", marginBottom: "16px" }}>
             {headline}<br />
-            <span style={{ color: "#0047FF" }}>{headlineAccent}</span>
+            <span style={{ color: "#4A78E8" }}>{headlineAccent}</span>
           </h2>
           <p style={{ color: "#64748B", fontSize: "14px", lineHeight: 1.65, maxWidth: "520px" }}>{description}</p>
         </div>

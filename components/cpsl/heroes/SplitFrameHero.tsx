@@ -22,22 +22,22 @@ export function SplitFrameHero({
   primaryCta = { label: "Buy Tickets" },
   secondaryCta = { label: "Match Preview" },
   imageSrc,
-  homeTeam   = { abbr: "CFA", color: "#0047FF" },
-  awayTeam   = { abbr: "RLH", color: "#7C3AED" },
+  homeTeam   = { abbr: "CFA", color: "#4A78E8" },
+  awayTeam   = { abbr: "RLH", color: "#8B40D4" },
 }: SplitFrameHeroProps) {
   return (
     <div className="flex flex-col md:flex-row md:h-[520px] overflow-hidden">
 
       {/* Left — content */}
       <div className="w-full md:w-1/2 shrink-0 flex flex-col justify-center p-8 md:p-14" style={{ background: "#020B1A" }}>
-        <div style={{ color: "#0047FF", fontSize: "10px", fontWeight: 700, letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ width: "20px", height: "2px", background: "#0047FF", display: "inline-block" }} />
+        <div style={{ color: "#4A78E8", fontSize: "10px", fontWeight: 700, letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}>
+          <span style={{ width: "20px", height: "2px", background: "#4A78E8", display: "inline-block" }} />
           {eyebrow}
         </div>
 
         <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
           {teamA}<br />
-          <span style={{ color: "#7C3AED" }}>vs</span> RALEIGH<br />
+          <span style={{ color: "#8B40D4" }}>vs</span> RALEIGH<br />
           {teamB}
         </h1>
 
@@ -61,7 +61,7 @@ export function SplitFrameHero({
         {imageSrc ? (
           <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #0A2040 0%, #1A4080 35%, #0047FF 65%, #0029A3 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #0A2040 0%, #1A4080 35%, #4A78E8 65%, #284BAA 100%)" }} />
         )}
 
         {/* Jersey number watermark — hidden on mobile */}

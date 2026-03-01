@@ -195,7 +195,7 @@ export default function PatternsPage() {
             {/* Sign-in card */}
             <div className="w-[380px] shrink-0 rounded-2xl p-8 border bg-white border-[#E2E8F0] shadow-sm">
               <div className="flex flex-col items-center mb-6">
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-3" style={{ background: "#0047FF" }}>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-3" style={{ background: "#4A78E8" }}>
                   <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
                     <path d="M2 2L22 2L22 18C22 24 12 27 12 27C12 27 2 24 2 18Z" fill="none" stroke="white" strokeWidth="2" />
                     <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
@@ -268,7 +268,7 @@ export default function PatternsPage() {
                       key={i}
                       className="w-10 h-12 rounded-lg flex items-center justify-center text-base font-bold border-2 transition-colors"
                       style={{
-                        borderColor: i < 3 ? "#0047FF" : "#E2E8F0",
+                        borderColor: i < 3 ? "#4A78E8" : "#E2E8F0",
                         background: i < 3 ? "#FAFCFF" : "white",
                         color: i < 3 ? "#0A0E1A" : "#94A3B8",
                       }}

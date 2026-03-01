@@ -12,7 +12,7 @@ export default function NavigationPage() {
             <div className="flex items-center justify-between px-6 py-4" style={{ background: "#020B1A" }}>
               <div className="flex items-center gap-8">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "#0047FF" }}>
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: "#4A78E8" }}>
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
                       <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="white" strokeWidth="1.5"/>
                     </svg>
@@ -21,7 +21,7 @@ export default function NavigationPage() {
                 </div>
                 <nav className="flex gap-6">
                   {["Standings", "Matches", "Teams", "Stats", "News"].map((item, i) => (
-                    <a key={item} className="text-sm font-medium pb-4 border-b-2 transition-colors cursor-pointer" style={{ color: i === 0 ? "white" : "#64748B", borderColor: i === 0 ? "#0047FF" : "transparent" }}>
+                    <a key={item} className="text-sm font-medium pb-4 border-b-2 transition-colors cursor-pointer" style={{ color: i === 0 ? "white" : "#64748B", borderColor: i === 0 ? "#4A78E8" : "transparent" }}>
                       {item}
                     </a>
                   ))}
@@ -31,7 +31,7 @@ export default function NavigationPage() {
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold" style={{ background: "#FF1744", color: "white" }}>
                   <span className="w-1.5 h-1.5 rounded-full bg-white" />Live
                 </div>
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#0047FF" }}>JD</div>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#4A78E8" }}>JD</div>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function NavigationPage() {
               <div className="flex border-b" style={{ borderColor: "#E2E8F0" }}>
                 {["Overview", "Matches", "Players", "Stats"].map((tab, i) => (
                   <button key={tab} className="px-5 py-3 text-sm font-semibold border-b-2 -mb-px"
-                    style={{ color: i === 0 ? "#0047FF" : "#94A3B8", borderColor: i === 0 ? "#0047FF" : "transparent" }}>
+                    style={{ color: i === 0 ? "#4A78E8" : "#94A3B8", borderColor: i === 0 ? "#4A78E8" : "transparent" }}>
                     {tab}
                   </button>
                 ))}
@@ -74,7 +74,7 @@ export default function NavigationPage() {
               <div className="flex items-center gap-2 text-sm flex-wrap">
                 {["CPSL", "Teams", "Charlotte FC", "Matches"].map((item, i, arr) => (
                   <span key={item} className="flex items-center gap-2">
-                    <a className="cursor-pointer" style={{ color: i === arr.length - 1 ? "#0A0E1A" : "#0047FF", fontWeight: i === arr.length - 1 ? 600 : 400 }}>{item}</a>
+                    <a className="cursor-pointer" style={{ color: i === arr.length - 1 ? "#0A0E1A" : "#4A78E8", fontWeight: i === arr.length - 1 ? 600 : 400 }}>{item}</a>
                     {i < arr.length - 1 && <span style={{ color: "#CBD5E1" }}>/</span>}
                   </span>
                 ))}
@@ -86,7 +86,7 @@ export default function NavigationPage() {
                 <button className="px-3 py-2 rounded-lg text-sm border" style={{ borderColor: "#E2E8F0", color: "#94A3B8" }}>←</button>
                 {[1,2,3,"…",8].map((p, i) => (
                   <button key={i} className="w-8 h-8 rounded-lg text-sm font-semibold"
-                    style={{ background: p === 1 ? "#0047FF" : "transparent", color: p === 1 ? "white" : "#475569" }}>{p}</button>
+                    style={{ background: p === 1 ? "#4A78E8" : "transparent", color: p === 1 ? "white" : "#475569" }}>{p}</button>
                 ))}
                 <button className="px-3 py-2 rounded-lg text-sm border" style={{ borderColor: "#E2E8F0", color: "#475569" }}>→</button>
               </div>
@@ -106,8 +106,8 @@ export default function NavigationPage() {
                 ].map((item) => (
                   <button key={item.label} className="flex flex-col items-center gap-1 px-3 py-1">
                     <span className="text-lg">{item.icon}</span>
-                    <span className="text-xs font-medium" style={{ color: item.active ? "#0047FF" : "#475569" }}>{item.label}</span>
-                    {item.active && <div className="w-1 h-1 rounded-full" style={{ background: "#0047FF" }} />}
+                    <span className="text-xs font-medium" style={{ color: item.active ? "#4A78E8" : "#475569" }}>{item.label}</span>
+                    {item.active && <div className="w-1 h-1 rounded-full" style={{ background: "#4A78E8" }} />}
                   </button>
                 ))}
               </div>

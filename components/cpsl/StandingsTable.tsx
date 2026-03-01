@@ -127,8 +127,8 @@ export function StandingsTable({
                     <span
                       className={cn(
                         "absolute left-0 top-0 bottom-0 w-0.5",
-                        zone === "promotion" && "bg-[#0047FF]",
-                        zone === "playoff" && "bg-[#91AFFF]",
+                        zone === "promotion" && "bg-[#4A78E8]",
+                        zone === "playoff" && "bg-[#8ABAFF]",
                         zone === "relegation" && "bg-[#FF1744]",
                       )}
                     />
@@ -186,8 +186,8 @@ export function StandingsTable({
 
       {/* Legend */}
       <div className="px-4 py-2 border-t bg-secondary/30 flex items-center gap-4">
-        <LegendItem color="bg-[#0047FF]" label="Promotion" />
-        <LegendItem color="bg-[#91AFFF]" label="Playoff" />
+        <LegendItem color="bg-[#4A78E8]" label="Promotion" />
+        <LegendItem color="bg-[#8ABAFF]" label="Playoff" />
         <LegendItem color="bg-[#FF1744]" label="Relegation" />
       </div>
     </div>

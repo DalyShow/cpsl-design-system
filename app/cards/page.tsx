@@ -2,8 +2,8 @@ import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 
 const standingsData = [
-  { team: "Charlotte FC", init: "CC", color: "#0047FF", p:18,w:14,d:2,l:2,gd:"+24",pts:44 },
-  { team: "Raleigh Athletic", init: "RA", color: "#7C3AED", p:18,w:11,d:4,l:3,gd:"+14",pts:37 },
+  { team: "Charlotte FC", init: "CC", color: "#4A78E8", p:18,w:14,d:2,l:2,gd:"+24",pts:44 },
+  { team: "Raleigh Athletic", init: "RA", color: "#8B40D4", p:18,w:11,d:4,l:3,gd:"+14",pts:37 },
   { team: "Durham United", init: "DU", color: "#1A1A2E", p:18,w:10,d:3,l:5,gd:"+8",pts:33 },
 ];
 
@@ -24,8 +24,8 @@ export default function CardsPage() {
             </div>
             {/* Elevated */}
             <div className="rounded-2xl p-5" style={{ background: "white", boxShadow: "0 8px 24px rgba(0,0,0,0.10)", transform: "translateY(-3px)" }}>
-              <div className="text-xs font-bold uppercase tracking-wide mb-2" style={{ color: "#0047FF" }}>Elevated</div>
-              <div className="w-full h-28 rounded-xl mb-3" style={{ background: "#EEF3FF" }} />
+              <div className="text-xs font-bold uppercase tracking-wide mb-2" style={{ color: "#4A78E8" }}>Elevated</div>
+              <div className="w-full h-28 rounded-xl mb-3" style={{ background: "#EEF4FF" }} />
               <div className="font-bold text-sm mb-1" style={{ color: "#0A0E1A" }}>Featured Match</div>
               <div className="text-xs leading-relaxed" style={{ color: "#64748B" }}>Promoted content, pinned items, or featured stories.</div>
             </div>
@@ -35,7 +35,7 @@ export default function CardsPage() {
                 <div className="text-xs font-bold mb-4" style={{ color: "#475569" }}>CPSL League · FT</div>
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#0047FF" }}>CC</div>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#4A78E8" }}>CC</div>
                     <span className="text-xs text-white">Charlotte</span>
                   </div>
                   <div className="text-center">
@@ -43,7 +43,7 @@ export default function CardsPage() {
                     <div className="text-xs mt-1 font-semibold" style={{ color: "#00C853" }}>WIN</div>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#7C3AED" }}>RA</div>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: "#8B40D4" }}>RA</div>
                     <span className="text-xs" style={{ color: "#64748B" }}>Raleigh</span>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ export default function CardsPage() {
             </div>
             {/* Horizontal */}
             <div className="rounded-2xl border flex overflow-hidden" style={{ borderColor: "#E2E8F0", background: "white" }}>
-              <div className="w-24 flex-shrink-0" style={{ background: "#EEF3FF" }} />
+              <div className="w-24 flex-shrink-0" style={{ background: "#EEF4FF" }} />
               <div className="p-4">
                 <div className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: "#94A3B8" }}>Horizontal</div>
                 <div className="font-bold text-sm mb-1" style={{ color: "#0A0E1A" }}>Player Profile</div>
@@ -69,14 +69,14 @@ export default function CardsPage() {
               {["P","W","D","L","GD","Pts"].map(h => <span key={h} className="w-10 text-center">{h}</span>)}
             </div>
             {standingsData.map((row, i) => (
-              <div key={row.team} className="flex items-center px-5 py-3.5 border-b" style={{ borderColor: "#F1F5F9", background: i === 0 ? "#EEF3FF" : "white" }}>
+              <div key={row.team} className="flex items-center px-5 py-3.5 border-b" style={{ borderColor: "#F1F5F9", background: i === 0 ? "#EEF4FF" : "white" }}>
                 <div className="flex-1 flex items-center gap-3">
                   <span className="text-xs font-mono w-4" style={{ color: "#94A3B8" }}>{i + 1}</span>
                   <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ background: row.color }}>{row.init}</div>
                   <span className="text-sm font-semibold" style={{ color: "#0A0E1A" }}>{row.team}</span>
                 </div>
                 {[row.p, row.w, row.d, row.l, row.gd, row.pts].map((v, j) => (
-                  <span key={j} className="w-10 text-center text-sm" style={{ color: j === 5 ? "#0047FF" : "#475569", fontWeight: j === 5 ? 700 : 400 }}>{v}</span>
+                  <span key={j} className="w-10 text-center text-sm" style={{ color: j === 5 ? "#4A78E8" : "#475569", fontWeight: j === 5 ? 700 : 400 }}>{v}</span>
                 ))}
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function CardsPage() {
             {[
               { icon: "⚽", title: "Goal — Thompson, R.", sub: "Charlotte FC vs Raleigh · 67'", time: "2min ago", color: "#00875A" },
               { icon: "🟨", title: "Yellow card — Davies, M.", sub: "Raleigh Athletic · 54'", time: "15min ago", color: "#FFB300" },
-              { icon: "🔄", title: "Substitution — Barnes for Cole", sub: "Charlotte FC · 45'", time: "45min ago", color: "#0047FF" },
+              { icon: "🔄", title: "Substitution — Barnes for Cole", sub: "Charlotte FC · 45'", time: "45min ago", color: "#4A78E8" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 px-5 py-4 border-b" style={{ borderColor: "#F1F5F9" }}>
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0" style={{ background: `${item.color}22` }}>

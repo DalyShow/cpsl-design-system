@@ -19,7 +19,7 @@ export function FullWidthImageHero({
         <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
       ) : (
         <>
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(160deg, #071A2E 0%, #0A2A50 30%, #0047FF 65%, #002299 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(160deg, #071A2E 0%, #0A2A50 30%, #4A78E8 65%, #002299 100%)" }} />
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 68% 38%, rgba(255,255,255,0.06) 0%, transparent 55%)" }} />
         </>
       )}

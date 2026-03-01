@@ -36,7 +36,7 @@ const badgeVariants = cva(
           "bg-[#FF1744] text-white border-[#D50000] animate-pulse",
         /** Upcoming / scheduled */
         upcoming:
-          "bg-[#EEF3FF] text-[#0047FF] border-[#BDCEFF]",
+          "bg-[#EEF4FF] text-[#4A78E8] border-[#BEDAFF]",
         /** Postponed / cancelled */
         postponed:
           "bg-[#FFF8E1] text-[#B45309] border-[#FCD34D]",
@@ -50,10 +50,10 @@ const badgeVariants = cva(
           "bg-[#FFB300] text-[#78350F] border-[#F59E0B]",
         /** Promotion zone */
         promotion:
-          "bg-[#0047FF] text-white border-[#0038CC]",
+          "bg-[#4A78E8] text-white border-[#3761CC]",
         /** Playoff zone */
         playoff:
-          "bg-[#EEF3FF] text-[#0047FF] border-[#91AFFF]",
+          "bg-[#EEF4FF] text-[#4A78E8] border-[#8ABAFF]",
         /** Relegation zone */
         relegation:
           "bg-[#FEF2F2] text-[#FF1744] border-[#FECACA]",
@@ -61,10 +61,10 @@ const badgeVariants = cva(
         // ── CPSL club tier / category ────────────────────────────────────────
         /** Premier tier */
         premier:
-          "bg-[#0047FF] text-white border-[#0038CC]",
+          "bg-[#4A78E8] text-white border-[#3761CC]",
         /** Elite tier */
         elite:
-          "bg-[#7C3AED] text-white border-[#6D28D9]",
+          "bg-[#8B40D4] text-white border-[#7333B8]",
         /** Academy / development */
         academy:
           "bg-[#EEF1F7] text-[#334155] border-[#CBD5E1]",
