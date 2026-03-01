@@ -53,14 +53,14 @@ export function ResultsFixturesTabs({
         <TabsContent value="results" className="mt-0">
           <div className="divide-y divide-[#F1F5F9]">
             {results.map((r, i) => (
-              <div key={i} className="flex items-center gap-4 px-6 py-4">
-                <span className="text-xs text-[#94A3B8] w-20 shrink-0">{r.date}</span>
-                <div className="flex-1 flex items-center justify-between gap-3">
-                  <span className="text-sm font-semibold text-[#0A0E1A] flex-1 text-right">{r.home}</span>
+              <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4">
+                <span className="text-xs text-[#94A3B8] sm:w-20 shrink-0">{r.date}</span>
+                <div className="flex-1 flex items-center justify-between gap-3 w-full sm:w-auto">
+                  <span className="text-sm font-semibold text-[#0A0E1A] flex-1 text-right truncate">{r.home}</span>
                   <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "20px", fontWeight: 800, color: "#0A0E1A", letterSpacing: "-0.5px", minWidth: "52px", textAlign: "center" }}>
                     {r.hScore}–{r.aScore}
                   </span>
-                  <span className="text-sm font-medium text-[#64748B] flex-1">{r.away}</span>
+                  <span className="text-sm font-medium text-[#64748B] flex-1 truncate">{r.away}</span>
                 </div>
                 <Badge variant={r.result} className="w-12 justify-center shrink-0">
                   {r.result === "win" ? "W" : r.result === "draw" ? "D" : "L"}
@@ -73,19 +73,19 @@ export function ResultsFixturesTabs({
         <TabsContent value="fixtures" className="mt-0">
           <div className="divide-y divide-[#F1F5F9]">
             {fixtures.map((f, i) => (
-              <div key={i} className="flex items-center gap-4 px-6 py-4">
-                <div className="w-20 shrink-0">
+              <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4">
+                <div className="sm:w-20 shrink-0">
                   <div className="text-xs font-semibold text-[#0A0E1A]">{f.date}</div>
                   <div className="text-xs text-[#94A3B8]">{f.time}</div>
                 </div>
-                <div className="flex-1 flex items-center justify-between gap-3">
-                  <span className="text-sm font-semibold text-[#0A0E1A] flex-1 text-right">{f.home}</span>
+                <div className="flex-1 flex items-center justify-between gap-3 w-full sm:w-auto">
+                  <span className="text-sm font-semibold text-[#0A0E1A] flex-1 text-right truncate">{f.home}</span>
                   <span className="text-xs font-bold text-[#94A3B8] px-3">vs</span>
-                  <span className="text-sm font-medium text-[#64748B] flex-1">{f.away}</span>
+                  <span className="text-sm font-medium text-[#64748B] flex-1 truncate">{f.away}</span>
                 </div>
                 <div className="text-right shrink-0">
                   <Badge variant="upcoming" className="mb-1">{f.comp}</Badge>
-                  <div className="text-[10px] text-[#94A3B8]">{f.venue}</div>
+                  <div className="hidden sm:block text-[10px] text-[#94A3B8]">{f.venue}</div>
                 </div>
               </div>
             ))}

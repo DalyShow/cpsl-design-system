@@ -20,18 +20,18 @@ const DEFAULT_STATS: StatItem[] = [
 
 export function StatsBar({ stats = DEFAULT_STATS, background = "#020B1A" }: StatsBarProps) {
   return (
-    <div style={{ background, padding: "36px 48px", display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+    <div className="flex flex-wrap items-center justify-around gap-y-8 px-6 py-8 md:px-12 md:py-9" style={{ background }}>
       {stats.map((s, i) => (
-        <div key={s.label} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <div key={s.label} className="flex items-center">
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "52px", fontWeight: 800, color: "white", lineHeight: 1, letterSpacing: "-1.5px" }}>
+            <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 800, color: "white", lineHeight: 1, letterSpacing: "-1.5px" }}>
               {s.value}
             </div>
             <div style={{ color: "#475569", fontSize: "10px", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginTop: "8px" }}>
               {s.label}
             </div>
           </div>
-          {i < stats.length - 1 && <Separator orientation="vertical" className="h-12 opacity-10 ml-10" />}
+          {i < stats.length - 1 && <Separator orientation="vertical" className="hidden md:block h-12 opacity-10 mx-6" />}
         </div>
       ))}
     </div>

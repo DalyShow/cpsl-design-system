@@ -66,7 +66,7 @@ export function PlayerSpotlight({
   matchDay    = 18,
 }: PlayerSpotlightProps) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "16px", alignItems: "start" }}>
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 items-start">
       {/* Player card */}
       <Card className="bg-white border-[#E2E8F0]">
         <CardContent className="pt-6">
@@ -123,7 +123,7 @@ export function PlayerSpotlight({
 
           <Separator className="my-5" />
 
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {miniStats?.map(s => (
               <div key={s.label} className="rounded-lg p-3" style={{ background: "#F4F6FA" }}>
                 <div className="text-sm font-bold text-[#0A0E1A]">{s.value}</div>

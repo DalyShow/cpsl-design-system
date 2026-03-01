@@ -51,7 +51,7 @@ export function CinematicHero({
   tickerMatches = DEFAULT_TICKER,
 }: CinematicHeroProps) {
   return (
-    <div style={{ position: "relative", height: "540px", overflow: "hidden", background: "#020B1A" }}>
+    <div className="relative min-h-[420px] md:min-h-[540px] overflow-hidden" style={{ background: "#020B1A" }}>
 
       {/* Background */}
       {imageSrc ? (
@@ -74,10 +74,10 @@ export function CinematicHero({
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(2,11,26,0.97) 30%, rgba(2,11,26,0.65) 55%, rgba(2,11,26,0.05) 100%)" }} />
 
       {/* Content */}
-      <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 64px" }}>
+      <div className="relative h-full flex flex-col justify-center px-6 md:px-16 py-12 md:py-0">
         <div style={{ maxWidth: "560px" }}>
           {/* Eyebrow */}
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-5">
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#FF1744", display: "inline-block", flexShrink: 0, boxShadow: "0 0 8px #FF1744" }} />
             <span style={{ color: "#FF1744", fontSize: "10px", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase" }}>{liveLabel}</span>
             <span style={{ width: "1px", height: "12px", background: "#334155", flexShrink: 0 }} />
@@ -85,7 +85,7 @@ export function CinematicHero({
           </div>
 
           {/* Headline */}
-          <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "76px", fontWeight: 800, color: "white", lineHeight: 0.92, letterSpacing: "-2px", marginBottom: "24px" }}>
+          <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(36px, 7vw, 76px)", fontWeight: 800, color: "white", lineHeight: 0.92, letterSpacing: "-2px", marginBottom: "24px" }}>
             {headline}<br />
             <span style={{ color: "#0047FF" }}>{headlineAccent}</span><br />
             {headlineSub}
@@ -100,8 +100,8 @@ export function CinematicHero({
         </div>
       </div>
 
-      {/* Bottom ticker */}
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "rgba(0,71,255,0.12)", backdropFilter: "blur(12px)", borderTop: "1px solid rgba(0,71,255,0.25)", padding: "10px 64px", display: "flex", alignItems: "center", gap: "32px" }}>
+      {/* Bottom ticker — hidden on mobile */}
+      <div className="hidden md:flex" style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "rgba(0,71,255,0.12)", backdropFilter: "blur(12px)", borderTop: "1px solid rgba(0,71,255,0.25)", padding: "10px 64px", alignItems: "center", gap: "32px" }}>
         <span style={{ color: "#475569", fontSize: "9px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", flexShrink: 0 }}>{tickerLabel}</span>
         {tickerMatches.map((m) => (
           <div key={m.hAbbr} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", whiteSpace: "nowrap", flexShrink: 0 }}>

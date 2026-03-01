@@ -20,7 +20,7 @@ export interface ClubDirectoryProps {
 
 export function ClubDirectory({ clubs, onViewClub }: ClubDirectoryProps) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {clubs.map((c) => (
         <Card key={c.abbr} className="bg-white border-[#E2E8F0] hover:shadow-md transition-shadow">
           <CardHeader className="pb-3">

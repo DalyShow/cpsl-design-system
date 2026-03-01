@@ -5,17 +5,15 @@ export interface FullWidthImageHeroProps {
   headlineSub?: string
   /** src for <img> background */
   imageSrc?: string
-  height?: number
 }
 
 export function FullWidthImageHero({
   headline    = "CAROLINA",
   headlineSub = "PREMIER LEAGUE",
   imageSrc,
-  height      = 560,
 }: FullWidthImageHeroProps) {
   return (
-    <div style={{ position: "relative", height }}>
+    <div className="relative min-h-[300px] sm:min-h-[400px] md:min-h-[480px] lg:min-h-[560px]">
       {/* Background */}
       {imageSrc ? (
         <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
@@ -30,8 +28,8 @@ export function FullWidthImageHero({
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "65%", background: "linear-gradient(to top, rgba(2,11,26,0.94) 0%, rgba(2,11,26,0.5) 50%, transparent 100%)" }} />
 
       {/* Headline */}
-      <div style={{ position: "absolute", bottom: "52px", left: "60px" }}>
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "88px", fontWeight: 800, color: "white", lineHeight: 0.91, letterSpacing: "-2.5px", margin: 0 }}>
+      <div style={{ position: "absolute", bottom: "clamp(24px, 5vw, 52px)", left: "clamp(20px, 5vw, 60px)" }}>
+        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(40px, 8vw, 88px)", fontWeight: 800, color: "white", lineHeight: 0.91, letterSpacing: "-2.5px", margin: 0 }}>
           {headline}<br />{headlineSub}
         </h1>
       </div>

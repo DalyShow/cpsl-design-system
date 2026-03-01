@@ -17,7 +17,7 @@ export interface NewsGridProps {
 
 export function NewsGrid({ articles }: NewsGridProps) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {articles.map((n) => (
         <Card key={n.title} className="bg-white border-[#E2E8F0] flex flex-col">
           {/* Image slot */}

@@ -26,7 +26,7 @@ export function GlassCardHero({
   const awayPossession = 100 - homePossession
 
   return (
-    <div style={{ position: "relative", height: "560px", background: "#020B1A", overflow: "hidden" }}>
+    <div className="relative min-h-[480px] md:min-h-[560px] overflow-hidden" style={{ background: "#020B1A" }}>
 
       {/* Background */}
       {imageSrc ? (
@@ -42,8 +42,8 @@ export function GlassCardHero({
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(2,11,26,0.7), transparent)" }} />
 
       {/* Frosted glass card */}
-      <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ background: "rgba(10,22,40,0.72)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: "24px", padding: "40px 52px", minWidth: "460px", textAlign: "center", boxShadow: "0 32px 80px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.07)" }}>
+      <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", padding: "32px 16px" }}>
+        <div className="w-[90vw] max-w-[480px] md:w-auto p-6 md:p-10" style={{ background: "rgba(10,22,40,0.72)", backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: "24px", textAlign: "center", boxShadow: "0 32px 80px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.07)" }}>
 
           {/* Header */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginBottom: "24px" }}>
@@ -55,20 +55,20 @@ export function GlassCardHero({
           <div style={{ display: "flex", alignItems: "center", gap: "20px", marginBottom: "32px" }}>
             {/* Home */}
             <div style={{ flex: 1, textAlign: "center" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: homeTeam.color, border: `3px solid ${homeTeam.color}4D`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: 800, color: "white", margin: "0 auto 10px", boxShadow: `0 4px 20px ${homeTeam.color}66` }}>{homeTeam.abbr}</div>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2.5 text-[13px] font-extrabold text-white" style={{ background: homeTeam.color, border: `3px solid ${homeTeam.color}4D`, boxShadow: `0 4px 20px ${homeTeam.color}66` }}>{homeTeam.abbr}</div>
               <div style={{ color: "#E2E8F0", fontSize: "12px", fontWeight: 700 }}>{homeTeam.name}</div>
               <div style={{ color: "#475569", fontSize: "10px", marginTop: "2px" }}>Home</div>
             </div>
 
             {/* Score */}
             <div style={{ textAlign: "center", flexShrink: 0 }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "80px", fontWeight: 800, color: "white", letterSpacing: "-4px", lineHeight: 1 }}>{homeTeam.score}–{awayTeam.score}</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(48px, 10vw, 80px)", fontWeight: 800, color: "white", letterSpacing: "-4px", lineHeight: 1 }}>{homeTeam.score}–{awayTeam.score}</div>
               <div style={{ color: "#00C853", fontSize: "10px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>{leadingLabel}</div>
             </div>
 
             {/* Away */}
             <div style={{ flex: 1, textAlign: "center" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: awayTeam.color, border: `3px solid ${awayTeam.color}4D`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: 800, color: "white", margin: "0 auto 10px", boxShadow: `0 4px 20px ${awayTeam.color}4D` }}>{awayTeam.abbr}</div>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2.5 text-[13px] font-extrabold text-white" style={{ background: awayTeam.color, border: `3px solid ${awayTeam.color}4D`, boxShadow: `0 4px 20px ${awayTeam.color}4D` }}>{awayTeam.abbr}</div>
               <div style={{ color: "#94A3B8", fontSize: "12px", fontWeight: 700 }}>{awayTeam.name}</div>
               <div style={{ color: "#475569", fontSize: "10px", marginTop: "2px" }}>Away</div>
             </div>

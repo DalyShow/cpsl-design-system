@@ -13,7 +13,7 @@ export function SkeletonLoader({ variant = "card-grid-table", cardCount = 3, tab
   return (
     <div className="flex flex-col gap-4">
       {(variant === "card-grid" || variant === "card-grid-table") && (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           {Array.from({ length: cardCount }).map((_, i) => (
             <Card key={i} className="bg-white border-[#E2E8F0]">
               <CardContent className="pt-5">

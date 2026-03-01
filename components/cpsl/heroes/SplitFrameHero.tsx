@@ -26,24 +26,24 @@ export function SplitFrameHero({
   awayTeam   = { abbr: "RLH", color: "#7C3AED" },
 }: SplitFrameHeroProps) {
   return (
-    <div style={{ display: "flex", height: "520px", overflow: "hidden" }}>
+    <div className="flex flex-col md:flex-row md:h-[520px] overflow-hidden">
 
       {/* Left — content */}
-      <div style={{ width: "50%", flexShrink: 0, background: "#020B1A", padding: "56px 52px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <div className="w-full md:w-1/2 shrink-0 flex flex-col justify-center p-8 md:p-14" style={{ background: "#020B1A" }}>
         <div style={{ color: "#0047FF", fontSize: "10px", fontWeight: 700, letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}>
           <span style={{ width: "20px", height: "2px", background: "#0047FF", display: "inline-block" }} />
           {eyebrow}
         </div>
 
-        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "58px", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
+        <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(32px, 6vw, 58px)", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
           {teamA}<br />
           <span style={{ color: "#7C3AED" }}>vs</span> RALEIGH<br />
           {teamB}
         </h1>
 
-        <div style={{ display: "flex", gap: "0", marginBottom: "36px" }}>
+        <div className="flex flex-wrap gap-4 mb-8 md:mb-9">
           {matchMeta.map((s, i) => (
-            <div key={s.label} style={{ paddingRight: "24px", marginRight: "24px", borderRight: i < matchMeta.length - 1 ? "1px solid #1E2D45" : "none" }}>
+            <div key={s.label} style={{ paddingRight: "24px", marginRight: "0", borderRight: i < matchMeta.length - 1 ? "1px solid #1E2D45" : "none" }}>
               <div style={{ color: "#334155", fontSize: "9px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "4px" }}>{s.label}</div>
               <div style={{ color: "#F1F5F9", fontSize: "14px", fontWeight: 600 }}>{s.value}</div>
             </div>
@@ -57,15 +57,15 @@ export function SplitFrameHero({
       </div>
 
       {/* Right — photo slot */}
-      <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
+      <div className="min-h-[240px] md:min-h-0 relative flex-1 overflow-hidden">
         {imageSrc ? (
           <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #0A2040 0%, #1A4080 35%, #0047FF 65%, #0029A3 100%)" }} />
         )}
 
-        {/* Jersey number watermark */}
-        <div style={{ position: "absolute", right: "-20px", top: "50%", transform: "translateY(-50%)", fontFamily: "'Barlow Condensed', sans-serif", fontSize: "260px", fontWeight: 800, color: "rgba(255,255,255,0.06)", lineHeight: 1, letterSpacing: "-8px", userSelect: "none" }}>10</div>
+        {/* Jersey number watermark — hidden on mobile */}
+        <div className="hidden md:block" style={{ position: "absolute", right: "-20px", top: "50%", transform: "translateY(-50%)", fontFamily: "'Barlow Condensed', sans-serif", fontSize: "260px", fontWeight: 800, color: "rgba(255,255,255,0.06)", lineHeight: 1, letterSpacing: "-8px", userSelect: "none" }}>10</div>
 
         {/* Diagonal mask */}
         <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "100px", background: "#020B1A", clipPath: "polygon(0 0, 100% 0, 20% 100%, 0 100%)" }} />
