@@ -65,7 +65,7 @@ export function TopNav({
                 cursor: "pointer",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 500,
-                fontSize: "15px",
+                fontSize: "16px",
               }}
             >
               {item.label}
