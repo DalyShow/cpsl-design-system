@@ -8,7 +8,7 @@ export interface ContentSectionCenteredProps {
   lead?: string;
   /** Body paragraphs — rendered in two columns below the header */
   paragraphs?: string[];
-  /** Surface variant — defaults to "white". */
+  /** Surface variant — defaults to "cream". */
   background?: "white" | "surface" | "cream" | "navy" | "gold";
 }
 
@@ -24,7 +24,7 @@ export function ContentSectionCentered({
   heading = "Competitive Soccer Across the Carolinas",
   lead = "From the Piedmont to the coast, CPSL brings together the best clubs in North and South Carolina under one banner — raising the standard for competitive soccer at every level.",
   paragraphs = defaultParagraphs,
-  background = "white",
+  background = "cream",
 }: ContentSectionCenteredProps) {
   const bgColor   = background === "navy"    ? "#091628"
                   : background === "surface" ? "#F4F6FA"
