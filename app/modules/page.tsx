@@ -181,12 +181,15 @@ export default function ModulesPage() {
       <div className="px-12 pb-4">
         <Section title="10 — Content Section: Centered">
           <p className="text-xs text-muted-foreground mb-4">
-            Full-width centered section ported from Tailwind UI. Eyebrow label, display heading, lead paragraph, divider, and a two-column body. Four background variants: <code className="bg-secondary px-1.5 py-0.5 rounded">"white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>, and <code className="bg-secondary px-1.5 py-0.5 rounded">"gold"</code> (divider switches to navy for contrast).
+            Full-width centered section. Eyebrow label, display heading, lead paragraph, divider, and a body copy area.{" "}
+            <strong>columns</strong>: <code className="bg-secondary px-1.5 py-0.5 rounded">1</code> flows text in a single centered column;{" "}
+            <code className="bg-secondary px-1.5 py-0.5 rounded">2</code> (default) splits into two columns at lg.{" "}
+            Background variants: <code className="bg-secondary px-1.5 py-0.5 rounded">"white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"cream"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"gold"</code>.
           </p>
         </Section>
       </div>
-      <ContentSectionCentered background="white" />
-      <ContentSectionCentered background="cream" />
+      <ContentSectionCentered background="cream" columns={1} />
+      <ContentSectionCentered background="white" columns={2} />
       <ContentSectionCentered background="surface" />
       <ContentSectionCentered background="gold" />
       <ContentSectionCentered background="navy" />
