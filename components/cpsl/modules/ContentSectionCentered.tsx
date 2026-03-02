@@ -22,6 +22,8 @@ export interface ContentSectionCenteredProps {
   background?: "white" | "surface" | "cream" | "navy" | "gold";
   /** Number of body-copy columns — defaults to 2. */
   columns?: 1 | 2;
+  /** Optional image displayed at the very bottom of the section, 120px below the last content. */
+  bottomImage?: { src: string; alt?: string };
 }
 
 const defaultParagraphs = [
@@ -39,6 +41,7 @@ export function ContentSectionCentered({
   paragraphs = defaultParagraphs,
   background = "cream",
   columns = 2,
+  bottomImage,
 }: ContentSectionCenteredProps) {
   const bgColor   = background === "navy"    ? "#091628"
                   : background === "surface" ? "#F4F6FA"
@@ -98,11 +101,11 @@ export function ContentSectionCentered({
             <img
               src={image.src}
               alt={image.alt ?? ""}
+              className="max-h-[250px] lg:max-h-[450px]"
               style={{
                 display: "block",
                 width: "auto",
                 maxWidth: "100%",
-                maxHeight: "450px",
                 margin: "0 auto 32px",
               }}
             />
@@ -160,6 +163,22 @@ export function ContentSectionCentered({
               </div>
             </div>
           )
+        )}
+
+        {/* ── Bottom image — 120px below last content ────────────────── */}
+        {bottomImage?.src && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={bottomImage.src}
+            alt={bottomImage.alt ?? ""}
+            style={{
+              display: "block",
+              width: "auto",
+              maxWidth: "100%",
+              maxHeight: "450px",
+              margin: "120px auto 0",
+            }}
+          />
         )}
       </div>
     </section>
