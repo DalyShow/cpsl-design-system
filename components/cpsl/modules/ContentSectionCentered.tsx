@@ -55,7 +55,7 @@ export function ContentSectionCentered({
               style={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 600,
-                color: "#C9A74C",
+                color: background === "gold" ? "#7A9BAA" : "#C9A74C",
                 letterSpacing: "0.12em",
               }}
             >
