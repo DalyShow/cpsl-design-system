@@ -181,14 +181,18 @@ export default function ModulesPage() {
       <div className="px-12 pb-4">
         <Section title="10 — Content Section: Centered">
           <p className="text-xs text-muted-foreground mb-4">
-            Full-width centered section. Eyebrow label, display heading, lead paragraph, divider, and a body copy area.{" "}
-            <strong>columns</strong>: <code className="bg-secondary px-1.5 py-0.5 rounded">1</code> flows text in a single centered column;{" "}
-            <code className="bg-secondary px-1.5 py-0.5 rounded">2</code> (default) splits into two columns at lg.{" "}
+            Full-width centered section. Eyebrow label, display heading, optional <strong>image</strong> (below heading), lead paragraph, divider, body copy.{" "}
+            <strong>columns</strong>: <code className="bg-secondary px-1.5 py-0.5 rounded">1</code> single column;{" "}
+            <code className="bg-secondary px-1.5 py-0.5 rounded">2</code> (default) two columns at lg.{" "}
             Background variants: <code className="bg-secondary px-1.5 py-0.5 rounded">"white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"cream"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"gold"</code>.
           </p>
         </Section>
       </div>
-      <ContentSectionCentered background="cream" columns={1} />
+      <ContentSectionCentered
+        background="cream"
+        columns={1}
+        image={{ src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80", alt: "Soccer match aerial view" }}
+      />
       <ContentSectionCentered background="white" columns={2} />
       <ContentSectionCentered background="surface" />
       <ContentSectionCentered background="gold" />
