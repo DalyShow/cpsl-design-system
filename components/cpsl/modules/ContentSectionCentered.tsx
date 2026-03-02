@@ -3,7 +3,7 @@
 export interface ContentSectionCenteredProps {
   /** Small eyebrow label above the heading */
   eyebrow?: string;
-  heading: string;
+  heading?: string;
   /** Lead paragraph centered below the heading */
   lead?: string;
   /** Body paragraphs — rendered in two columns below the header */
