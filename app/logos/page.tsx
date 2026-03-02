@@ -39,7 +39,7 @@ function LogoPlaceholder({
           </div>
           <span
             className="text-xs font-semibold tracking-wide"
-            style={{ color: bg === "#020B1A" || bg === "#0A0E1A" ? "#475569" : "#94A3B8" }}
+            style={{ color: bg === "#091628" || bg === "#091628" ? "#475569" : "#94A3B8" }}
           >
             Asset pending
           </span>
@@ -51,7 +51,7 @@ function LogoPlaceholder({
         className="px-4 py-3 border-t flex items-center justify-between"
         style={{ background: "white", borderColor: "#F1F5F9" }}
       >
-        <span className="text-xs font-bold" style={{ color: "#0A0E1A" }}>{label}</span>
+        <span className="text-xs font-bold" style={{ color: "#091628" }}>{label}</span>
         {note && (
           <span className="text-[10px] font-mono px-2 py-0.5 rounded" style={{ background: "#F4F6FA", color: "#94A3B8" }}>
             {note}
@@ -69,7 +69,7 @@ function SpecRow({ label, value, mono = false }: { label: string; value: string;
       <span className="text-xs font-semibold" style={{ color: "#475569" }}>{label}</span>
       <span
         className={`text-xs text-right max-w-xs ${mono ? "font-mono" : ""}`}
-        style={{ color: "#0A0E1A" }}
+        style={{ color: "#091628" }}
       >
         {value}
       </span>
@@ -90,9 +90,9 @@ export default function LogosPage() {
 
         {/* ── Spec callout ── */}
         <div className="rounded-2xl border overflow-hidden mb-10" style={{ borderColor: "#E2E8F0" }}>
-          <div className="px-6 py-3 border-b flex items-center justify-between" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+          <div className="px-6 py-3 border-b flex items-center justify-between" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <span className="text-xs font-bold text-white">Required delivery specs</span>
-            <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#4A78E8" }}>Send to designer</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#3B82F6" }}>Send to designer</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x" style={{ background: "white", borderColor: "#F1F5F9" }}>
             <div className="px-6 py-5">
@@ -122,7 +122,7 @@ export default function LogosPage() {
           </p>
           <div className="grid grid-cols-3 gap-4">
             <LogoPlaceholder label="Crest — on Light"       bg="#F4F6FA" note="SVG + PNG" />
-            <LogoPlaceholder label="Crest — on Dark Navy"   bg="#020B1A" border="#1E2D45" note="SVG + PNG" />
+            <LogoPlaceholder label="Crest — on Dark Navy"   bg="#091628" border="#1E2D45" note="SVG + PNG" />
             <LogoPlaceholder label="Crest — on Forest"      bg="#1A3D2B" border="#1A3D2B" note="SVG + PNG" />
           </div>
         </Section>
@@ -134,9 +134,9 @@ export default function LogosPage() {
             Mono (black) for single-colour print. Both must pass at minimum 4.5:1 contrast.
           </p>
           <div className="grid grid-cols-3 gap-4">
-            <LogoPlaceholder label="Crest — Reversed (White)"    bg="#020B1A" border="#1E2D45" note="SVG" />
+            <LogoPlaceholder label="Crest — Reversed (White)"    bg="#091628" border="#1E2D45" note="SVG" />
             <LogoPlaceholder label="Crest — Mono (Black)"        bg="#F4F6FA" note="SVG" />
-            <LogoPlaceholder label="Crest — Gold on Dark"        bg="#020B1A" border="#1E2D45" note="SVG" />
+            <LogoPlaceholder label="Crest — Gold on Dark"        bg="#091628" border="#1E2D45" note="SVG" />
           </div>
         </Section>
 
@@ -148,9 +148,9 @@ export default function LogosPage() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <LogoPlaceholder label="Horizontal — on Light"     bg="#F4F6FA" note="SVG + PNG" />
-            <LogoPlaceholder label="Horizontal — on Dark"      bg="#020B1A" border="#1E2D45" note="SVG + PNG" />
+            <LogoPlaceholder label="Horizontal — on Dark"      bg="#091628" border="#1E2D45" note="SVG + PNG" />
             <LogoPlaceholder label="Stacked — on Light"        bg="#F4F6FA" note="SVG + PNG" />
-            <LogoPlaceholder label="Stacked — on Dark"         bg="#020B1A" border="#1E2D45" note="SVG + PNG" />
+            <LogoPlaceholder label="Stacked — on Dark"         bg="#091628" border="#1E2D45" note="SVG + PNG" />
           </div>
         </Section>
 
@@ -162,9 +162,9 @@ export default function LogosPage() {
           </p>
           <div className="grid grid-cols-4 gap-4">
             <LogoPlaceholder label="Brandmark — Colour"  bg="#F4F6FA" note="SVG" />
-            <LogoPlaceholder label="Brandmark — White"   bg="#020B1A" border="#1E2D45" note="SVG" />
+            <LogoPlaceholder label="Brandmark — White"   bg="#091628" border="#1E2D45" note="SVG" />
             <LogoPlaceholder label="Brandmark — Mono"    bg="#F4F6FA" note="SVG" />
-            <LogoPlaceholder label="Favicon — Square"    bg="#4A78E8" border="#4A78E8" note="ICO + PNG" />
+            <LogoPlaceholder label="Favicon — Square"    bg="#3B82F6" border="#3B82F6" note="ICO + PNG" />
           </div>
         </Section>
 
@@ -177,7 +177,7 @@ export default function LogosPage() {
           <div className="grid grid-cols-2 gap-4">
             <LogoPlaceholder
               label="OG Card — Default (1200 × 630)"
-              bg="#020B1A" border="#1E2D45"
+              bg="#091628" border="#1E2D45"
               note="PNG · 1200×630"
               wide
             />
@@ -190,13 +190,13 @@ export default function LogosPage() {
             {[
               { rule: "Clear space", desc: "Maintain clear space equal to the height of the \u2018C\u2019 in CPSL on all four sides of any lockup." },
               { rule: "Minimum size", desc: "Crest: 32 px height minimum on screen. Wordmark horizontal: 200 px width. Brandmark: 24 px." },
-              { rule: "Approved backgrounds", desc: "Light (#F4F6FA, white), Dark Navy (#020B1A), Forest (#1A3D2B). No gradients behind the crest." },
+              { rule: "Approved backgrounds", desc: "Light (#F4F6FA, white), Dark Navy (#091628), Forest (#1A3D2B). No gradients behind the crest." },
               { rule: "Don't distort", desc: "Never stretch, skew, or rotate the crest. Scale uniformly from centre only." },
               { rule: "Don't recolour", desc: "Use only the approved colour variants. No custom tints, shadows, or glow effects on the logo." },
               { rule: "Don't crop", desc: "The crest shield must never be cropped — all elements inside the shield must remain fully visible." },
             ].map((r) => (
               <div key={r.rule} className="rounded-xl p-5 border bg-white border-[#E2E8F0]">
-                <div className="text-sm font-bold mb-1.5" style={{ color: "#4A78E8" }}>✓ {r.rule}</div>
+                <div className="text-sm font-bold mb-1.5" style={{ color: "#3B82F6" }}>✓ {r.rule}</div>
                 <div className="text-xs leading-relaxed text-muted-foreground">{r.desc}</div>
               </div>
             ))}

@@ -50,14 +50,14 @@ export function StandingsList({ rows, highlightLeader = true }: StandingsListPro
               >
                 {row.init}
               </div>
-              <span className="text-sm font-semibold" style={{ color: "#0A0E1A" }}>{row.team}</span>
+              <span className="text-sm font-semibold" style={{ color: "#091628" }}>{row.team}</span>
             </div>
             {cells.map((v, j) => (
               <span
                 key={j}
                 className="w-10 text-center text-sm"
                 style={{
-                  color: j === 5 ? "#4A78E8" : "#475569",
+                  color: j === 5 ? "#3B82F6" : "#475569",
                   fontWeight: j === 5 ? 700 : 400,
                 }}
               >

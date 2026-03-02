@@ -10,7 +10,7 @@ const tokenJson = `{
       "200": "#BEDAFF",
       "300": "#8ABAFF",
       "400": "#6A9AF2",
-      "500": "#4A78E8",
+      "500": "#3B82F6",
       "600": "#3761CC",
       "700": "#284BAA",
       "800": "#1B3488",
@@ -18,18 +18,18 @@ const tokenJson = `{
     },
     "accent": {
       "400": "#B08CF5",
-      "500": "#8B40D4",
+      "500": "#7C3AEC",
       "600": "#7333B8"
     },
     "gold": {
       "300": "#E0C88A",
       "400": "#CDB268",
-      "500": "#BFA05A",
+      "500": "#C9A74C",
       "600": "#A58840",
       "700": "#8C7030"
     },
     "cream": {
-      "default": "#F5EFE0",
+      "default": "#F4EFE6",
       "dark":    "#EDE4CC"
     },
     "neutral": {
@@ -39,7 +39,7 @@ const tokenJson = `{
       "500": "#64748B",
       "600": "#475569",
       "700": "#334155",
-      "900": "#0A0E1A"
+      "900": "#091628"
     },
     "semantic": {
       "success": "#00C853",
@@ -87,21 +87,21 @@ const tokenJson = `{
 const cssVars = `:root {
   /* Color — Primary */
   --cpsl-blue-50:  #EEF4FF;
-  --cpsl-blue-500: #4A78E8;
+  --cpsl-blue-500: #3B82F6;
   --cpsl-blue-600: #3761CC;
   --cpsl-blue-900: #0F2066;
 
   /* Color — Accent */
-  --cpsl-purple-500: #8B40D4;
+  --cpsl-purple-500: #7C3AEC;
   --cpsl-purple-600: #7333B8;
 
   /* Color — Gold */
-  --cpsl-gold-500: #BFA05A;
+  --cpsl-gold-500: #C9A74C;
   --cpsl-gold-600: #A58840;
   --cpsl-gold-300: #E0C88A;
 
   /* Color — Cream */
-  --cpsl-cream:      #F5EFE0;
+  --cpsl-cream:      #F4EFE6;
   --cpsl-cream-dark: #EDE4CC;
 
   /* Color — Neutral */
@@ -109,7 +109,7 @@ const cssVars = `:root {
   --cpsl-neutral-200: #E2E8F0;
   --cpsl-neutral-400: #94A3B8;
   --cpsl-neutral-600: #475569;
-  --cpsl-neutral-900: #0A0E1A;
+  --cpsl-neutral-900: #091628;
 
   /* Semantic */
   --cpsl-success: #00C853;
@@ -121,8 +121,8 @@ const cssVars = `:root {
   --surface-1:     #FFFFFF;
   --surface-2:     #F4F6FA;
   --surface-3:     #E2E8F0;
-  --surface-warm:  #F5EFE0;
-  --text-primary:  #0A0E1A;
+  --surface-warm:  #F4EFE6;
+  --text-primary:  #091628;
   --text-secondary:#475569;
   --text-muted:    #94A3B8;
   --border:        #E2E8F0;
@@ -161,7 +161,7 @@ const cssVars = `:root {
 /* Dark mode */
 [data-theme="dark"] {
   --surface-1:     #0A1628;
-  --surface-2:     #020B1A;
+  --surface-2:     #091628;
   --surface-3:     #1E2D45;
   --text-primary:  #F4F6FA;
   --text-secondary:#94A3B8;
@@ -190,13 +190,13 @@ const principles = [
 
 export default function TokensPage() {
   return (
-    <div style={{ background: "#0A0E1A", minHeight: "100vh" }}>
-      <div style={{ background: "#020B1A", borderBottom: "1px solid #1E2D45" }}>
+    <div style={{ background: "#091628", minHeight: "100vh" }}>
+      <div style={{ background: "#091628", borderBottom: "1px solid #1E2D45" }}>
         <div className="px-12 pt-12 pb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div style={{ width: "4px", height: "40px", background: "#4A78E8", borderRadius: "2px" }} />
+            <div style={{ width: "4px", height: "40px", background: "#3B82F6", borderRadius: "2px" }} />
             <div>
-              <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: "#4A78E8" }}>11 — Tokens &amp; Dev Guide</div>
+              <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: "#3B82F6" }}>11 — Tokens &amp; Dev Guide</div>
               <h1 className="text-4xl font-bold" style={{ color: "#F4F6FA", letterSpacing: "-0.5px" }}>Design Tokens &amp; Dev Guide</h1>
             </div>
           </div>
@@ -216,12 +216,12 @@ export default function TokensPage() {
         </Section>
 
         <Section title="Contribution Checklist">
-          <div className="rounded-2xl p-6 border" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+          <div className="rounded-2xl p-6 border" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <div className="grid grid-cols-2 gap-3">
               {checklist.map((item) => (
                 <div key={item} className="flex items-start gap-3 p-3.5 rounded-xl" style={{ background: "#0A1628", border: "1px solid #1E2D45" }}>
-                  <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#4A78E822", border: "1.5px solid #4A78E8" }}>
-                    <svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#4A78E8" strokeWidth="1.8" fill="none" strokeLinecap="round"/></svg>
+                  <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#3B82F622", border: "1.5px solid #3B82F6" }}>
+                    <svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#3B82F6" strokeWidth="1.8" fill="none" strokeLinecap="round"/></svg>
                   </div>
                   <span className="text-sm leading-relaxed" style={{ color: "#94A3B8" }}>{item}</span>
                 </div>
@@ -233,7 +233,7 @@ export default function TokensPage() {
         <Section title="Design Principles">
           <div className="grid grid-cols-5 gap-4">
             {principles.map((p) => (
-              <div key={p.title} className="rounded-xl p-5 border" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+              <div key={p.title} className="rounded-xl p-5 border" style={{ background: "#091628", borderColor: "#1E2D45" }}>
                 <div className="text-2xl mb-3">{p.icon}</div>
                 <div className="text-sm font-bold mb-2" style={{ color: "#F4F6FA" }}>{p.title}</div>
                 <div className="text-xs leading-relaxed" style={{ color: "#64748B" }}>{p.desc}</div>
@@ -243,22 +243,22 @@ export default function TokensPage() {
         </Section>
 
         <Section title="Supported Stacks">
-          <div className="rounded-2xl p-6 border" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+          <div className="rounded-2xl p-6 border" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <div className="flex flex-wrap gap-3">
               {["React", "Next.js", "Vue 3", "Svelte", "Remix", "Vanilla CSS", "Tailwind CSS", "CSS Modules"].map(s => (
-                <span key={s} className="px-4 py-2 rounded-lg text-sm font-semibold border" style={{ background: "#4A78E822", borderColor: "#4A78E844", color: "#8ABAFF" }}>{s}</span>
+                <span key={s} className="px-4 py-2 rounded-lg text-sm font-semibold border" style={{ background: "#3B82F622", borderColor: "#3B82F644", color: "#8ABAFF" }}>{s}</span>
               ))}
             </div>
           </div>
         </Section>
 
-        <div className="flex items-center justify-between p-6 rounded-2xl border mt-4" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+        <div className="flex items-center justify-between p-6 rounded-2xl border mt-4" style={{ background: "#091628", borderColor: "#1E2D45" }}>
           <div>
-            <div className="text-xl font-bold mb-1" style={{ color: "#F4F6FA" }}>CPSL Design System <span style={{ color: "#4A78E8" }}>v1.0</span></div>
+            <div className="text-xl font-bold mb-1" style={{ color: "#F4F6FA" }}>CPSL Design System <span style={{ color: "#3B82F6" }}>v1.0</span></div>
             <div className="text-sm" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5 items-center">
-            {["#4A78E8","#BFA05A","#8B40D4","#F5EFE0","#F4F6FA"].map(c => (
+            {["#3B82F6","#C9A74C","#7C3AEC","#F4EFE6","#F4F6FA"].map(c => (
               <div key={c} className="w-8 h-8 rounded-full border-2" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

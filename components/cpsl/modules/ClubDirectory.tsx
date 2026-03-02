@@ -31,7 +31,7 @@ export function ClubDirectory({ clubs, onViewClub }: ClubDirectoryProps) {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <CardTitle className="text-sm text-[#0A0E1A] leading-tight">{c.name}</CardTitle>
+                <CardTitle className="text-sm text-[#091628] leading-tight">{c.name}</CardTitle>
                 <p className="text-xs text-[#94A3B8] mt-0.5">{c.city}, NC</p>
               </div>
             </div>

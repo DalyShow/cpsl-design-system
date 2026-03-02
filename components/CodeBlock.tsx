@@ -9,7 +9,7 @@ export default function CodeBlock({ code, language = "css" }: { code: string; la
           <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#00C853" }} />
         </div>
       </div>
-      <pre className="p-5 text-xs overflow-x-auto leading-7" style={{ background: "#020B1A", color: "#94A3B8", fontFamily: "'Fira Code', 'JetBrains Mono', 'Courier New', monospace" }}>
+      <pre className="p-5 text-xs overflow-x-auto leading-7" style={{ background: "#091628", color: "#94A3B8", fontFamily: "'Fira Code', 'JetBrains Mono', 'Courier New', monospace" }}>
         <code>{code}</code>
       </pre>
     </div>

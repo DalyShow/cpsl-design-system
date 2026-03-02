@@ -12,15 +12,15 @@ import {
 } from "@/components/cpsl/cards";
 
 const standingsData: StandingsListRow[] = [
-  { team: "Charlotte FC",     init: "CC", color: "#4A78E8", p: 18, w: 14, d: 2, l: 2, gd: "+24", pts: 44 },
-  { team: "Raleigh Athletic", init: "RA", color: "#8B40D4", p: 18, w: 11, d: 4, l: 3, gd: "+14", pts: 37 },
+  { team: "Charlotte FC",     init: "CC", color: "#3B82F6", p: 18, w: 14, d: 2, l: 2, gd: "+24", pts: 44 },
+  { team: "Raleigh Athletic", init: "RA", color: "#7C3AEC", p: 18, w: 11, d: 4, l: 3, gd: "+14", pts: 37 },
   { team: "Durham United",    init: "DU", color: "#1A1A2E", p: 18, w: 10, d: 3, l: 5, gd: "+8",  pts: 33 },
 ];
 
 const activityItems: ActivityItem[] = [
   { icon: "⚽", title: "Goal — Thompson, R.",      sub: "Charlotte FC vs Raleigh · 67'", time: "2min ago",  color: "#00875A" },
   { icon: "🟨", title: "Yellow card — Davies, M.", sub: "Raleigh Athletic · 54'",        time: "15min ago", color: "#FFB300" },
-  { icon: "🔄", title: "Substitution — Barnes for Cole", sub: "Charlotte FC · 45'",     time: "45min ago", color: "#4A78E8" },
+  { icon: "🔄", title: "Substitution — Barnes for Cole", sub: "Charlotte FC · 45'",     time: "45min ago", color: "#3B82F6" },
 ];
 
 export default function CardsPage() {
@@ -49,10 +49,10 @@ export default function CardsPage() {
             <ScoreCard
               homeTeam="Charlotte"
               homeInitials="CC"
-              homeColor="#4A78E8"
+              homeColor="#3B82F6"
               awayTeam="Raleigh"
               awayInitials="RA"
-              awayColor="#8B40D4"
+              awayColor="#7C3AEC"
               score="3–1"
               result="WIN"
               date="Sat, Feb 22"

@@ -58,7 +58,7 @@ export function Pagination({ totalPages = 8, defaultPage = 1 }: PaginationProps)
             onClick={() => setCurrent(p as number)}
             className="w-8 h-8 rounded-lg text-sm font-semibold transition-all"
             style={{
-              background: p === current ? "#4A78E8" : "transparent",
+              background: p === current ? "#3B82F6" : "transparent",
               color: p === current ? "white" : "#475569",
               cursor: "pointer",
               border: "none",

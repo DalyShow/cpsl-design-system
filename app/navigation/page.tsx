@@ -73,7 +73,7 @@ export default function NavigationPage() {
 
         <div className="mt-12 mb-6">
           <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: "#94A3B8" }}>Full-width variants</div>
-          <h2 className="text-xl font-bold" style={{ color: "#0A0E1A" }}>Edge-to-Edge Production Layouts</h2>
+          <h2 className="text-xl font-bold" style={{ color: "#091628" }}>Edge-to-Edge Production Layouts</h2>
           <p className="text-sm mt-1" style={{ color: "#64748B" }}>
             No rounded corners — each bar spans the full browser width exactly as it would in a deployed app.
           </p>
@@ -167,7 +167,7 @@ export default function NavigationPage() {
                 style={{ background: "white", borderColor: "#E2E8F0" }}
               >
                 <div className="px-4 py-2.5 border-b" style={{ background: "#FAFBFF", borderColor: "#F1F5F9" }}>
-                  <span className="text-xs font-bold" style={{ color: "#0A0E1A" }}>{item.title}</span>
+                  <span className="text-xs font-bold" style={{ color: "#091628" }}>{item.title}</span>
                 </div>
                 <pre
                   className="text-[11px] leading-relaxed p-4 overflow-x-auto"

@@ -1,19 +1,19 @@
 import Link from "next/link";
 
 const sections = [
-  { num: "00", label: "Logo & Brand Marks", href: "/logos", desc: "Primary crest, wordmark lockups, horizontal and stacked variants, brandmark, and OG assets. Specs included.", color: "#BFA05A" },
-  { num: "01", label: "Color System", href: "/colors", desc: "Primary, accent, semantic, neutral palettes. Dark mode tokens and WCAG contrast ratios.", color: "#4A78E8" },
-  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#8B40D4" },
+  { num: "00", label: "Logo & Brand Marks", href: "/logos", desc: "Primary crest, wordmark lockups, horizontal and stacked variants, brandmark, and OG assets. Specs included.", color: "#C9A74C" },
+  { num: "01", label: "Color System", href: "/colors", desc: "Primary, accent, semantic, neutral palettes. Dark mode tokens and WCAG contrast ratios.", color: "#3B82F6" },
+  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#7C3AEC" },
   { num: "03", label: "Grid & Spacing", href: "/grid", desc: "12-column grid, 5 breakpoints, 8px base spacing scale, border radius tokens.", color: "#0288D1" },
   { num: "04", label: "Buttons & CTAs", href: "/buttons", desc: "5 variants, 4 states, 3 sizes. Full anatomy, CSS tokens, and a11y specs.", color: "#00875A" },
-  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#8B40D4" },
+  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#7C3AEC" },
   { num: "06", label: "Cards & Lists", href: "/cards", desc: "Default, elevated, score, and horizontal card variants. Standings list pattern.", color: "#E65100" },
-  { num: "07", label: "Navigation", href: "/navigation", desc: "Top nav, tab bar, breadcrumb, pagination, sidebar, and mobile tab bar.", color: "#8B40D4" },
+  { num: "07", label: "Navigation", href: "/navigation", desc: "Top nav, tab bar, breadcrumb, pagination, sidebar, and mobile tab bar.", color: "#7C3AEC" },
   { num: "08", label: "Feedback & Overlays", href: "/feedback", desc: "Alerts, toasts, progress bars, badges, modal, tooltip, and empty states.", color: "#FF1744" },
-  { num: "09", label: "Data Display", href: "/data-display", desc: "Sortable tables, avatar groups, tags, stat displays, and skeleton loading.", color: "#4A78E8" },
-  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#8B40D4" },
+  { num: "09", label: "Data Display", href: "/data-display", desc: "Sortable tables, avatar groups, tags, stat displays, and skeleton loading.", color: "#3B82F6" },
+  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#7C3AEC" },
   { num: "11", label: "Tokens & Dev Guide", href: "/tokens", desc: "tokens.json, CSS custom properties, dark mode, contribution checklist.", color: "#00875A" },
-  { num: "12", label: "Hero Sections", href: "/heroes", desc: "Four production-ready hero layouts — cinematic gradient, split frame, glass card, and magazine overlap. Photo and video ready.", color: "#4A78E8" },
+  { num: "12", label: "Hero Sections", href: "/heroes", desc: "Four production-ready hero layouts — cinematic gradient, split frame, glass card, and magazine overlap. Photo and video ready.", color: "#3B82F6" },
   { num: "13", label: "Body Modules", href: "/modules", desc: "Nine plug-and-play page sections — stats bar, tabs, standings table, club directory, news grid, player spotlight, CTA banner, and skeleton states.", color: "#00875A" },
 ];
 
@@ -28,13 +28,13 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="px-12 py-16 border-b" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+      <div className="px-12 py-16 border-b" style={{ background: "#091628", borderColor: "#1E2D45" }}>
         <div className="max-w-3xl">
-          <div className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "#4A78E8" }}>
+          <div className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "#3B82F6" }}>
             Carolina Premier Soccer League
           </div>
           <h1 className="font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", lineHeight: 1.05, letterSpacing: "-1px", color: "white" }}>
-            CPSL<br /><span style={{ color: "#4A78E8" }}>Design System</span>
+            CPSL<br /><span style={{ color: "#3B82F6" }}>Design System</span>
           </h1>
           <p className="text-lg mb-8 leading-relaxed" style={{ color: "#64748B", maxWidth: "520px" }}>
             A complete, publish-ready design system for the Carolina Premier Soccer League. Built for speed, accessibility, and brand cohesion across all digital surfaces.
@@ -42,7 +42,7 @@ export default function Home() {
           <div className="flex gap-3">
             <Link href="/colors"
               className="px-6 py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
-              style={{ background: "#4A78E8" }}>
+              style={{ background: "#3B82F6" }}>
               Get Started →
             </Link>
             <Link href="/tokens"
@@ -76,7 +76,7 @@ export default function Home() {
                   {s.num}
                 </span>
                 <div className="w-px self-stretch" style={{ background: "#E2E8F0" }} />
-                <h3 className="font-bold text-base leading-tight" style={{ color: "#0A0E1A" }}>{s.label}</h3>
+                <h3 className="font-bold text-base leading-tight" style={{ color: "#091628" }}>{s.label}</h3>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: "#64748B" }}>{s.desc}</p>
               <div className="mt-4 text-xs font-semibold transition-colors" style={{ color: "#94A3B8" }}>
@@ -87,13 +87,13 @@ export default function Home() {
         </div>
 
         {/* Footer banner */}
-        <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
+        <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#091628", borderColor: "#1E2D45" }}>
           <div>
-            <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#4A78E8" }}>v1.0</span></div>
+            <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#3B82F6" }}>v1.0</span></div>
             <div className="text-xs" style={{ color: "#475569" }}>14 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
-            {["#4A78E8", "#8B40D4", "#F4F6FA"].map((c) => (
+            {["#3B82F6", "#7C3AEC", "#F4F6FA"].map((c) => (
               <div key={c} className="w-7 h-7 rounded-full border" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

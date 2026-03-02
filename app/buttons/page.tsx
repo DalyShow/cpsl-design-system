@@ -9,32 +9,32 @@ import { Button } from "@/components/ui/button"
 // Derived from buttonVariants in components/ui/button.tsx
 const STATE_TOKENS = {
   primary: {
-    default:  { bg: "#4A78E8",                color: "#ffffff", border: "none",              ring: "none" },
+    default:  { bg: "#3B82F6",                color: "#ffffff", border: "none",              ring: "none" },
     hover:    { bg: "rgba(0,71,255,0.88)",     color: "#ffffff", border: "none",              ring: "none" },
-    focus:    { bg: "#4A78E8",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(0,71,255,0.5)" },
+    focus:    { bg: "#3B82F6",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(0,71,255,0.5)" },
     active:   { bg: "rgba(0,71,255,0.82)",     color: "#ffffff", border: "none",              ring: "none" },
-    disabled: { bg: "#4A78E8",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
+    disabled: { bg: "#3B82F6",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
   purple: {
-    default:  { bg: "#8B40D4",                color: "#ffffff", border: "none",              ring: "none" },
+    default:  { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "none" },
     hover:    { bg: "rgba(124,58,237,0.88)",   color: "#ffffff", border: "none",              ring: "none" },
-    focus:    { bg: "#8B40D4",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(124,58,237,0.4)" },
+    focus:    { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(124,58,237,0.4)" },
     active:   { bg: "rgba(124,58,237,0.82)",   color: "#ffffff", border: "none",              ring: "none" },
-    disabled: { bg: "#8B40D4",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
+    disabled: { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
   secondary: {
-    default:  { bg: "transparent",            color: "#4A78E8", border: "2px solid #4A78E8",  ring: "none" },
-    hover:    { bg: "#4A78E8",                color: "#ffffff", border: "2px solid #4A78E8",  ring: "none" },
-    focus:    { bg: "transparent",            color: "#4A78E8", border: "2px solid #4A78E8",  ring: "0 0 0 3px rgba(0,71,255,0.4)" },
-    active:   { bg: "rgba(0,71,255,0.90)",    color: "#ffffff", border: "2px solid #4A78E8",  ring: "none" },
-    disabled: { bg: "transparent",            color: "#4A78E8", border: "2px solid #4A78E8",  ring: "none", opacity: 0.5 },
+    default:  { bg: "transparent",            color: "#3B82F6", border: "2px solid #3B82F6",  ring: "none" },
+    hover:    { bg: "#3B82F6",                color: "#ffffff", border: "2px solid #3B82F6",  ring: "none" },
+    focus:    { bg: "transparent",            color: "#3B82F6", border: "2px solid #3B82F6",  ring: "0 0 0 3px rgba(0,71,255,0.4)" },
+    active:   { bg: "rgba(0,71,255,0.90)",    color: "#ffffff", border: "2px solid #3B82F6",  ring: "none" },
+    disabled: { bg: "transparent",            color: "#3B82F6", border: "2px solid #3B82F6",  ring: "none", opacity: 0.5 },
   },
   ghost: {
-    default:  { bg: "transparent",            color: "#0A0E1A", border: "none",              ring: "none" },
-    hover:    { bg: "#EEF1F7",                color: "#0A0E1A", border: "none",              ring: "none" },
-    focus:    { bg: "transparent",            color: "#0A0E1A", border: "none",              ring: "0 0 0 3px rgba(0,71,255,0.5)" },
-    active:   { bg: "rgba(238,241,247,0.8)",   color: "#0A0E1A", border: "none",              ring: "none" },
-    disabled: { bg: "transparent",            color: "#0A0E1A", border: "none",              ring: "none", opacity: 0.5 },
+    default:  { bg: "transparent",            color: "#091628", border: "none",              ring: "none" },
+    hover:    { bg: "#EEF1F7",                color: "#091628", border: "none",              ring: "none" },
+    focus:    { bg: "transparent",            color: "#091628", border: "none",              ring: "0 0 0 3px rgba(0,71,255,0.5)" },
+    active:   { bg: "rgba(238,241,247,0.8)",   color: "#091628", border: "none",              ring: "none" },
+    disabled: { bg: "transparent",            color: "#091628", border: "none",              ring: "none", opacity: 0.5 },
   },
   destructive: {
     default:  { bg: "#FF1744",                color: "#ffffff", border: "none",              ring: "none" },
@@ -59,7 +59,7 @@ const STATE_LABELS: Record<StateKey, string> = {
 const STATE_DESCRIPTIONS: Record<StateKey, string> = {
   default:  "Resting state. No interaction.",
   hover:    "bg opacity → 88%. Cursor: pointer.",
-  focus:    "3px ring · ring-ring/50 · #4A78E8 at 50%.",
+  focus:    "3px ring · ring-ring/50 · #3B82F6 at 50%.",
   active:   "bg opacity → 82%. scale(0.98).",
   disabled: "opacity-50 · pointer-events-none.",
 }
@@ -117,7 +117,7 @@ const codeStates = `/* ── State tokens for Primary button ──────
 
 /* Default */
 .btn-primary {
-  background-color: var(--primary);          /* #4A78E8 */
+  background-color: var(--primary);          /* #3B82F6 */
   color: var(--primary-foreground);          /* #ffffff */
 }
 
@@ -129,7 +129,7 @@ const codeStates = `/* ── State tokens for Primary button ──────
 /* Focus (keyboard only) */
 .btn-primary:focus-visible {
   box-shadow: 0 0 0 3px oklch(from var(--ring) l c h / 50%);
-  /* ring = #4A78E8 → rgba(0,71,255,0.5) */
+  /* ring = #3B82F6 → rgba(0,71,255,0.5) */
 }
 
 /* Active / Pressed */
@@ -205,7 +205,7 @@ export default function ButtonsPage() {
         <Section title="Interaction States — Documented">
           <div className="rounded-2xl overflow-hidden border border-[#E2E8F0]">
             {/* Column headers */}
-            <div className="grid bg-[#0A0E1A]" style={{ gridTemplateColumns: "180px repeat(5, 1fr)" }}>
+            <div className="grid bg-[#091628]" style={{ gridTemplateColumns: "180px repeat(5, 1fr)" }}>
               <div className="px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-white/40">Variant</div>
               {(Object.keys(STATE_LABELS) as StateKey[]).map((s) => (
                 <div key={s} className="px-4 py-3 border-l border-white/10">
@@ -240,7 +240,7 @@ export default function ButtonsPage() {
                     />
                     {state === "focus" && (
                       <p className="text-[9px] text-muted-foreground leading-tight">
-                        3px · #4A78E8 · 50% alpha
+                        3px · #3B82F6 · 50% alpha
                       </p>
                     )}
                     {state === "hover" && (
@@ -289,7 +289,7 @@ export default function ButtonsPage() {
                 {[
                   { property: "Property", value: "Value", token: "Token", isHeader: true },
                   { property: "box-shadow style", value: "ring (not outline)", token: "focus-visible:ring-[3px]" },
-                  { property: "ring color", value: "#4A78E8 at 50% alpha", token: "ring-ring/50" },
+                  { property: "ring color", value: "#3B82F6 at 50% alpha", token: "ring-ring/50" },
                   { property: "ring width", value: "3px", token: "ring-[3px]" },
                   { property: "visibility", value: "keyboard only", token: "focus-visible (not focus)" },
                   { property: "never suppressed", value: "outline: none is not used", token: "WCAG 2.4.7" },

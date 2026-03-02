@@ -43,7 +43,7 @@ export default function GridPage() {
             <div className="flex gap-3 mb-4">
               {Array.from({ length: 12 }).map((_, i) => (
                 <div key={i} className="flex-1 h-12 rounded flex items-center justify-center text-xs font-bold"
-                  style={{ background: i % 2 === 0 ? "#4A78E8" : "#BEDAFF", color: i % 2 === 0 ? "white" : "#284BAA" }}>
+                  style={{ background: i % 2 === 0 ? "#3B82F6" : "#BEDAFF", color: i % 2 === 0 ? "white" : "#284BAA" }}>
                   {i + 1}
                 </div>
               ))}
@@ -85,9 +85,9 @@ export default function GridPage() {
                   ["Desktop", "1440px", "12", "24px", "64px", "Wide desktop default"],
                 ].map(([name, ...rest], i) => (
                   <tr key={name} style={{ borderBottom: "1px solid #F1F5F9", background: i % 2 === 0 ? "white" : "#FAFBFC" }}>
-                    <td className="px-5 py-3 font-bold text-sm" style={{ color: "#0A0E1A" }}>{name}</td>
+                    <td className="px-5 py-3 font-bold text-sm" style={{ color: "#091628" }}>{name}</td>
                     {rest.map((v, j) => (
-                      <td key={j} className="px-5 py-3 font-mono text-xs" style={{ color: j === 0 ? "#4A78E8" : "#475569" }}>{v}</td>
+                      <td key={j} className="px-5 py-3 font-mono text-xs" style={{ color: j === 0 ? "#3B82F6" : "#475569" }}>{v}</td>
                     ))}
                   </tr>
                 ))}
@@ -102,8 +102,8 @@ export default function GridPage() {
               {spacingScale.map((s) => (
                 <div key={s.token} className="flex items-center gap-5">
                   <span className="font-mono text-xs w-28 flex-shrink-0" style={{ color: "#64748B" }}>{s.token}</span>
-                  <span className="font-mono text-xs w-12 flex-shrink-0 font-bold" style={{ color: "#4A78E8" }}>{s.px}</span>
-                  <div className="rounded" style={{ width: `${s.width * 2}px`, height: "20px", background: "#4A78E822", border: "1px solid #BEDAFF", flexShrink: 0 }} />
+                  <span className="font-mono text-xs w-12 flex-shrink-0 font-bold" style={{ color: "#3B82F6" }}>{s.px}</span>
+                  <div className="rounded" style={{ width: `${s.width * 2}px`, height: "20px", background: "#3B82F622", border: "1px solid #BEDAFF", flexShrink: 0 }} />
                   <span className="text-xs" style={{ color: "#94A3B8" }}>{s.mult}</span>
                 </div>
               ))}
@@ -120,9 +120,9 @@ export default function GridPage() {
               { name: "pill", token: "--radius-pill", px: "100px", radius: "100px" },
             ].map((r) => (
               <div key={r.name} className="flex-1 rounded-xl p-5 border text-center" style={{ background: "white", borderColor: "#E2E8F0" }}>
-                <div className="w-20 h-20 mx-auto mb-4 border-2" style={{ borderRadius: r.radius, borderColor: "#4A78E8", background: "#EEF4FF" }} />
-                <div className="text-sm font-bold mb-1" style={{ color: "#0A0E1A" }}>{r.name}</div>
-                <div className="text-xs font-mono mb-1" style={{ color: "#4A78E8" }}>{r.px}</div>
+                <div className="w-20 h-20 mx-auto mb-4 border-2" style={{ borderRadius: r.radius, borderColor: "#3B82F6", background: "#EEF4FF" }} />
+                <div className="text-sm font-bold mb-1" style={{ color: "#091628" }}>{r.name}</div>
+                <div className="text-xs font-mono mb-1" style={{ color: "#3B82F6" }}>{r.px}</div>
                 <div className="text-xs font-mono" style={{ color: "#94A3B8", fontSize: "10px" }}>{r.token}</div>
               </div>
             ))}

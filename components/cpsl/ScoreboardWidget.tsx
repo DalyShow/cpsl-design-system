@@ -66,12 +66,12 @@ export function ScoreboardWidget({
     <div
       data-slot="scoreboard-widget"
       className={cn(
-        "w-full max-w-sm rounded-2xl bg-[#020B1A] text-white overflow-hidden select-none",
+        "w-full max-w-sm rounded-2xl bg-[#091628] text-white overflow-hidden select-none",
         className
       )}
     >
       {/* Top bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#0A0E1A]/80 border-b border-white/10">
+      <div className="flex items-center justify-between px-4 py-3 bg-[#091628]/80 border-b border-white/10">
         <span className="text-[10px] font-semibold tracking-[2px] uppercase text-white/50">
           {competition ?? "CPSL"}
         </span>
@@ -144,8 +144,8 @@ export function ScoreboardWidget({
             <span>Possession</span>
           </div>
           <div className="flex h-1 rounded-full overflow-hidden bg-white/10">
-            <div className="bg-[#4A78E8]" style={{ width: "54%" }} />
-            <div className="bg-[#8B40D4]" style={{ width: "46%" }} />
+            <div className="bg-[#3B82F6]" style={{ width: "54%" }} />
+            <div className="bg-[#7C3AEC]" style={{ width: "46%" }} />
           </div>
           <div className="flex justify-between text-[10px] text-white/60 mt-1">
             <span>54%</span>
@@ -172,7 +172,7 @@ function TeamLogo({ logoUrl, name }: { logoUrl?: string; name: string }) {
     .join("")
     .toUpperCase()
   return (
-    <div className="size-10 rounded-full bg-[#4A78E8]/30 border border-[#4A78E8]/60 flex items-center justify-center">
+    <div className="size-10 rounded-full bg-[#3B82F6]/30 border border-[#3B82F6]/60 flex items-center justify-center">
       <span className="text-xs font-bold text-white">{initials}</span>
     </div>
   )

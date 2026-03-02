@@ -43,16 +43,16 @@ export function PlayerSpotlight({
   position    = "Forward",
   club        = "Charlotte FC",
   initials    = "RT",
-  color       = "#4A78E8",
+  color       = "#3B82F6",
   goals       = 14,
   assists     = 7,
   games       = 18,
   badges      = [{ label: "Premiership", variant: "premier" }, { label: "Top Scorer", variant: "gold" }],
   stats       = [
-    { label: "Shooting Accuracy", value: 72, color: "#4A78E8" },
-    { label: "Pass Completion",   value: 84, color: "#4A78E8" },
-    { label: "Dribble Success",   value: 61, color: "#8B40D4" },
-    { label: "Aerial Duels Won",  value: 55, color: "#8B40D4" },
+    { label: "Shooting Accuracy", value: 72, color: "#3B82F6" },
+    { label: "Pass Completion",   value: 84, color: "#3B82F6" },
+    { label: "Dribble Success",   value: 61, color: "#7C3AEC" },
+    { label: "Aerial Duels Won",  value: 55, color: "#7C3AEC" },
     { label: "Distance Covered",  value: 88, color: "#00C853" },
   ],
   miniStats   = [
@@ -77,7 +77,7 @@ export function PlayerSpotlight({
               </AvatarFallback>
             </Avatar>
             <div>
-              <div className="text-base font-bold text-[#0A0E1A]">{name}</div>
+              <div className="text-base font-bold text-[#091628]">{name}</div>
               <div className="text-xs text-[#64748B]">{position} · {club}</div>
             </div>
             <div className="flex gap-2 flex-wrap justify-center">
@@ -105,7 +105,7 @@ export function PlayerSpotlight({
       {/* Stats breakdown */}
       <Card className="bg-white border-[#E2E8F0]">
         <CardHeader>
-          <CardTitle className="text-sm text-[#0A0E1A]">Season Performance</CardTitle>
+          <CardTitle className="text-sm text-[#091628]">Season Performance</CardTitle>
           <CardDescription className="text-xs text-[#64748B]">{season} {competition} · Match Day {matchDay}</CardDescription>
         </CardHeader>
         <CardContent>
@@ -114,9 +114,9 @@ export function PlayerSpotlight({
               <div key={stat.label}>
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="text-xs font-semibold text-[#475569]">{stat.label}</span>
-                  <span className="text-xs font-bold tabular-nums" style={{ color: stat.color ?? "#4A78E8" }}>{stat.value}%</span>
+                  <span className="text-xs font-bold tabular-nums" style={{ color: stat.color ?? "#3B82F6" }}>{stat.value}%</span>
                 </div>
-                <Progress value={stat.value} className="h-2" style={{ "--progress-color": stat.color ?? "#4A78E8" } as React.CSSProperties} />
+                <Progress value={stat.value} className="h-2" style={{ "--progress-color": stat.color ?? "#3B82F6" } as React.CSSProperties} />
               </div>
             ))}
           </div>
@@ -126,7 +126,7 @@ export function PlayerSpotlight({
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {miniStats?.map(s => (
               <div key={s.label} className="rounded-lg p-3" style={{ background: "#F4F6FA" }}>
-                <div className="text-sm font-bold text-[#0A0E1A]">{s.value}</div>
+                <div className="text-sm font-bold text-[#091628]">{s.value}</div>
                 <div className="text-[10px] text-[#94A3B8] mt-0.5 leading-tight">{s.label}</div>
               </div>
             ))}

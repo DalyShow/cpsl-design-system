@@ -18,7 +18,7 @@ const DEFAULT_STATS: StatItem[] = [
   { value: "2026",  label: "Season" },
 ]
 
-export function StatsBar({ stats = DEFAULT_STATS, background = "#020B1A" }: StatsBarProps) {
+export function StatsBar({ stats = DEFAULT_STATS, background = "#091628" }: StatsBarProps) {
   return (
     <div className="flex flex-wrap items-center justify-around gap-y-8 px-6 py-8 md:px-12 md:py-9" style={{ background }}>
       {stats.map((s, i) => (

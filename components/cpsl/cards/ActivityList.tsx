@@ -33,7 +33,7 @@ export function ActivityList({ items }: ActivityListProps) {
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-semibold" style={{ color: "#0A0E1A" }}>{item.title}</div>
+            <div className="text-sm font-semibold" style={{ color: "#091628" }}>{item.title}</div>
             <div className="text-xs" style={{ color: "#94A3B8" }}>{item.sub}</div>
           </div>
 

@@ -36,14 +36,14 @@ export function TopNav({
   const inner = (
     <div
       className="flex items-center justify-between px-6 py-0"
-      style={{ background: "#020B1A" }}
+      style={{ background: "#091628" }}
     >
       {/* Logo + Nav */}
       <div className="flex items-center gap-8">
         <div className="flex items-center gap-2.5 py-4">
           <div
             className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "#4A78E8" }}
+            style={{ background: "#3B82F6" }}
           >
             <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
               <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="white" strokeWidth="1.5" />
@@ -61,7 +61,7 @@ export function TopNav({
               className="px-4 py-4 text-sm font-medium border-b-2 transition-colors"
               style={{
                 color: i === activeIndex ? "white" : "#64748B",
-                borderColor: i === activeIndex ? "#4A78E8" : "transparent",
+                borderColor: i === activeIndex ? "#3B82F6" : "transparent",
                 background: "none",
                 cursor: "pointer",
               }}
@@ -85,7 +85,7 @@ export function TopNav({
         )}
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white"
-          style={{ background: "#4A78E8" }}
+          style={{ background: "#3B82F6" }}
         >
           {userInitials}
         </div>

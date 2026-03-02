@@ -49,8 +49,8 @@ export function StandingsTable({ rows, promotionSpots = 2 }: StandingsTableProps
                     <div className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold text-white shrink-0" style={{ background: row.color }}>
                       {row.abbr.slice(0, 2)}
                     </div>
-                    <span className="hidden sm:inline text-sm font-semibold text-[#0A0E1A]">{row.club}</span>
-                    <span className="sm:hidden text-sm font-semibold text-[#0A0E1A]">{row.abbr}</span>
+                    <span className="hidden sm:inline text-sm font-semibold text-[#091628]">{row.club}</span>
+                    <span className="sm:hidden text-sm font-semibold text-[#091628]">{row.abbr}</span>
                     {row.pos <= promotionSpots && <Badge variant="promotion" className="text-[9px] px-1.5 py-0 hidden sm:inline-flex">Promo</Badge>}
                   </div>
                 </TableCell>
@@ -59,7 +59,7 @@ export function StandingsTable({ rows, promotionSpots = 2 }: StandingsTableProps
                 ))}
                 <TableCell className="hidden sm:table-cell text-center text-sm text-[#475569]">{row.gd}</TableCell>
                 <TableCell className="text-center">
-                  <span className="text-sm font-bold text-[#4A78E8]">{row.pts}</span>
+                  <span className="text-sm font-bold text-[#3B82F6]">{row.pts}</span>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
                   <div className="flex gap-1">

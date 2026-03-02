@@ -23,7 +23,7 @@ export function FeatureHighlights({ features }: FeatureHighlightsProps) {
             <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3" style={{ background: "#EEF4FF" }}>
               {f.icon}
             </div>
-            <CardTitle className="text-base text-[#0A0E1A]">{f.title}</CardTitle>
+            <CardTitle className="text-base text-[#091628]">{f.title}</CardTitle>
           </CardHeader>
           <CardContent>
             <CardDescription className="text-sm leading-relaxed text-[#64748B]">{f.body}</CardDescription>

@@ -9,7 +9,7 @@ export interface ElevatedCardProps {
 
 export function ElevatedCard({
   label = "Elevated",
-  labelColor = "#4A78E8",
+  labelColor = "#3B82F6",
   title,
   description,
   placeholderBg = "#EEF4FF",
@@ -27,7 +27,7 @@ export function ElevatedCard({
         {label}
       </div>
       <div className="w-full h-28 rounded-xl mb-3" style={{ background: placeholderBg }} />
-      <div className="font-bold text-sm mb-1" style={{ color: "#0A0E1A" }}>{title}</div>
+      <div className="font-bold text-sm mb-1" style={{ color: "#091628" }}>{title}</div>
       <div className="text-xs leading-relaxed" style={{ color: "#64748B" }}>{description}</div>
     </div>
   );

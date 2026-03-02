@@ -33,7 +33,7 @@ export function TabBar({
             className={`py-2 rounded-lg text-sm font-semibold transition-all ${stretch ? "flex-1" : "px-4"}`}
             style={{
               background: i === active ? "white" : "transparent",
-              color: i === active ? "#0A0E1A" : "#94A3B8",
+              color: i === active ? "#091628" : "#94A3B8",
               boxShadow: i === active ? "0 1px 4px rgba(0,0,0,0.08)" : "none",
               cursor: "pointer",
               border: "none",
@@ -58,8 +58,8 @@ export function TabBar({
           onClick={() => setActive(i)}
           className={`py-3 text-sm font-semibold border-b-2 -mb-px transition-all ${stretch ? "flex-1" : "px-5"}`}
           style={{
-            color: i === active ? "#4A78E8" : "#94A3B8",
-            borderColor: i === active ? "#4A78E8" : "transparent",
+            color: i === active ? "#3B82F6" : "#94A3B8",
+            borderColor: i === active ? "#3B82F6" : "transparent",
             background: "none",
             cursor: "pointer",
           }}

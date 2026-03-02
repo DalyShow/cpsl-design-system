@@ -41,9 +41,9 @@ export default function FeedbackPage() {
           </p>
           <div className="rounded-2xl p-6 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
             <div className="flex flex-col gap-5">
-              <ProgressBar label="Season progress"       value={75}  color="#4A78E8" />
+              <ProgressBar label="Season progress"       value={75}  color="#3B82F6" />
               <ProgressBar label="Registration complete" value={100} color="#00C853" />
-              <ProgressBar label="Upload: kit assets"    value={45}  color="#8B40D4" />
+              <ProgressBar label="Upload: kit assets"    value={45}  color="#7C3AEC" />
             </div>
           </div>
         </Section>

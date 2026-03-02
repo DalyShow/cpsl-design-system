@@ -26,10 +26,10 @@ export function ScoreCard({
   status = "FT",
   homeTeam,
   homeInitials,
-  homeColor = "#4A78E8",
+  homeColor = "#3B82F6",
   awayTeam,
   awayInitials,
-  awayColor = "#8B40D4",
+  awayColor = "#7C3AEC",
   score,
   result,
   date,
@@ -38,7 +38,7 @@ export function ScoreCard({
   return (
     <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#E2E8F0" }}>
       {/* Dark header */}
-      <div className="px-5 py-4" style={{ background: "#020B1A" }}>
+      <div className="px-5 py-4" style={{ background: "#091628" }}>
         <div className="text-xs font-bold mb-4" style={{ color: "#475569" }}>
           {competition} · {status}
         </div>

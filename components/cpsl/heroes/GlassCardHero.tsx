@@ -17,8 +17,8 @@ export function GlassCardHero({
   imageSrc,
   competition     = "CPSL Premiership",
   minute          = 67,
-  homeTeam        = { name: "Charlotte FC",    abbr: "CFA", color: "#4A78E8", score: 3 },
-  awayTeam        = { name: "Raleigh Athletic", abbr: "RLH", color: "#8B40D4", score: 1 },
+  homeTeam        = { name: "Charlotte FC",    abbr: "CFA", color: "#3B82F6", score: 3 },
+  awayTeam        = { name: "Raleigh Athletic", abbr: "RLH", color: "#7C3AEC", score: 1 },
   leadingLabel    = "Charlotte Leading",
   homePossession  = 54,
   primaryCta      = { label: "Watch Live" },
@@ -26,13 +26,13 @@ export function GlassCardHero({
   const awayPossession = 100 - homePossession
 
   return (
-    <div className="relative min-h-[480px] md:min-h-[560px] overflow-hidden" style={{ background: "#020B1A" }}>
+    <div className="relative min-h-[480px] md:min-h-[560px] overflow-hidden" style={{ background: "#091628" }}>
 
       {/* Background */}
       {imageSrc ? (
         <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
       ) : (
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 60%, #1A3A6A 0%, #0A1628 50%, #020B1A 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 60%, #1A3A6A 0%, #0A1628 50%, #091628 100%)" }} />
       )}
 
       {/* Spotlight beams */}

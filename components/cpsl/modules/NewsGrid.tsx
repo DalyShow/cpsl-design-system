@@ -35,7 +35,7 @@ export function NewsGrid({ articles }: NewsGridProps) {
               <Badge variant="default" className="text-[10px] px-2">{n.category}</Badge>
               <span className="text-[10px] text-[#94A3B8]">{n.date}</span>
             </div>
-            <CardTitle className="text-sm leading-snug text-[#0A0E1A]">{n.title}</CardTitle>
+            <CardTitle className="text-sm leading-snug text-[#091628]">{n.title}</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 pt-0">
             <CardDescription className="text-xs leading-relaxed text-[#64748B] line-clamp-3">{n.excerpt}</CardDescription>

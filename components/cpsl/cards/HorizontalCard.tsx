@@ -25,7 +25,7 @@ export function HorizontalCard({
         <div className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: "#94A3B8" }}>
           {label}
         </div>
-        <div className="font-bold text-sm mb-1" style={{ color: "#0A0E1A" }}>{title}</div>
+        <div className="font-bold text-sm mb-1" style={{ color: "#091628" }}>{title}</div>
         <div className="text-xs leading-relaxed" style={{ color: "#64748B" }}>{description}</div>
       </div>
     </div>

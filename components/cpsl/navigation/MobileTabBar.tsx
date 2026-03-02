@@ -74,7 +74,7 @@ function TabButton({
       onClick={onClick}
       className={`flex flex-col items-center gap-1 py-2 transition-all ${fullWidth ? "flex-1" : "px-4 py-1 rounded-xl"}`}
       style={{
-        color: isActive ? "#4A78E8" : "#475569",
+        color: isActive ? "#3B82F6" : "#475569",
         background: "none",
         border: "none",
         cursor: "pointer",
@@ -93,7 +93,7 @@ function TabButton({
             transform: "translateX(-50%)",
             width: isActive ? "28px" : "0px",
             height: "2px",
-            background: isActive ? "#4A78E8" : "transparent",
+            background: isActive ? "#3B82F6" : "transparent",
             borderRadius: "0 0 2px 2px",
             transition: "width 200ms ease",
           }}
@@ -102,7 +102,7 @@ function TabButton({
         /* Mobile variant: dot indicator */
         <div
           className="w-1 h-1 rounded-full transition-all"
-          style={{ background: isActive ? "#4A78E8" : "transparent" }}
+          style={{ background: isActive ? "#3B82F6" : "transparent" }}
         />
       )}
     </button>
@@ -122,7 +122,7 @@ export function MobileTabBar({
     <div
       className="flex items-center justify-around"
       style={{
-        background: "#020B1A",
+        background: "#091628",
         borderTop: "1px solid #1E2D45",
         position: "relative",
         padding: isFull ? "8px 0 10px" : "12px 8px",

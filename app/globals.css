@@ -5,33 +5,37 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ── CPSL Blue scale (cornflower / periwinkle primary) ── */
-  --cpsl-blue-50:  #EEF4FF;
-  --cpsl-blue-100: #DDEAFF;
-  --cpsl-blue-200: #BEDAFF;
-  --cpsl-blue-300: #8ABAFF;
-  --cpsl-blue-400: #6A9AF2;
-  --cpsl-blue-500: #4A78E8;
-  --cpsl-blue-600: #3761CC;
-  --cpsl-blue-700: #284BAA;
-  --cpsl-blue-800: #1B3488;
-  --cpsl-blue-900: #0F2066;
+  /* ── CPSL Blue scale (approved primary) ── */
+  --cpsl-blue-50:  #EFF6FF;
+  --cpsl-blue-100: #DBEAFE;
+  --cpsl-blue-200: #BFDBFE;
+  --cpsl-blue-300: #93C5FD;
+  --cpsl-blue-400: #60A5FA;
+  --cpsl-blue-500: #3B82F6;
+  --cpsl-blue-600: #2563EB;
+  --cpsl-blue-700: #1D4ED8;
+  --cpsl-blue-800: #1E40AF;
+  --cpsl-blue-900: #1E3A8A;
 
-  /* ── CPSL Purple scale ── */
-  --cpsl-purple-400: #B08CF5;
-  --cpsl-purple-500: #8B40D4;
-  --cpsl-purple-600: #7333B8;
+  /* ── CPSL Purple scale (approved) ── */
+  --cpsl-purple-400: #A78BFA;
+  --cpsl-purple-500: #7C3AEC;
+  --cpsl-purple-600: #6D28D9;
 
-  /* ── CPSL Gold scale (championship / premium accent) ── */
-  --cpsl-gold-300: #E0C88A;
-  --cpsl-gold-400: #CDB268;
-  --cpsl-gold-500: #BFA05A;
-  --cpsl-gold-600: #A58840;
-  --cpsl-gold-700: #8C7030;
+  /* ── CPSL Gold scale (approved championship accent) ── */
+  --cpsl-gold-300: #E5C97A;
+  --cpsl-gold-400: #D8B85E;
+  --cpsl-gold-500: #C9A74C;
+  --cpsl-gold-600: #B08A34;
+  --cpsl-gold-700: #8C6E24;
 
-  /* ── CPSL Cream (warm premium surface) ── */
-  --cpsl-cream:      #F5EFE0;
-  --cpsl-cream-dark: #EDE4CC;
+  /* ── CPSL Cream (warm premium surface, approved) ── */
+  --cpsl-cream:      #F4EFE6;
+  --cpsl-cream-dark: #EBE3D0;
+
+  /* ── CPSL Navy (approved brand darks) ── */
+  --cpsl-navy-deep:     #091628;
+  --cpsl-navy-midnight: #0D1B3E;
 
   /* ── CPSL Neutral scale ── */
   --cpsl-neutral-50:  #F4F6FA;
@@ -43,7 +47,7 @@
   --cpsl-neutral-600: #475569;
   --cpsl-neutral-700: #334155;
   --cpsl-neutral-800: #1E293B;
-  --cpsl-neutral-900: #0A0E1A;
+  --cpsl-neutral-900: #091628;
 
   --cpsl-success: #00C853;
   --cpsl-warning: #FFB300;
@@ -53,8 +57,8 @@
   --surface-1:    #FFFFFF;
   --surface-2:    #F4F6FA;
   --surface-3:    #E2E8F0;
-  --surface-warm: #F5EFE0;
-  --text-primary:   #0A0E1A;
+  --surface-warm: #F4EFE6;
+  --text-primary:   #091628;
   --text-secondary: #475569;
   --text-muted:     #94A3B8;
   --border: oklch(0.922 0 0);
@@ -100,40 +104,40 @@
   /* ── shadcn semantic tokens → CPSL brand values ── */
   --radius: 0.625rem;
   --background: #F4F6FA;
-  --foreground: #0A0E1A;
+  --foreground: #091628;
   --card: #FFFFFF;
-  --card-foreground: #0A0E1A;
+  --card-foreground: #091628;
   --popover: #FFFFFF;
-  --popover-foreground: #0A0E1A;
-  --primary: #4A78E8;
+  --popover-foreground: #091628;
+  --primary: #3B82F6;
   --primary-foreground: #FFFFFF;
   --secondary: #EEF1F7;
-  --secondary-foreground: #0A0E1A;
+  --secondary-foreground: #091628;
   --muted: #EEF1F7;
   --muted-foreground: #64748B;
-  --accent: #8B40D4;
+  --accent: #7C3AEC;
   --accent-foreground: #FFFFFF;
   --destructive: #FF1744;
   --border: #E2E8F0;
   --input: #E2E8F0;
-  --ring: #4A78E8;
+  --ring: #3B82F6;
 
   /* ── Chart colors → CPSL palette ── */
-  --chart-1: #4A78E8;
-  --chart-2: #8B40D4;
+  --chart-1: #3B82F6;
+  --chart-2: #7C3AEC;
   --chart-3: #00C853;
-  --chart-4: #BFA05A;
+  --chart-4: #C9A74C;
   --chart-5: #0288D1;
 
-  /* ── Sidebar (dark navy) ── */
-  --sidebar: #0A0E1A;
+  /* ── Sidebar (deep navy) ── */
+  --sidebar: #091628;
   --sidebar-foreground: #F4F6FA;
-  --sidebar-primary: #4A78E8;
+  --sidebar-primary: #3B82F6;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1E2D45;
+  --sidebar-accent: #0D1B3E;
   --sidebar-accent-foreground: #F4F6FA;
-  --sidebar-border: #1E2D45;
-  --sidebar-ring: #4A78E8;
+  --sidebar-border: #0D1B3E;
+  --sidebar-ring: #3B82F6;
 }
 
 * { box-sizing: border-box; }
@@ -165,6 +169,8 @@ pre { overflow-x: auto; }
   --color-cpsl-gold-700: var(--cpsl-gold-700);
   --color-cpsl-cream:      var(--cpsl-cream);
   --color-cpsl-cream-dark: var(--cpsl-cream-dark);
+  --color-cpsl-navy-deep:     var(--cpsl-navy-deep);
+  --color-cpsl-navy-midnight: var(--cpsl-navy-midnight);
   --color-cpsl-success: var(--cpsl-success);
   --color-cpsl-warning: var(--cpsl-warning);
   --color-cpsl-error:   var(--cpsl-error);
@@ -215,37 +221,37 @@ pre { overflow-x: auto; }
 
 .dark {
   /* ── CPSL dark mode ── */
-  --background: #0A0E1A;
+  --background: #091628;
   --foreground: #F4F6FA;
-  --card: #1E293B;
+  --card: #0D1B3E;
   --card-foreground: #F4F6FA;
-  --popover: #1E293B;
+  --popover: #0D1B3E;
   --popover-foreground: #F4F6FA;
-  --primary: #6A9AF2;
-  --primary-foreground: #0A0E1A;
-  --secondary: #1E2D45;
+  --primary: #60A5FA;
+  --primary-foreground: #091628;
+  --secondary: #0D1B3E;
   --secondary-foreground: #F4F6FA;
-  --muted: #1E2D45;
+  --muted: #0D1B3E;
   --muted-foreground: #94A3B8;
-  --accent: #B08CF5;
-  --accent-foreground: #0A0E1A;
+  --accent: #A78BFA;
+  --accent-foreground: #091628;
   --destructive: #FF1744;
-  --border: #1E2D45;
-  --input: #1E2D45;
-  --ring: #6A9AF2;
-  --chart-1: #6A9AF2;
-  --chart-2: #B08CF5;
+  --border: #0D1B3E;
+  --input: #0D1B3E;
+  --ring: #60A5FA;
+  --chart-1: #60A5FA;
+  --chart-2: #A78BFA;
   --chart-3: #00C853;
-  --chart-4: #CDB268;
+  --chart-4: #D8B85E;
   --chart-5: #29B6F6;
-  --sidebar: #020B1A;
+  --sidebar: #091628;
   --sidebar-foreground: #F4F6FA;
-  --sidebar-primary: #6A9AF2;
-  --sidebar-primary-foreground: #0A0E1A;
-  --sidebar-accent: #1E2D45;
+  --sidebar-primary: #60A5FA;
+  --sidebar-primary-foreground: #091628;
+  --sidebar-accent: #0D1B3E;
   --sidebar-accent-foreground: #F4F6FA;
-  --sidebar-border: #1E2D45;
-  --sidebar-ring: #6A9AF2;
+  --sidebar-border: #0D1B3E;
+  --sidebar-ring: #60A5FA;
 }
 
 @layer base {

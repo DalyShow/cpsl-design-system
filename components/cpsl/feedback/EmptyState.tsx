@@ -14,8 +14,8 @@ export interface EmptyStateProps {
 
 const DefaultIcon = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-    <circle cx="14" cy="14" r="12" stroke="#4A78E8" strokeWidth="2" />
-    <path d="M9 14h10M14 9v10" stroke="#4A78E8" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="14" cy="14" r="12" stroke="#3B82F6" strokeWidth="2" />
+    <path d="M9 14h10M14 9v10" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
 
@@ -35,7 +35,7 @@ export function EmptyState({
       >
         {icon}
       </div>
-      <h3 className="font-bold text-base mb-2" style={{ color: "#0A0E1A" }}>{title}</h3>
+      <h3 className="font-bold text-base mb-2" style={{ color: "#091628" }}>{title}</h3>
       <p className="text-sm mb-5" style={{ color: "#64748B", maxWidth: "280px", margin: "0 auto 20px" }}>
         {description}
       </p>
@@ -43,7 +43,7 @@ export function EmptyState({
         <button
           onClick={onCta}
           className="px-5 py-2.5 rounded-xl text-sm font-bold text-white"
-          style={{ background: "#4A78E8" }}
+          style={{ background: "#3B82F6" }}
         >
           {cta}
         </button>
