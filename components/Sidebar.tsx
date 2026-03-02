@@ -18,6 +18,7 @@ const components = [
   { label: "Data Display",         href: "/data-display", icon: "09" },
   { label: "Hero Sections",        href: "/heroes",       icon: "12" },
   { label: "Body Modules",         href: "/modules",      icon: "13" },
+  { label: "Marketing Sections",   href: "/sections",     icon: "14" },
 ];
 const resources = [
   { label: "Patterns",             href: "/patterns",     icon: "10" },

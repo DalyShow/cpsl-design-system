@@ -1,0 +1,115 @@
+"use client";
+
+export interface ContentSectionCenteredProps {
+  /** Small eyebrow label above the heading */
+  eyebrow?: string;
+  heading: string;
+  /** Lead paragraph centered below the heading */
+  lead?: string;
+  /** Body paragraphs — rendered in two columns below the header */
+  paragraphs?: string[];
+  /** Surface variant — defaults to "white" */
+  background?: "white" | "surface" | "navy";
+}
+
+const defaultParagraphs = [
+  "The Carolina Premier Soccer League was founded to elevate competitive youth and amateur soccer across North Carolina and South Carolina. Our league spans the state border — a boundary that unites rather than divides — and serves clubs from Charlotte to Raleigh, Greensboro to the coast.",
+  "With tiered divisions — Premier, Elite, and Academy — CPSL provides a development pathway for players at every stage. Our promotion and relegation structure rewards ambition and ensures every match carries weight throughout the full season.",
+  "CPSL partners with US Soccer and regional federations to deliver certified officiating, standardized pitch standards, and transparent standings. Teams gain access to stat tracking, live scoring, and digital match reports through the CPSL platform.",
+  "From pre-season tournaments to end-of-season championships, the CPSL calendar is built around the player experience. We believe competitive soccer should be accessible, professionally run, and celebrated by the communities it represents.",
+];
+
+export function ContentSectionCentered({
+  eyebrow = "About the League",
+  heading = "Competitive Soccer Across the Carolinas",
+  lead = "From the Piedmont to the coast, CPSL brings together the best clubs in North and South Carolina under one banner — raising the standard for competitive soccer at every level.",
+  paragraphs = defaultParagraphs,
+  background = "white",
+}: ContentSectionCenteredProps) {
+  const bgColor     = background === "navy" ? "#091628" : background === "surface" ? "#F4F6FA" : "#FFFFFF";
+  const headColor   = background === "navy" ? "#F4EFE6" : "#091628";
+  const leadColor   = background === "navy" ? "#94A3B8" : "#475569";
+  const bodyColor   = background === "navy" ? "#64748B" : "#64748B";
+  const borderColor = background === "navy" ? "#1E2D45" : "#E2E8F0";
+
+  const mid  = Math.ceil(paragraphs.length / 2);
+  const col1 = paragraphs.slice(0, mid);
+  const col2 = paragraphs.slice(mid);
+
+  return (
+    <section style={{ background: bgColor }}>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
+
+        {/* ── Centered header ───────────────────────────────────────── */}
+        <div className="mx-auto max-w-2xl text-center" style={{ marginBottom: "64px" }}>
+          {eyebrow && (
+            <p
+              className="text-sm tracking-widest uppercase mb-4"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 600,
+                color: "#C9A74C",
+                letterSpacing: "0.12em",
+              }}
+            >
+              {eyebrow}
+            </p>
+          )}
+          <h2
+            className="uppercase mb-6"
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(36px, 5vw, 52px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              color: headColor,
+            }}
+          >
+            {heading}
+          </h2>
+          {lead && (
+            <p
+              className="text-lg leading-relaxed"
+              style={{ color: leadColor }}
+            >
+              {lead}
+            </p>
+          )}
+        </div>
+
+        {/* ── Divider ───────────────────────────────────────────────── */}
+        {paragraphs.length > 0 && (
+          <div
+            className="mx-auto mb-12"
+            style={{
+              width: "48px",
+              height: "3px",
+              background: "#C9A74C",
+            }}
+          />
+        )}
+
+        {/* ── Two-column body ───────────────────────────────────────── */}
+        {paragraphs.length > 0 && (
+          <div className="mx-auto max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="flex flex-col gap-6">
+              {col1.map((p, i) => (
+                <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="flex flex-col gap-6">
+              {col2.map((p, i) => (
+                <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
+                  {p}
+                </p>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
