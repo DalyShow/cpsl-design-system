@@ -8,8 +8,8 @@ export interface ContentSectionCenteredProps {
   lead?: string;
   /** Body paragraphs — rendered in two columns below the header */
   paragraphs?: string[];
-  /** Surface variant — defaults to "white" */
-  background?: "white" | "surface" | "navy";
+  /** Surface variant — defaults to "white". */
+  background?: "white" | "surface" | "navy" | "gold";
 }
 
 const defaultParagraphs = [
@@ -26,11 +26,18 @@ export function ContentSectionCentered({
   paragraphs = defaultParagraphs,
   background = "white",
 }: ContentSectionCenteredProps) {
-  const bgColor     = background === "navy" ? "#091628" : background === "surface" ? "#F4F6FA" : "#FFFFFF";
-  const headColor   = background === "navy" ? "#F4EFE6" : "#091628";
-  const leadColor   = background === "navy" ? "#94A3B8" : "#475569";
-  const bodyColor   = background === "navy" ? "#64748B" : "#64748B";
-  const borderColor = background === "navy" ? "#1E2D45" : "#E2E8F0";
+  const bgColor   = background === "navy"    ? "#091628"
+                  : background === "surface" ? "#F4F6FA"
+                  : background === "gold"    ? "#C9A74C"
+                  : "#FFFFFF";
+  const headColor = background === "navy"    ? "#F4EFE6"
+                  : "#091628";
+  const leadColor = background === "navy"    ? "#94A3B8"
+                  : background === "gold"    ? "#3D2400"
+                  : "#475569";
+  const bodyColor = background === "navy"    ? "#64748B"
+                  : background === "gold"    ? "#4A2E00"
+                  : "#64748B";
 
   const mid  = Math.ceil(paragraphs.length / 2);
   const col1 = paragraphs.slice(0, mid);
@@ -85,7 +92,7 @@ export function ContentSectionCentered({
             style={{
               width: "48px",
               height: "3px",
-              background: "#C9A74C",
+              background: background === "gold" ? "#091628" : "#C9A74C",
             }}
           />
         )}

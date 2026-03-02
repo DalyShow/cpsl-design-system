@@ -181,12 +181,13 @@ export default function ModulesPage() {
       <div className="px-12 pb-4">
         <Section title="10 — Content Section: Centered">
           <p className="text-xs text-muted-foreground mb-4">
-            Full-width centered section ported from Tailwind UI. Eyebrow label, display heading, lead paragraph, gold divider, and a two-column body. Use <code className="bg-secondary px-1.5 py-0.5 rounded">background="white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, or <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>.
+            Full-width centered section ported from Tailwind UI. Eyebrow label, display heading, lead paragraph, divider, and a two-column body. Four background variants: <code className="bg-secondary px-1.5 py-0.5 rounded">"white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>, and <code className="bg-secondary px-1.5 py-0.5 rounded">"gold"</code> (divider switches to navy for contrast).
           </p>
         </Section>
       </div>
       <ContentSectionCentered background="white" />
       <ContentSectionCentered background="surface" />
+      <ContentSectionCentered background="gold" />
       <ContentSectionCentered background="navy" />
       <div className="px-12 py-12" />
 
