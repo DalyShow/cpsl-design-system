@@ -9,6 +9,7 @@ import { NewsGrid } from "@/components/cpsl/modules/NewsGrid"
 import { PlayerSpotlight } from "@/components/cpsl/modules/PlayerSpotlight"
 import { CTABanner } from "@/components/cpsl/modules/CTABanner"
 import { SkeletonLoader } from "@/components/cpsl/modules/SkeletonLoader"
+import { ContentSectionCentered } from "@/components/cpsl/modules/ContentSectionCentered"
 import type { StandingRow } from "@/components/cpsl/modules/StandingsTable"
 import type { MatchResult, Fixture } from "@/components/cpsl/modules/ResultsFixturesTabs"
 import type { Club } from "@/components/cpsl/modules/ClubDirectory"
@@ -175,6 +176,20 @@ export default function ModulesPage() {
         </Section>
 
       </div>
+
+      {/* 10 — Content Section: Centered */}
+      <div className="px-12 pb-4">
+        <Section title="10 — Content Section: Centered">
+          <p className="text-xs text-muted-foreground mb-4">
+            Full-width centered section ported from Tailwind UI. Eyebrow label, display heading, lead paragraph, gold divider, and a two-column body. Use <code className="bg-secondary px-1.5 py-0.5 rounded">background="white"</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">"surface"</code>, or <code className="bg-secondary px-1.5 py-0.5 rounded">"navy"</code>.
+          </p>
+        </Section>
+      </div>
+      <ContentSectionCentered background="white" />
+      <ContentSectionCentered background="surface" />
+      <ContentSectionCentered background="navy" />
+      <div className="px-12 py-12" />
+
     </div>
   )
 }
