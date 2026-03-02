@@ -9,7 +9,7 @@ export interface ContentSectionCenteredProps {
   /** Body paragraphs — rendered in two columns below the header */
   paragraphs?: string[];
   /** Surface variant — defaults to "white". */
-  background?: "white" | "surface" | "navy" | "gold";
+  background?: "white" | "surface" | "cream" | "navy" | "gold";
 }
 
 const defaultParagraphs = [
@@ -28,6 +28,7 @@ export function ContentSectionCentered({
 }: ContentSectionCenteredProps) {
   const bgColor   = background === "navy"    ? "#091628"
                   : background === "surface" ? "#F4F6FA"
+                  : background === "cream"   ? "#F4EFE6"
                   : background === "gold"    ? "#C9A74C"
                   : "#FFFFFF";
   const headColor = background === "navy"    ? "#F4EFE6"
@@ -55,7 +56,7 @@ export function ContentSectionCentered({
               style={{
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 600,
-                color: background === "gold" ? "#7A9BAA" : "#C9A74C",
+                color: background === "gold" ? "#1A3D2B" : "#C9A74C",
                 letterSpacing: "0.12em",
               }}
             >

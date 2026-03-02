@@ -186,6 +186,7 @@ export default function ModulesPage() {
         </Section>
       </div>
       <ContentSectionCentered background="white" />
+      <ContentSectionCentered background="cream" />
       <ContentSectionCentered background="surface" />
       <ContentSectionCentered background="gold" />
       <ContentSectionCentered background="navy" />
