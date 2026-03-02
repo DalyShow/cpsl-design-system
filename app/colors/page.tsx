@@ -7,7 +7,7 @@ const primaryColors = [
   { token: "--cpsl-blue-200", hex: "#BEDAFF", name: "Blue 200" },
   { token: "--cpsl-blue-300", hex: "#8ABAFF", name: "Blue 300" },
   { token: "--cpsl-blue-400", hex: "#6A9AF2", name: "Blue 400" },
-  { token: "--cpsl-blue-500", hex: "#3B82F6", name: "Blue 500", main: true },
+  { token: "--cpsl-blue-500", hex: "#3B82F6", name: "Blue 500" },
   { token: "--cpsl-blue-600", hex: "#3761CC", name: "Blue 600" },
   { token: "--cpsl-blue-700", hex: "#284BAA", name: "Blue 700" },
   { token: "--cpsl-blue-800", hex: "#1B3488", name: "Blue 800" },
@@ -54,14 +54,12 @@ export default function ColorsPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader section="01 — Foundations" title="Color System"
-        description="CPSL Blue (#3B82F6), Gold (#C9A74C), and Purple (#7C3AEC) anchor the new brand palette. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
+        description="Championship Gold (#C9A74C) is the primary brand color. CPSL Blue (#3B82F6) and Purple (#7C3AEC) serve as supporting interactive colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
       <div className="px-12 py-12">
-        <Section title="Primary — CPSL Blue">
+        <Section title="Supporting Interactive — CPSL Blue">
           <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
             {primaryColors.map((c) => (
-              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }}>
-                {c.main && <div className="absolute inset-0 flex items-end p-2"><span className="text-xs font-bold text-white bg-black/20 px-1.5 py-0.5 rounded">Primary</span></div>}
-              </div>
+              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }} />
             ))}
           </div>
           <div className="grid grid-cols-5 gap-3">
@@ -77,9 +75,9 @@ export default function ColorsPage() {
         </Section>
 
         {/* ── Gold ── */}
-        <Section title="Championship — CPSL Gold">
+        <Section title="Primary — Championship Gold">
           <p className="text-xs text-muted-foreground mb-4">
-            Gold marks championship moments, top scorers, and premium surfaces. Always use dark text on gold — it achieves 8:1 contrast (AAA).
+            Gold is the primary brand color — used for CTAs, active states, and championship moments. Always use dark navy text on gold — it achieves 8:1 contrast (AAA).
           </p>
           <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
             {goldColors.map((c) => (
@@ -174,7 +172,7 @@ export default function ColorsPage() {
 
         <Section title="WCAG Contrast Ratios">
           <p className="text-xs text-muted-foreground mb-4">
-            The new primary blue (#3B82F6) passes AA for <strong>large text</strong> with white. For small body copy on a blue button, use dark text — it achieves 5.2:1 (AA Normal). Gold (#C9A74C) always requires dark text.
+            Gold (#C9A74C) is the primary color and always requires dark navy text — it achieves 8:1 (AAA). Blue (#3B82F6) passes AA for <strong>large text</strong> with white; use dark text on blue buttons to hit 5.2:1 (AA Normal).
           </p>
           <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#E2E8F0" }}>
             <table className="w-full text-sm" style={{ background: "white" }}>
@@ -204,7 +202,7 @@ export default function ColorsPage() {
           <div className="rounded-2xl p-6 border" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <div className="grid grid-cols-4 gap-4">
               {[
-                { token: "--primary",      light: "#3B82F6", dark: "#6A9AF2"  },
+                { token: "--primary",      light: "#C9A74C", dark: "#D8B85E"  },
                 { token: "--accent",       light: "#7C3AEC", dark: "#B08CF5"  },
                 { token: "--cpsl-gold",    light: "#C9A74C", dark: "#CDB268"  },
                 { token: "--surface-warm", light: "#F4EFE6", dark: "#1A1208"  },
