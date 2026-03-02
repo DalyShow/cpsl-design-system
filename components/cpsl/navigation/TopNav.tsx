@@ -64,7 +64,7 @@ export function TopNav({
                 background: "none",
                 cursor: "pointer",
                 fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "15px",
               }}
             >
