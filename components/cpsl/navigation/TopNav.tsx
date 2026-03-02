@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export interface TopNavItem {
   label: string;
@@ -40,17 +41,15 @@ export function TopNav({
     >
       {/* Logo + Nav */}
       <div className="flex items-center gap-8">
-        <div className="flex items-center gap-2.5 py-4">
-          <div
-            className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "#C9A74C" }}
-          >
-            <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
-              <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="#091628" strokeWidth="1.5" />
-              <path d="M4 9.5L8 6L12 9.5" stroke="#091628" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </div>
-          <span className="text-white font-bold text-sm">{logoText}</span>
+        <div className="flex items-center py-4">
+          <Image
+            src="/cpsl-horizontal.svg"
+            alt="CPSL"
+            width={140}
+            height={52}
+            unoptimized
+            priority
+          />
         </div>
 
         <nav className="flex gap-1">

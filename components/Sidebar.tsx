@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const foundations = [
@@ -53,23 +54,23 @@ export default function Sidebar() {
       style={{ background: "#091628", borderRight: "1px solid #1E2D45" }}>
       {/* Logo */}
       <div className="p-5 border-b" style={{ borderColor: "#1E2D45" }}>
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "#C9A74C" }}>
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none">
-              <path d="M1 1L17 1L17 13C17 18 9 19.5 9 19.5C9 19.5 1 18 1 13Z"
-                fill="none" stroke="#091628" strokeWidth="1.5" />
-              <path d="M5 11L9 7L13 11" stroke="#091628" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div>
-            <div className="text-xs font-bold tracking-widest uppercase" style={{ color: "#C9A74C" }}>CPSL</div>
-            <div className="text-white font-bold text-sm leading-tight">Design System</div>
-          </div>
+        <div className="mb-3">
+          <Image
+            src="/cpsl-horizontal.svg"
+            alt="CPSL"
+            width={160}
+            height={59}
+            unoptimized
+            priority
+          />
         </div>
-        <span className="text-xs font-semibold px-2 py-0.5 rounded-full inline-block"
-          style={{ background: "#C9A74C22", color: "#C9A74C", border: "1px solid #C9A74C44" }}>
-          v1.0
-        </span>
+        <div className="flex items-center justify-between">
+          <div className="text-xs font-bold tracking-widest uppercase" style={{ color: "#475569" }}>Design System</div>
+          <span className="text-xs font-semibold px-2 py-0.5 rounded-full inline-block"
+            style={{ background: "#C9A74C22", color: "#C9A74C", border: "1px solid #C9A74C44" }}>
+            v1.0
+          </span>
+        </div>
       </div>
 
       {/* Nav */}
