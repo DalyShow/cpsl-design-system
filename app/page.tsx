@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const sections = [
+  { num: "00", label: "Logo & Brand Marks", href: "/logos", desc: "Primary crest, wordmark lockups, horizontal and stacked variants, brandmark, and OG assets. Specs included.", color: "#BFA05A" },
   { num: "01", label: "Color System", href: "/colors", desc: "Primary, accent, semantic, neutral palettes. Dark mode tokens and WCAG contrast ratios.", color: "#4A78E8" },
   { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#8B40D4" },
   { num: "03", label: "Grid & Spacing", href: "/grid", desc: "12-column grid, 5 breakpoints, 8px base spacing scale, border radius tokens.", color: "#0288D1" },
@@ -17,7 +18,7 @@ const sections = [
 ];
 
 const stats = [
-  { value: "13", label: "Sections" },
+  { value: "14", label: "Sections" },
   { value: "30+", label: "Components" },
   { value: "3", label: "Patterns" },
   { value: "WCAG AA", label: "Accessibility" },
@@ -89,7 +90,7 @@ export default function Home() {
         <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#020B1A", borderColor: "#1E2D45" }}>
           <div>
             <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#4A78E8" }}>v1.0</span></div>
-            <div className="text-xs" style={{ color: "#475569" }}>13 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
+            <div className="text-xs" style={{ color: "#475569" }}>14 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
             {["#4A78E8", "#8B40D4", "#F4F6FA"].map((c) => (
