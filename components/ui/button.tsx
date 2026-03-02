@@ -38,6 +38,16 @@ const buttonVariants = cva(
         /** Live indicator style — pulsing red */
         "cpsl-live":
           "bg-[#FF1744] text-white shadow-sm hover:bg-[#D50000] animate-pulse focus-visible:ring-[#FF1744]/40",
+        /**
+         * Championship Gold CTA — primary call-to-action on dark surfaces.
+         * Used in TopNav and hero sections. Sharp corners (rounded-none) match
+         * the diagonal border motif in the CPSL brand identity.
+         */
+        "cpsl-gold":
+          "rounded-none bg-[#C9A74C] text-[#091628] shadow-sm font-bold hover:bg-[#B89640] focus-visible:ring-[#C9A74C]/40",
+        /** Gold ghost — outlined version for use on light surfaces */
+        "cpsl-outline-gold":
+          "rounded-none border-2 border-[#C9A74C] text-[#C9A74C] bg-transparent hover:bg-[#C9A74C] hover:text-[#091628] focus-visible:ring-[#C9A74C]/40",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

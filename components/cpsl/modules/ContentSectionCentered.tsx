@@ -6,10 +6,17 @@ export interface ContentSectionCenteredProps {
   heading?: string;
   /** Lead paragraph centered below the heading */
   lead?: string;
-  /** Body paragraphs — rendered in two columns below the header */
+  /**
+   * Body paragraphs below the header block.
+   * - columns="2" (default): split into two equal columns at lg breakpoint
+   * - columns="1": single centered column, max-w-2xl, for shorter or more
+   *   editorial copy where scanability matters less than flow.
+   */
   paragraphs?: string[];
   /** Surface variant — defaults to "cream". */
   background?: "white" | "surface" | "cream" | "navy" | "gold";
+  /** Number of body-copy columns — defaults to 2. */
+  columns?: 1 | 2;
 }
 
 const defaultParagraphs = [
@@ -25,6 +32,7 @@ export function ContentSectionCentered({
   lead = "From the Piedmont to the coast, CPSL brings together the best clubs in North and South Carolina under one banner — raising the standard for competitive soccer at every level.",
   paragraphs = defaultParagraphs,
   background = "cream",
+  columns = 2,
 }: ContentSectionCenteredProps) {
   const bgColor   = background === "navy"    ? "#091628"
                   : background === "surface" ? "#F4F6FA"
@@ -98,24 +106,36 @@ export function ContentSectionCentered({
           />
         )}
 
-        {/* ── Two-column body ───────────────────────────────────────── */}
+        {/* ── Body copy ─────────────────────────────────────────────── */}
         {paragraphs.length > 0 && (
-          <div className="mx-auto max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div className="flex flex-col gap-6">
-              {col1.map((p, i) => (
+          columns === 1 ? (
+            /* Single column — centered, editorial flow */
+            <div className="mx-auto max-w-2xl flex flex-col gap-6">
+              {paragraphs.map((p, i) => (
                 <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
                   {p}
                 </p>
               ))}
             </div>
-            <div className="flex flex-col gap-6">
-              {col2.map((p, i) => (
-                <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
-                  {p}
-                </p>
-              ))}
+          ) : (
+            /* Two columns — split evenly at lg breakpoint */
+            <div className="mx-auto max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div className="flex flex-col gap-6">
+                {col1.map((p, i) => (
+                  <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
+                    {p}
+                  </p>
+                ))}
+              </div>
+              <div className="flex flex-col gap-6">
+                {col2.map((p, i) => (
+                  <p key={i} className="text-base leading-8" style={{ color: bodyColor }}>
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
+          )
         )}
       </div>
     </section>
