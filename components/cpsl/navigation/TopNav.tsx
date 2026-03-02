@@ -43,11 +43,11 @@ export function TopNav({
         <div className="flex items-center gap-2.5 py-4">
           <div
             className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: "#3B82F6" }}
+            style={{ background: "#C9A74C" }}
           >
             <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
-              <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="white" strokeWidth="1.5" />
-              <path d="M4 9.5L8 6L12 9.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M1 1L15 1L15 12C15 16 8 17 8 17C8 17 1 16 1 12Z" fill="none" stroke="#091628" strokeWidth="1.5" />
+              <path d="M4 9.5L8 6L12 9.5" stroke="#091628" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           </div>
           <span className="text-white font-bold text-sm">{logoText}</span>
@@ -61,7 +61,7 @@ export function TopNav({
               className="px-4 py-4 text-sm font-medium border-b-2 transition-colors"
               style={{
                 color: i === activeIndex ? "white" : "#64748B",
-                borderColor: i === activeIndex ? "#3B82F6" : "transparent",
+                borderColor: i === activeIndex ? "#C9A74C" : "transparent",
                 background: "none",
                 cursor: "pointer",
               }}
@@ -85,7 +85,7 @@ export function TopNav({
         )}
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white"
-          style={{ background: "#3B82F6" }}
+          style={{ background: "#C9A74C", color: "#091628" }}
         >
           {userInitials}
         </div>

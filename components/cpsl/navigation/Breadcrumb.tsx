@@ -14,7 +14,7 @@ export function Breadcrumb({
             <a
               className={isLast ? "" : "cursor-pointer hover:underline"}
               style={{
-                color: isLast ? "#091628" : "#3B82F6",
+                color: isLast ? "#091628" : "#C9A74C",
                 fontWeight: isLast ? 600 : 400,
                 textDecoration: "none",
               }}

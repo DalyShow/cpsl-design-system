@@ -30,19 +30,19 @@ export default function Home() {
       {/* Hero */}
       <div className="px-12 py-16 border-b" style={{ background: "#091628", borderColor: "#1E2D45" }}>
         <div className="max-w-3xl">
-          <div className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "#3B82F6" }}>
+          <div className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "#C9A74C" }}>
             Carolina Premier Soccer League
           </div>
           <h1 className="font-bold mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "56px", lineHeight: 1.05, letterSpacing: "-1px", color: "white" }}>
-            CPSL<br /><span style={{ color: "#3B82F6" }}>Design System</span>
+            CPSL<br /><span style={{ color: "#C9A74C" }}>Design System</span>
           </h1>
           <p className="text-lg mb-8 leading-relaxed" style={{ color: "#64748B", maxWidth: "520px" }}>
             A complete, publish-ready design system for the Carolina Premier Soccer League. Built for speed, accessibility, and brand cohesion across all digital surfaces.
           </p>
           <div className="flex gap-3">
             <Link href="/colors"
-              className="px-6 py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
-              style={{ background: "#3B82F6" }}>
+              className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+              style={{ background: "#C9A74C", color: "#091628" }}>
               Get Started →
             </Link>
             <Link href="/tokens"
@@ -89,11 +89,11 @@ export default function Home() {
         {/* Footer banner */}
         <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#091628", borderColor: "#1E2D45" }}>
           <div>
-            <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#3B82F6" }}>v1.0</span></div>
+            <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#C9A74C" }}>v1.0</span></div>
             <div className="text-xs" style={{ color: "#475569" }}>14 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
-            {["#3B82F6", "#7C3AEC", "#F4F6FA"].map((c) => (
+            {["#C9A74C", "#3B82F6", "#7C3AEC"].map((c) => (
               <div key={c} className="w-7 h-7 rounded-full border" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>
