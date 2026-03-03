@@ -56,29 +56,6 @@ export default function ColorsPage() {
       <PageHeader section="01 — Foundations" title="Color System"
         description="Championship Gold (#C9A74C) is the primary brand color. CPSL Steel (#697279) and Purple (#7C3AEC) serve as supporting interactive colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
       <div className="px-12 py-12">
-        <Section title="Secondary — CPSL Steel">
-          <p className="text-xs text-muted-foreground mb-4">
-            Steel is a cool blue-grey secondary color centered on <strong>#697279</strong>. Used for informational states, secondary badges, promotion zones, and UI chrome accents.
-          </p>
-          <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
-            {steelColors.map((c) => (
-              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }}>
-                {c.main && <div className="absolute inset-0 flex items-end p-2"><span className="text-xs font-bold px-1.5 py-0.5 rounded bg-black/10" style={{ color: "white" }}>Steel</span></div>}
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-5 gap-3">
-            {steelColors.map((c) => (
-              <div key={c.hex} className="rounded-xl p-3 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
-                <div className="w-full h-10 rounded-lg mb-2" style={{ background: c.hex }} />
-                <div className="text-xs font-bold" style={{ color: "#091628" }}>{c.name}</div>
-                <div className="text-xs font-mono mt-0.5" style={{ color: "#64748B" }}>{c.hex}</div>
-                <div className="text-xs font-mono mt-0.5" style={{ color: "#94A3B8", fontSize: "10px" }}>{c.token}</div>
-              </div>
-            ))}
-          </div>
-        </Section>
-
         {/* ── Gold ── */}
         <Section title="Primary — Championship Gold">
           <p className="text-xs text-muted-foreground mb-4">
@@ -100,6 +77,29 @@ export default function ColorsPage() {
                   <div className="text-xs font-mono" style={{ color: "#64748B" }}>{c.hex}</div>
                   {c.main && <div className="text-xs mt-1 font-semibold" style={{ color: "#A58840" }}>Championship</div>}
                 </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section title="Secondary — CPSL Steel">
+          <p className="text-xs text-muted-foreground mb-4">
+            Steel is a cool blue-grey secondary color centered on <strong>#697279</strong>. Used for informational states, secondary badges, promotion zones, and UI chrome accents.
+          </p>
+          <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
+            {steelColors.map((c) => (
+              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }}>
+                {c.main && <div className="absolute inset-0 flex items-end p-2"><span className="text-xs font-bold px-1.5 py-0.5 rounded bg-black/10" style={{ color: "white" }}>Steel</span></div>}
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-5 gap-3">
+            {steelColors.map((c) => (
+              <div key={c.hex} className="rounded-xl p-3 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
+                <div className="w-full h-10 rounded-lg mb-2" style={{ background: c.hex }} />
+                <div className="text-xs font-bold" style={{ color: "#091628" }}>{c.name}</div>
+                <div className="text-xs font-mono mt-0.5" style={{ color: "#64748B" }}>{c.hex}</div>
+                <div className="text-xs font-mono mt-0.5" style={{ color: "#94A3B8", fontSize: "10px" }}>{c.token}</div>
               </div>
             ))}
           </div>
