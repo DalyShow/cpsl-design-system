@@ -163,10 +163,14 @@ export default function ModulesPage() {
 
         <Section title="8 — CTA Banner">
           <p className="text-xs text-muted-foreground mb-4">
-            Full-width dark navy section with Barlow Condensed headline, subtext, and a primary + secondary CTA pair.
+            Five <code className="bg-secondary px-1.5 py-0.5 rounded">background</code> variants — <code className="bg-secondary px-1.5 py-0.5 rounded">cream</code> (default), <code className="bg-secondary px-1.5 py-0.5 rounded">white</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">surface</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">navy</code>, <code className="bg-secondary px-1.5 py-0.5 rounded">gold</code>. Matches the ContentSectionCentered background token set.
           </p>
-          <CTABanner />
         </Section>
+      </div>
+      {(["cream","white","surface","navy","gold"] as const).map((bg) => (
+        <CTABanner key={bg} background={bg} eyebrow={`${bg} variant`} />
+      ))}
+      <div className="px-12 py-12">
 
         <Section title="9 — Skeleton Loading State">
           <p className="text-xs text-muted-foreground mb-4">
