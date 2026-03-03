@@ -51,7 +51,7 @@ export function CTABanner({
             <div style={{ color: "#E74552", fontSize: "10px", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "12px" }}>
               {eyebrow}
             </div>
-            <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 0.95, letterSpacing: "-1.5px", marginBottom: "16px" }}>
+            <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "#F4EFE6", lineHeight: 0.95, letterSpacing: "-1.5px", marginBottom: "16px" }}>
               {headline}<br />
               <span style={{ color: "#C9A74C" }}>{headlineAccent}</span>
             </h2>
