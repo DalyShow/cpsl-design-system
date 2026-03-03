@@ -76,7 +76,7 @@ export async function fetchClubs(): Promise<Club[]> {
   } while (offset);
 
   // Map Airtable records → Club shape, skip any incomplete rows
-  return allRecords
+  const mapped = allRecords
     .filter((r) => r.fields["Club Name"] && r.fields["Conference"])
     .map((r) => {
       const f = r.fields;
@@ -95,6 +95,9 @@ export async function fetchClubs(): Promise<Club[]> {
         director: f["Director"] ?? "",
       };
     });
+
+  // Fall back to static data if Airtable returned no usable records yet
+  return mapped.length > 0 ? mapped : CLUBS;
 }
 
 /** Converts "Charlotte FC" → "charlotte-fc" as a fallback logo slug */
