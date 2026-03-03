@@ -19,7 +19,7 @@ import type { NewsArticle } from "@/components/cpsl/modules/NewsGrid"
 
 const clubs: Club[] = [
   { abbr: "CFA", name: "Charlotte FC Academy", city: "Charlotte",      color: "#697279", tier: "premier"  },
-  { abbr: "RLH", name: "Raleigh Athletic",      city: "Raleigh",       color: "#7C3AEC", tier: "premier"  },
+  { abbr: "RLH", name: "Raleigh Athletic",      city: "Raleigh",       color: "#BF1D2D", tier: "premier"  },
   { abbr: "DUR", name: "Durham United",         city: "Durham",        color: "#091628", tier: "elite"    },
   { abbr: "TFC", name: "Triangle FC",           city: "Cary",          color: "#697279", tier: "elite"    },
   { abbr: "GFC", name: "Greensboro FC",         city: "Greensboro",    color: "#00875A", tier: "academy"  },
@@ -28,7 +28,7 @@ const clubs: Club[] = [
 
 const standingsRows: StandingRow[] = [
   { pos: 1, club: "Charlotte FC",     abbr: "CFA", color: "#697279", p: 18, w: 14, d: 2,  l: 2,  gd: "+24", pts: 44, form: ["W","W","W","D","W"] },
-  { pos: 2, club: "Raleigh Athletic", abbr: "RLH", color: "#7C3AEC", p: 18, w: 11, d: 4,  l: 3,  gd: "+14", pts: 37, form: ["W","D","W","L","W"] },
+  { pos: 2, club: "Raleigh Athletic", abbr: "RLH", color: "#BF1D2D", p: 18, w: 11, d: 4,  l: 3,  gd: "+14", pts: 37, form: ["W","D","W","L","W"] },
   { pos: 3, club: "Durham United",    abbr: "DUR", color: "#091628", p: 18, w: 10, d: 3,  l: 5,  gd: "+8",  pts: 33, form: ["D","W","L","W","D"] },
   { pos: 4, club: "Triangle FC",      abbr: "TFC", color: "#697279", p: 18, w:  8, d: 5,  l: 5,  gd: "+2",  pts: 29, form: ["D","L","W","D","W"] },
   { pos: 5, club: "Greensboro FC",    abbr: "GFC", color: "#00875A", p: 18, w:  6, d: 3,  l: 9,  gd: "-8",  pts: 21, form: ["L","W","L","D","L"] },
@@ -145,8 +145,8 @@ export default function ModulesPage() {
             stats={[
               { label: "Shooting Accuracy", value: 72, color: "#697279" },
               { label: "Pass Completion",   value: 84, color: "#697279" },
-              { label: "Dribble Success",   value: 61, color: "#7C3AEC" },
-              { label: "Aerial Duels Won",  value: 55, color: "#7C3AEC" },
+              { label: "Dribble Success",   value: 61, color: "#BF1D2D" },
+              { label: "Aerial Duels Won",  value: 55, color: "#BF1D2D" },
               { label: "Distance Covered",  value: 88, color: "#00C853" },
             ]}
             miniStats={[

@@ -43,7 +43,7 @@ export default function FeedbackPage() {
             <div className="flex flex-col gap-5">
               <ProgressBar label="Season progress"       value={75}  color="#697279" />
               <ProgressBar label="Registration complete" value={100} color="#00C853" />
-              <ProgressBar label="Upload: kit assets"    value={45}  color="#7C3AEC" />
+              <ProgressBar label="Upload: kit assets"    value={45}  color="#BF1D2D" />
             </div>
           </div>
         </Section>

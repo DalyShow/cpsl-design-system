@@ -145,7 +145,7 @@ export function ScoreboardWidget({
           </div>
           <div className="flex h-1 rounded-full overflow-hidden bg-white/10">
             <div className="bg-[#697279]" style={{ width: "54%" }} />
-            <div className="bg-[#7C3AEC]" style={{ width: "46%" }} />
+            <div className="bg-[#BF1D2D]" style={{ width: "46%" }} />
           </div>
           <div className="flex justify-between text-[10px] text-white/60 mt-1">
             <span>54%</span>

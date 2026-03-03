@@ -25,7 +25,7 @@ const BADGE_STYLES: Record<BadgeVariant, { bg: string; color: string; border: st
   postponed: { bg: "#FFF3E0", color: "#E65100", border: "#FFCC80" },
   loss:      { bg: "#FFF0F0", color: "#FF1744", border: "#FFC5CC" },
   draw:      { bg: "#F4F6FA", color: "#475569", border: "#E2E8F0" },
-  cup:       { bg: "#F5F0FF", color: "#7C3AEC", border: "#DDD6FE" },
+  cup:       { bg: "#FEF0F1", color: "#BF1D2D", border: "#FAB3B8" },
   featured:  { bg: "#F2F4F5", color: "#697279", border: "#C8CED2" },
   new:       { bg: "#F2F4F5", color: "#697279", border: "#C8CED2" },
 };

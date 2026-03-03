@@ -27,7 +27,7 @@ export function MagazineHero({
     <div className="relative min-h-[480px] md:h-[540px] overflow-hidden" style={{ background: "#F4F6FA" }}>
 
       {/* Accent stripe */}
-      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "4px", background: "linear-gradient(to bottom, #697279, #7C3AEC)" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "4px", background: "linear-gradient(to bottom, #697279, #BF1D2D)" }} />
 
       {/* Right — photo slot (hidden on mobile) */}
       <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[55%] overflow-hidden">

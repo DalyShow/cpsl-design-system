@@ -3,15 +3,15 @@ import Link from "next/link";
 const sections = [
   { num: "00", label: "Logo & Brand Marks", href: "/logos", desc: "Primary crest, wordmark lockups, horizontal and stacked variants, brandmark, and OG assets. Specs included.", color: "#C9A74C" },
   { num: "01", label: "Color System", href: "/colors", desc: "Primary, accent, semantic, neutral palettes. Dark mode tokens and WCAG contrast ratios.", color: "#697279" },
-  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#7C3AEC" },
+  { num: "02", label: "Typography", href: "/typography", desc: "9-level type scale. Barlow Condensed for headlines, Inter for body text. Responsive and accessible.", color: "#BF1D2D" },
   { num: "03", label: "Grid & Spacing", href: "/grid", desc: "12-column grid, 5 breakpoints, 8px base spacing scale, border radius tokens.", color: "#697279" },
   { num: "04", label: "Buttons & CTAs", href: "/buttons", desc: "5 variants, 4 states, 3 sizes. Full anatomy, CSS tokens, and a11y specs.", color: "#00875A" },
-  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#7C3AEC" },
+  { num: "05", label: "Inputs & Forms", href: "/inputs", desc: "Text, select, checkbox, radio, toggle, textarea. All interactive states.", color: "#BF1D2D" },
   { num: "06", label: "Cards & Lists", href: "/cards", desc: "Default, elevated, score, and horizontal card variants. Standings list pattern.", color: "#E65100" },
-  { num: "07", label: "Navigation", href: "/navigation", desc: "Top nav, tab bar, breadcrumb, pagination, sidebar, and mobile tab bar.", color: "#7C3AEC" },
+  { num: "07", label: "Navigation", href: "/navigation", desc: "Top nav, tab bar, breadcrumb, pagination, sidebar, and mobile tab bar.", color: "#BF1D2D" },
   { num: "08", label: "Feedback & Overlays", href: "/feedback", desc: "Alerts, toasts, progress bars, badges, modal, tooltip, and empty states.", color: "#FF1744" },
   { num: "09", label: "Data Display", href: "/data-display", desc: "Sortable tables, avatar groups, tags, stat displays, and skeleton loading.", color: "#697279" },
-  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#7C3AEC" },
+  { num: "10", label: "Patterns", href: "/patterns", desc: "Live scoreboard widget, match cards, auth sign-in flow with 2FA.", color: "#BF1D2D" },
   { num: "11", label: "Tokens & Dev Guide", href: "/tokens", desc: "tokens.json, CSS custom properties, dark mode, contribution checklist.", color: "#00875A" },
   { num: "12", label: "Hero Sections", href: "/heroes", desc: "Four production-ready hero layouts — cinematic gradient, split frame, glass card, and magazine overlap. Photo and video ready.", color: "#697279" },
   { num: "13", label: "Body Modules", href: "/modules", desc: "Nine plug-and-play page sections — stats bar, tabs, standings table, club directory, news grid, player spotlight, CTA banner, and skeleton states.", color: "#00875A" },
@@ -93,7 +93,7 @@ export default function Home() {
             <div className="text-xs" style={{ color: "#475569" }}>14 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
-            {["#C9A74C", "#697279", "#7C3AEC"].map((c) => (
+            {["#C9A74C", "#697279", "#BF1D2D"].map((c) => (
               <div key={c} className="w-7 h-7 rounded-full border" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

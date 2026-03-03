@@ -13,7 +13,7 @@ import {
 
 const standingsData: StandingsListRow[] = [
   { team: "Charlotte FC",     init: "CC", color: "#697279", p: 18, w: 14, d: 2, l: 2, gd: "+24", pts: 44 },
-  { team: "Raleigh Athletic", init: "RA", color: "#7C3AEC", p: 18, w: 11, d: 4, l: 3, gd: "+14", pts: 37 },
+  { team: "Raleigh Athletic", init: "RA", color: "#BF1D2D", p: 18, w: 11, d: 4, l: 3, gd: "+14", pts: 37 },
   { team: "Durham United",    init: "DU", color: "#1A1A2E", p: 18, w: 10, d: 3, l: 5, gd: "+8",  pts: 33 },
 ];
 
@@ -52,7 +52,7 @@ export default function CardsPage() {
               homeColor="#697279"
               awayTeam="Raleigh"
               awayInitials="RA"
-              awayColor="#7C3AEC"
+              awayColor="#BF1D2D"
               score="3–1"
               result="WIN"
               date="Sat, Feb 22"

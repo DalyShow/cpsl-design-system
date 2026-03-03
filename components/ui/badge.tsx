@@ -64,7 +64,7 @@ const badgeVariants = cva(
           "bg-[#697279] text-white border-[#505960]",
         /** Elite tier */
         elite:
-          "bg-[#7C3AEC] text-white border-[#7333B8]",
+          "bg-[#BF1D2D] text-white border-[#96161E]",
         /** Academy / development */
         academy:
           "bg-[#EEF1F7] text-[#334155] border-[#CBD5E1]",

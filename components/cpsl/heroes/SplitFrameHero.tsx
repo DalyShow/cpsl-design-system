@@ -23,7 +23,7 @@ export function SplitFrameHero({
   secondaryCta = { label: "Match Preview" },
   imageSrc,
   homeTeam   = { abbr: "CFA", color: "#697279" },
-  awayTeam   = { abbr: "RLH", color: "#7C3AEC" },
+  awayTeam   = { abbr: "RLH", color: "#BF1D2D" },
 }: SplitFrameHeroProps) {
   return (
     <div className="flex flex-col md:flex-row md:h-[520px] overflow-hidden">
@@ -37,7 +37,7 @@ export function SplitFrameHero({
 
         <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-sm)", fontWeight: 800, color: "white", lineHeight: 0.93, letterSpacing: "-1.5px", marginBottom: "28px" }}>
           {teamA}<br />
-          <span style={{ color: "#7C3AEC" }}>vs</span> RALEIGH<br />
+          <span style={{ color: "#BF1D2D" }}>vs</span> RALEIGH<br />
           {teamB}
         </h1>
 

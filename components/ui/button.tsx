@@ -23,14 +23,14 @@ const buttonVariants = cva(
           "text-primary underline-offset-4 hover:underline",
 
         // ── CPSL brand variants ──────────────────────────────────────────────
-        /** Vivid purple CTA — use for primary conversion actions */
-        "cpsl-purple":
+        /** Crimson CTA — competition accent, alerts, high-energy moments */
+        "cpsl-crimson":
           "bg-accent text-accent-foreground shadow-sm hover:bg-accent/90 focus-visible:ring-accent/40",
         /** Dark navy — primary action on light surfaces */
         "cpsl-navy":
           "bg-[#091628] text-white shadow-sm hover:bg-[#1E293B] focus-visible:ring-[#091628]/40",
-        /** Ghost with purple border — accent secondary */
-        "cpsl-outline-purple":
+        /** Ghost with crimson border — accent secondary */
+        "cpsl-outline-crimson":
           "border-2 border-accent text-accent bg-transparent hover:bg-accent hover:text-accent-foreground",
         /** Success green */
         "cpsl-success":

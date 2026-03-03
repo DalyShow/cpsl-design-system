@@ -15,12 +15,12 @@ const STATE_TOKENS = {
     active:   { bg: "rgba(0,71,255,0.82)",     color: "#ffffff", border: "none",              ring: "none" },
     disabled: { bg: "#697279",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
-  purple: {
-    default:  { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "none" },
-    hover:    { bg: "rgba(124,58,237,0.88)",   color: "#ffffff", border: "none",              ring: "none" },
-    focus:    { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(124,58,237,0.4)" },
-    active:   { bg: "rgba(124,58,237,0.82)",   color: "#ffffff", border: "none",              ring: "none" },
-    disabled: { bg: "#7C3AEC",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
+  crimson: {
+    default:  { bg: "#BF1D2D",                color: "#ffffff", border: "none",              ring: "none" },
+    hover:    { bg: "rgba(191,29,45,0.88)",    color: "#ffffff", border: "none",              ring: "none" },
+    focus:    { bg: "#BF1D2D",                color: "#ffffff", border: "none",              ring: "0 0 0 3px rgba(191,29,45,0.4)" },
+    active:   { bg: "rgba(191,29,45,0.82)",    color: "#ffffff", border: "none",              ring: "none" },
+    disabled: { bg: "#BF1D2D",                color: "#ffffff", border: "none",              ring: "none", opacity: 0.5 },
   },
   secondary: {
     default:  { bg: "transparent",            color: "#697279", border: "2px solid #697279",  ring: "none" },
@@ -66,7 +66,7 @@ const STATE_DESCRIPTIONS: Record<StateKey, string> = {
 
 const VARIANT_LABELS: Record<VariantKey, string> = {
   primary:     "Primary (default)",
-  purple:      "cpsl-purple",
+  crimson:     "cpsl-crimson",
   secondary:   "Secondary",
   ghost:       "Ghost",
   destructive: "Destructive",
@@ -149,7 +149,7 @@ const cssCode = `import { Button } from "@/components/ui/button"
 
 // Core CPSL variants
 <Button variant="default">Primary</Button>
-<Button variant="cpsl-purple">Purple CTA</Button>
+<Button variant="cpsl-crimson">Crimson CTA</Button>
 <Button variant="cpsl-navy">Navy</Button>
 <Button variant="secondary">Secondary</Button>
 <Button variant="ghost">Ghost</Button>
@@ -188,10 +188,10 @@ export default function ButtonsPage() {
             </p>
             <div className="flex flex-wrap gap-3 items-center">
               <Button variant="default">Primary</Button>
-              <Button variant="cpsl-purple">Purple CTA</Button>
+              <Button variant="cpsl-crimson">Crimson CTA</Button>
               <Button variant="cpsl-navy">Navy</Button>
               <Button variant="secondary">Secondary</Button>
-              <Button variant="cpsl-outline-purple">Outline Purple</Button>
+              <Button variant="cpsl-outline-crimson">Outline Crimson</Button>
               <Button variant="ghost">Ghost</Button>
               <Button variant="link">Link</Button>
               <Button variant="destructive">Destructive</Button>
@@ -273,7 +273,7 @@ export default function ButtonsPage() {
               <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">Tab to focus these buttons →</p>
               <div className="flex gap-4 p-6 rounded-xl bg-[#F4F6FA] border border-[#E2E8F0]">
                 <Button variant="default">Primary</Button>
-                <Button variant="cpsl-purple">Purple</Button>
+                <Button variant="cpsl-crimson">Crimson</Button>
                 <Button variant="secondary">Secondary</Button>
                 <Button variant="ghost">Ghost</Button>
               </div>
@@ -335,7 +335,7 @@ export default function ButtonsPage() {
                 <span className="text-[10px] text-muted-foreground">pill · rounded-full</span>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <Button size="pill-sm" variant="cpsl-purple">Pill SM</Button>
+                <Button size="pill-sm" variant="cpsl-crimson">Pill SM</Button>
                 <span className="text-[10px] text-muted-foreground">pill-sm</span>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -347,7 +347,7 @@ export default function ButtonsPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Icon Buttons</p>
               <div className="flex gap-3 items-center">
                 {(["icon-xs","icon-sm","icon","icon-lg"] as const).map((s, i) => (
-                  <Button key={s} size={s} variant={i === 0 ? "secondary" : i === 1 ? "ghost" : i === 2 ? "default" : "cpsl-purple"} aria-label="Navigate">
+                  <Button key={s} size={s} variant={i === 0 ? "secondary" : i === 1 ? "ghost" : i === 2 ? "default" : "cpsl-crimson"} aria-label="Navigate">
                     <svg width={10 + i * 2} height={10 + i * 2} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Button>
                 ))}
@@ -362,7 +362,7 @@ export default function ButtonsPage() {
             <div>
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3">Primary + Secondary CTA</p>
               <div className="flex gap-3">
-                <Button variant="cpsl-purple" size="lg">
+                <Button variant="cpsl-crimson" size="lg">
                   Apply for Admission
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                 </Button>

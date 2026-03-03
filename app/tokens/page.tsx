@@ -16,10 +16,17 @@ const tokenJson = `{
       "800": "#262D32",
       "900": "#161B1E"
     },
-    "accent": {
-      "400": "#B08CF5",
-      "500": "#7C3AEC",
-      "600": "#7333B8"
+    "crimson": {
+      "50":  "#FEF0F1",
+      "100": "#FDDCDE",
+      "200": "#FAB3B8",
+      "300": "#F47D85",
+      "400": "#E74552",
+      "500": "#BF1D2D",
+      "600": "#96161E",
+      "700": "#6E1017",
+      "800": "#480B0F",
+      "900": "#250508"
     },
     "gold": {
       "300": "#E0C88A",
@@ -91,9 +98,10 @@ const cssVars = `:root {
   --cpsl-steel-600: #505960;
   --cpsl-steel-900: #161B1E;
 
-  /* Color — Accent */
-  --cpsl-purple-500: #7C3AEC;
-  --cpsl-purple-600: #7333B8;
+  /* Color — Crimson (accent) */
+  --cpsl-crimson-400: #E74552;
+  --cpsl-crimson-500: #BF1D2D;
+  --cpsl-crimson-600: #96161E;
 
   /* Color — Gold */
   --cpsl-gold-500: #C9A74C;
@@ -258,7 +266,7 @@ export default function TokensPage() {
             <div className="text-sm" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5 items-center">
-            {["#697279","#C9A74C","#7C3AEC","#F4EFE6","#F4F6FA"].map(c => (
+            {["#697279","#C9A74C","#BF1D2D","#F4EFE6","#F4F6FA"].map(c => (
               <div key={c} className="w-8 h-8 rounded-full border-2" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

@@ -29,7 +29,7 @@ export function ScoreCard({
   homeColor = "#697279",
   awayTeam,
   awayInitials,
-  awayColor = "#7C3AEC",
+  awayColor = "#BF1D2D",
   score,
   result,
   date,

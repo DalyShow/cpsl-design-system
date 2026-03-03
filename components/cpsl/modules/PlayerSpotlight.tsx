@@ -51,8 +51,8 @@ export function PlayerSpotlight({
   stats       = [
     { label: "Shooting Accuracy", value: 72, color: "#697279" },
     { label: "Pass Completion",   value: 84, color: "#697279" },
-    { label: "Dribble Success",   value: 61, color: "#7C3AEC" },
-    { label: "Aerial Duels Won",  value: 55, color: "#7C3AEC" },
+    { label: "Dribble Success",   value: 61, color: "#BF1D2D" },
+    { label: "Aerial Duels Won",  value: 55, color: "#BF1D2D" },
     { label: "Distance Covered",  value: 88, color: "#00C853" },
   ],
   miniStats   = [

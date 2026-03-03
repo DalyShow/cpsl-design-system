@@ -17,10 +17,17 @@
   --cpsl-steel-800: #262D32;
   --cpsl-steel-900: #161B1E;
 
-  /* ── CPSL Purple scale (approved) ── */
-  --cpsl-purple-400: #A78BFA;
-  --cpsl-purple-500: #7C3AEC;
-  --cpsl-purple-600: #6D28D9;
+  /* ── CPSL Crimson scale (accent — midpoint #BF1D2D) ── */
+  --cpsl-crimson-50:  #FEF0F1;
+  --cpsl-crimson-100: #FDDCDE;
+  --cpsl-crimson-200: #FAB3B8;
+  --cpsl-crimson-300: #F47D85;
+  --cpsl-crimson-400: #E74552;
+  --cpsl-crimson-500: #BF1D2D;
+  --cpsl-crimson-600: #96161E;
+  --cpsl-crimson-700: #6E1017;
+  --cpsl-crimson-800: #480B0F;
+  --cpsl-crimson-900: #250508;
 
   /* ── CPSL Gold scale (approved championship accent) ── */
   --cpsl-gold-300: #E5C97A;
@@ -115,7 +122,7 @@
   --secondary-foreground: #091628;
   --muted: #EEF1F7;
   --muted-foreground: #64748B;
-  --accent: #7C3AEC;
+  --accent: #BF1D2D;
   --accent-foreground: #FFFFFF;
   --destructive: #FF1744;
   --border: #E2E8F0;
@@ -125,7 +132,7 @@
   /* ── Chart colors → CPSL palette ── */
   --chart-1: #C9A74C;
   --chart-2: #697279;
-  --chart-3: #7C3AEC;
+  --chart-3: #BF1D2D;
   --chart-4: #00C853;
   --chart-5: #8A9299;
 
@@ -159,9 +166,16 @@ pre { overflow-x: auto; }
   --color-cpsl-steel-700: var(--cpsl-steel-700);
   --color-cpsl-steel-800: var(--cpsl-steel-800);
   --color-cpsl-steel-900: var(--cpsl-steel-900);
-  --color-cpsl-purple-400: var(--cpsl-purple-400);
-  --color-cpsl-purple-500: var(--cpsl-purple-500);
-  --color-cpsl-purple-600: var(--cpsl-purple-600);
+  --color-cpsl-crimson-50:  var(--cpsl-crimson-50);
+  --color-cpsl-crimson-100: var(--cpsl-crimson-100);
+  --color-cpsl-crimson-200: var(--cpsl-crimson-200);
+  --color-cpsl-crimson-300: var(--cpsl-crimson-300);
+  --color-cpsl-crimson-400: var(--cpsl-crimson-400);
+  --color-cpsl-crimson-500: var(--cpsl-crimson-500);
+  --color-cpsl-crimson-600: var(--cpsl-crimson-600);
+  --color-cpsl-crimson-700: var(--cpsl-crimson-700);
+  --color-cpsl-crimson-800: var(--cpsl-crimson-800);
+  --color-cpsl-crimson-900: var(--cpsl-crimson-900);
   --color-cpsl-gold-300: var(--cpsl-gold-300);
   --color-cpsl-gold-400: var(--cpsl-gold-400);
   --color-cpsl-gold-500: var(--cpsl-gold-500);
@@ -233,15 +247,15 @@ pre { overflow-x: auto; }
   --secondary-foreground: #F4F6FA;
   --muted: #0D1B3E;
   --muted-foreground: #94A3B8;
-  --accent: #A78BFA;
-  --accent-foreground: #091628;
+  --accent: #E74552;
+  --accent-foreground: #FFFFFF;
   --destructive: #FF1744;
   --border: #0D1B3E;
   --input: #0D1B3E;
   --ring: #D8B85E;
   --chart-1: #D8B85E;
   --chart-2: #8A9299;
-  --chart-3: #A78BFA;
+  --chart-3: #E74552;
   --chart-4: #00C853;
   --chart-5: #A7AFB5;
   --sidebar: #091628;

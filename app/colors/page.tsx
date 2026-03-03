@@ -14,9 +14,16 @@ const steelColors = [
   { token: "--cpsl-steel-900", hex: "#161B1E", name: "Steel 900" },
 ];
 const accentColors = [
-  { token: "--cpsl-purple-400", hex: "#B08CF5", name: "Purple 400" },
-  { token: "--cpsl-purple-500", hex: "#7C3AEC", name: "Purple 500", main: true },
-  { token: "--cpsl-purple-600", hex: "#7333B8", name: "Purple 600" },
+  { token: "--cpsl-crimson-50",  hex: "#FEF0F1", name: "Crimson 50"  },
+  { token: "--cpsl-crimson-100", hex: "#FDDCDE", name: "Crimson 100" },
+  { token: "--cpsl-crimson-200", hex: "#FAB3B8", name: "Crimson 200" },
+  { token: "--cpsl-crimson-300", hex: "#F47D85", name: "Crimson 300" },
+  { token: "--cpsl-crimson-400", hex: "#E74552", name: "Crimson 400" },
+  { token: "--cpsl-crimson-500", hex: "#BF1D2D", name: "Crimson 500", main: true },
+  { token: "--cpsl-crimson-600", hex: "#96161E", name: "Crimson 600" },
+  { token: "--cpsl-crimson-700", hex: "#6E1017", name: "Crimson 700" },
+  { token: "--cpsl-crimson-800", hex: "#480B0F", name: "Crimson 800" },
+  { token: "--cpsl-crimson-900", hex: "#250508", name: "Crimson 900" },
 ];
 const goldColors = [
   { token: "--cpsl-gold-300", hex: "#E5C97A", name: "Gold 300" },
@@ -45,7 +52,7 @@ const contrastRows = [
   ["N-900 on N-50",                     "14.2:1", "✅", "✅", "✅"],
   ["N-600 on White",                    "5.74:1", "✅", "✅", "❌"],
   ["Dark text on Gold-500 (#C9A74C)",   "8.0:1",  "✅", "✅", "✅"],
-  ["White on Purple-500 (#7C3AEC)",     "6.7:1",  "✅", "✅", "❌"],
+  ["White on Crimson-500 (#BF1D2D)",    "5.9:1",  "✅", "✅", "❌"],
   ["White on Error (#FF1744)",          "4.58:1", "✅", "✅", "❌"],
   ["Dark text on Success bg",           "7.2:1",  "✅", "✅", "✅"],
 ];
@@ -54,7 +61,7 @@ export default function ColorsPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader section="01 — Foundations" title="Color System"
-        description="Championship Gold (#C9A74C) is the primary brand color. CPSL Steel (#697279) and Purple (#7C3AEC) serve as supporting interactive colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
+        description="Championship Gold (#C9A74C) is the primary brand color. CPSL Steel (#697279) and Crimson (#BF1D2D) serve as supporting and accent colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
       <div className="px-12 py-12">
         {/* ── Gold ── */}
         <Section title="Primary — Championship Gold">
@@ -105,17 +112,25 @@ export default function ColorsPage() {
           </div>
         </Section>
 
-        {/* ── Purple Accent ── */}
-        <Section title="Accent — CPSL Purple">
-          <div className="flex gap-4">
+        {/* ── Crimson Accent ── */}
+        <Section title="Accent — CPSL Crimson">
+          <p className="text-xs text-muted-foreground mb-4">
+            Crimson is the competition accent — used for alerts, relegation zones, red cards, and brand energy moments. Centered on <strong>#BF1D2D</strong>. White text on Crimson-500 achieves 5.9:1 (AA).
+          </p>
+          <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
             {accentColors.map((c) => (
-              <div key={c.hex} className="rounded-xl overflow-hidden border flex-1" style={{ borderColor: "#E2E8F0" }}>
-                <div className="h-20" style={{ background: c.hex }} />
-                <div className="p-3" style={{ background: "white" }}>
-                  <div className="text-xs font-bold" style={{ color: "#091628" }}>{c.name}</div>
-                  <div className="text-xs font-mono" style={{ color: "#64748B" }}>{c.hex}</div>
-                  {c.main && <div className="text-xs mt-1 font-semibold" style={{ color: "#7C3AEC" }}>Accent</div>}
-                </div>
+              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }}>
+                {c.main && <div className="absolute inset-0 flex items-end p-2"><span className="text-xs font-bold px-1.5 py-0.5 rounded bg-black/10" style={{ color: "white" }}>Crimson</span></div>}
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-5 gap-3">
+            {accentColors.map((c) => (
+              <div key={c.hex} className="rounded-xl p-3 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
+                <div className="w-full h-10 rounded-lg mb-2" style={{ background: c.hex }} />
+                <div className="text-xs font-bold" style={{ color: "#091628" }}>{c.name}</div>
+                <div className="text-xs font-mono mt-0.5" style={{ color: "#64748B" }}>{c.hex}</div>
+                <div className="text-xs font-mono mt-0.5" style={{ color: "#94A3B8", fontSize: "10px" }}>{c.token}</div>
               </div>
             ))}
           </div>
@@ -208,7 +223,7 @@ export default function ColorsPage() {
             <div className="grid grid-cols-4 gap-4">
               {[
                 { token: "--primary",      light: "#C9A74C", dark: "#D8B85E"  },
-                { token: "--accent",       light: "#7C3AEC", dark: "#B08CF5"  },
+                { token: "--accent",       light: "#BF1D2D", dark: "#E74552"  },
                 { token: "--cpsl-gold",    light: "#C9A74C", dark: "#CDB268"  },
                 { token: "--surface-warm", light: "#F4EFE6", dark: "#1A1208"  },
                 { token: "--surface-1",    light: "#FFFFFF",  dark: "#0A1628" },
