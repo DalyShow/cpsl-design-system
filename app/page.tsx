@@ -16,10 +16,11 @@ const sections = [
   { num: "12", label: "Hero Sections", href: "/heroes", desc: "Four production-ready hero layouts — cinematic gradient, split frame, glass card, and magazine overlap. Photo and video ready.", color: "#697279" },
   { num: "13", label: "Body Modules", href: "/modules", desc: "Nine plug-and-play page sections — stats bar, tabs, standings table, club directory, news grid, player spotlight, CTA banner, and skeleton states.", color: "#00875A" },
   { num: "14", label: "Calendar — Day View", href: "/calendar", desc: "Day-by-day match schedule with a mini month picker, competition badges, live scores, and empty state. Three composable primitives assembled into one drop-in view.", color: "#3B82F6" },
+  { num: "15", label: "Club Directory", href: "/clubs", desc: "Filterable club directory with conference grouping, crest logos, record stats, and points. Data-source agnostic — static array or Airtable with no component changes.", color: "#10B981" },
 ];
 
 const stats = [
-  { value: "15", label: "Sections" },
+  { value: "16", label: "Sections" },
   { value: "30+", label: "Components" },
   { value: "3", label: "Patterns" },
   { value: "WCAG AA", label: "Accessibility" },
@@ -91,7 +92,7 @@ export default function Home() {
         <div className="mt-8 rounded-2xl p-6 border flex items-center justify-between" style={{ background: "#091628", borderColor: "#1E2D45" }}>
           <div>
             <div className="text-base font-bold text-white mb-1">CPSL Design System <span style={{ color: "#C9A74C" }}>v1.0</span></div>
-            <div className="text-xs" style={{ color: "#475569" }}>15 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
+            <div className="text-xs" style={{ color: "#475569" }}>16 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5">
             {["#C9A74C", "#697279", "#BF1D2D"].map((c) => (
