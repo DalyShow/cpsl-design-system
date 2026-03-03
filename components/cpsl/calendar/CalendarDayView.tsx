@@ -87,19 +87,21 @@ export function CalendarDayView({
         background: "#091628",
       }}
     >
-      {/* ── Left: DayPicker sidebar ── */}
-      <DayPicker
-        monthLabel={monthLabel}
-        daysInMonth={daysInMonth}
-        startWeekday={startWeekday}
-        selectedDay={selectedDay}
-        todayDay={todayDay}
-        matchDays={matchDays}
-        summary={summary}
-        onDaySelect={setSelectedDay}
-        onPrevMonth={onPrevMonth}
-        onNextMonth={onNextMonth}
-      />
+      {/* ── Left: DayPicker sidebar — hidden, preserved for future use ── */}
+      <div style={{ display: "none" }}>
+        <DayPicker
+          monthLabel={monthLabel}
+          daysInMonth={daysInMonth}
+          startWeekday={startWeekday}
+          selectedDay={selectedDay}
+          todayDay={todayDay}
+          matchDays={matchDays}
+          summary={summary}
+          onDaySelect={setSelectedDay}
+          onPrevMonth={onPrevMonth}
+          onNextMonth={onNextMonth}
+        />
+      </div>
 
       {/* ── Right: Day schedule ── */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
