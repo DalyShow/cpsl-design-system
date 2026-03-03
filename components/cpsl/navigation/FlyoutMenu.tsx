@@ -227,11 +227,10 @@ export function FlyoutMenu({
         {/* Footer actions */}
         {actions && actions.length > 0 && (
           <div
-            className="flex divide-x"
+            className="flex"
             style={{
               borderTop: "1px solid #1E2D45",
               background: "#0D1B3E",
-              divideColor: "#1E2D45",
             }}
           >
             {actions.map((action) => (
