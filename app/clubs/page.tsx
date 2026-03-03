@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 import CodeBlock from "@/components/CodeBlock";
 import { ClubCard } from "@/components/cpsl/clubs/ClubCard";
 import { ClubDirectory } from "@/components/cpsl/clubs/ClubDirectory";
-import { CLUBS } from "@/lib/clubs";
+import { fetchClubs, CLUBS } from "@/lib/clubs";
 
 // ─── Code samples ─────────────────────────────────────────────────────────────
 
@@ -32,7 +32,10 @@ const cardCode = `import { ClubCard } from "@/components/cpsl/clubs"
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function ClubDirectoryPage() {
+export default async function ClubDirectoryPage() {
+  // Fetches from Airtable when env vars are present; falls back to static data
+  const clubs = await fetchClubs();
+
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader
@@ -52,7 +55,7 @@ export default function ClubDirectoryPage() {
             className="rounded-2xl p-8 border"
             style={{ background: "#091628", borderColor: "#1E2D45" }}
           >
-            <ClubDirectory clubs={CLUBS} />
+            <ClubDirectory clubs={clubs} />
           </div>
           <div className="mt-4">
             <CodeBlock code={directoryCode} language="tsx" />
@@ -72,15 +75,15 @@ export default function ClubDirectoryPage() {
             <div>
               <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#475569" }}>East Conference</div>
               <div className="flex flex-col gap-3">
-                <ClubCard club={CLUBS[0]} />
-                <ClubCard club={CLUBS[1]} />
+                <ClubCard club={clubs[0]} />
+                <ClubCard club={clubs[1]} />
               </div>
             </div>
             <div>
               <div className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#475569" }}>West Conference</div>
               <div className="flex flex-col gap-3">
-                <ClubCard club={CLUBS[5]} />
-                <ClubCard club={CLUBS[6]} />
+                <ClubCard club={clubs[5]} />
+                <ClubCard club={clubs[6]} />
               </div>
             </div>
           </div>

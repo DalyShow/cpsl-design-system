@@ -15,10 +15,95 @@ export function getPoints(record: Club["record"]): number {
   return record.wins * 3 + record.draws;
 }
 
-// ─── Fake data — 10 clubs across NC and SC ───────────────────────────────────
-// To swap for Airtable: replace CLUBS with an async fetch that returns Club[]
-// and pass the result to <ClubDirectory clubs={clubs} />.
-// Store logoSlug as a plain text field in Airtable; keep SVGs in /public/logos/.
+// ─── Airtable fetch ───────────────────────────────────────────────────────────
+// Runs server-side only (Next.js Server Component / Route Handler).
+// Airtable field names must match exactly:
+//   "Club Name" | "Location" | "Logo Slug" | "Conference"
+//   "Wins" | "Draws" | "Losses" | "Director"
+
+interface AirtableRecord {
+  id: string;
+  fields: {
+    "Club Name"?: string;
+    "Location"?: string;
+    "Logo Slug"?: string;
+    "Conference"?: string;
+    "Wins"?: number;
+    "Draws"?: number;
+    "Losses"?: number;
+    "Director"?: string;
+  };
+}
+
+interface AirtableResponse {
+  records: AirtableRecord[];
+  offset?: string;
+}
+
+export async function fetchClubs(): Promise<Club[]> {
+  const token = process.env.AIRTABLE_TOKEN;
+  const base  = process.env.AIRTABLE_CLUBS_BASE;
+  const table = process.env.AIRTABLE_CLUBS_TABLE;
+
+  if (!token || !base || !table) {
+    console.warn("Airtable env vars missing — falling back to static data.");
+    return CLUBS;
+  }
+
+  const allRecords: AirtableRecord[] = [];
+  let offset: string | undefined;
+
+  // Page through all records (Airtable returns max 100 per request)
+  do {
+    const url = new URL(`https://api.airtable.com/v0/${base}/${table}`);
+    url.searchParams.set("view", "Grid view");
+    if (offset) url.searchParams.set("offset", offset);
+
+    const res = await fetch(url.toString(), {
+      headers: { Authorization: `Bearer ${token}` },
+      // Revalidate every 5 minutes so the directory stays fresh
+      next: { revalidate: 300 },
+    });
+
+    if (!res.ok) {
+      console.error(`Airtable fetch failed: ${res.status} ${res.statusText}`);
+      return CLUBS; // graceful fallback
+    }
+
+    const data: AirtableResponse = await res.json();
+    allRecords.push(...data.records);
+    offset = data.offset;
+  } while (offset);
+
+  // Map Airtable records → Club shape, skip any incomplete rows
+  return allRecords
+    .filter((r) => r.fields["Club Name"] && r.fields["Conference"])
+    .map((r) => {
+      const f = r.fields;
+      const name = f["Club Name"] ?? "";
+      return {
+        id: r.id,
+        name,
+        location:   f["Location"]    ?? "",
+        logoSlug:   f["Logo Slug"]   ?? slugify(name),
+        conference: (f["Conference"] === "West" ? "West" : "East") as "East" | "West",
+        record: {
+          wins:   f["Wins"]   ?? 0,
+          draws:  f["Draws"]  ?? 0,
+          losses: f["Losses"] ?? 0,
+        },
+        director: f["Director"] ?? "",
+      };
+    });
+}
+
+/** Converts "Charlotte FC" → "charlotte-fc" as a fallback logo slug */
+function slugify(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+}
+
+// ─── Static fallback data — 10 clubs across NC and SC ────────────────────────
+// Used when Airtable env vars are missing or the fetch fails.
 
 export const CLUBS: Club[] = [
   // ── East Conference ──────────────────────────────────────────────────────
