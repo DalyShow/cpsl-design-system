@@ -31,7 +31,7 @@ export default function FeedbackPage() {
           <div className="flex gap-4 flex-wrap">
             <Toast icon="✓" color="#00C853" title="Lineup saved"    subtitle="Your changes are live." />
             <Toast icon="✕" color="#FF1744" title="Export failed"   subtitle="Try again in a moment." />
-            <Toast icon="ℹ" color="#0288D1" title="New match added" subtitle="Mar 8 vs Triangle FC." />
+            <Toast icon="ℹ" color="#697279" title="New match added" subtitle="Mar 8 vs Triangle FC." />
           </div>
         </Section>
 
@@ -41,7 +41,7 @@ export default function FeedbackPage() {
           </p>
           <div className="rounded-2xl p-6 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
             <div className="flex flex-col gap-5">
-              <ProgressBar label="Season progress"       value={75}  color="#3B82F6" />
+              <ProgressBar label="Season progress"       value={75}  color="#697279" />
               <ProgressBar label="Registration complete" value={100} color="#00C853" />
               <ProgressBar label="Upload: kit assets"    value={45}  color="#7C3AEC" />
             </div>

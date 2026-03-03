@@ -18,19 +18,19 @@ import type { NewsArticle } from "@/components/cpsl/modules/NewsGrid"
 // ─── Sample data ────────────────────────────────────────────────────────────
 
 const clubs: Club[] = [
-  { abbr: "CFA", name: "Charlotte FC Academy", city: "Charlotte",      color: "#3B82F6", tier: "premier"  },
+  { abbr: "CFA", name: "Charlotte FC Academy", city: "Charlotte",      color: "#697279", tier: "premier"  },
   { abbr: "RLH", name: "Raleigh Athletic",      city: "Raleigh",       color: "#7C3AEC", tier: "premier"  },
   { abbr: "DUR", name: "Durham United",         city: "Durham",        color: "#091628", tier: "elite"    },
-  { abbr: "TFC", name: "Triangle FC",           city: "Cary",          color: "#0288D1", tier: "elite"    },
+  { abbr: "TFC", name: "Triangle FC",           city: "Cary",          color: "#697279", tier: "elite"    },
   { abbr: "GFC", name: "Greensboro FC",         city: "Greensboro",    color: "#00875A", tier: "academy"  },
   { abbr: "WSS", name: "Winston-Salem SC",      city: "Winston-Salem", color: "#FF5722", tier: "academy"  },
 ]
 
 const standingsRows: StandingRow[] = [
-  { pos: 1, club: "Charlotte FC",     abbr: "CFA", color: "#3B82F6", p: 18, w: 14, d: 2,  l: 2,  gd: "+24", pts: 44, form: ["W","W","W","D","W"] },
+  { pos: 1, club: "Charlotte FC",     abbr: "CFA", color: "#697279", p: 18, w: 14, d: 2,  l: 2,  gd: "+24", pts: 44, form: ["W","W","W","D","W"] },
   { pos: 2, club: "Raleigh Athletic", abbr: "RLH", color: "#7C3AEC", p: 18, w: 11, d: 4,  l: 3,  gd: "+14", pts: 37, form: ["W","D","W","L","W"] },
   { pos: 3, club: "Durham United",    abbr: "DUR", color: "#091628", p: 18, w: 10, d: 3,  l: 5,  gd: "+8",  pts: 33, form: ["D","W","L","W","D"] },
-  { pos: 4, club: "Triangle FC",      abbr: "TFC", color: "#0288D1", p: 18, w:  8, d: 5,  l: 5,  gd: "+2",  pts: 29, form: ["D","L","W","D","W"] },
+  { pos: 4, club: "Triangle FC",      abbr: "TFC", color: "#697279", p: 18, w:  8, d: 5,  l: 5,  gd: "+2",  pts: 29, form: ["D","L","W","D","W"] },
   { pos: 5, club: "Greensboro FC",    abbr: "GFC", color: "#00875A", p: 18, w:  6, d: 3,  l: 9,  gd: "-8",  pts: 21, form: ["L","W","L","D","L"] },
   { pos: 6, club: "Winston-Salem SC", abbr: "WSS", color: "#FF5722", p: 18, w:  2, d: 1,  l: 15, gd: "-28", pts: 7,  form: ["L","L","D","L","L"] },
 ]
@@ -56,9 +56,9 @@ const news: NewsArticle[] = [
 ]
 
 const featureIcons = {
-  clock: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>,
-  users: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>,
-  chart: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>,
+  clock: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#697279" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>,
+  users: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#697279" strokeWidth="2" strokeLinecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg>,
+  chart: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#697279" strokeWidth="2" strokeLinecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>,
 }
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -137,14 +137,14 @@ export default function ModulesPage() {
             position="Forward"
             club="Charlotte FC"
             initials="RT"
-            color="#3B82F6"
+            color="#697279"
             goals={14}
             assists={7}
             games={18}
             badges={[{ label: "Premiership", variant: "premier" }, { label: "Top Scorer", variant: "gold" }]}
             stats={[
-              { label: "Shooting Accuracy", value: 72, color: "#3B82F6" },
-              { label: "Pass Completion",   value: 84, color: "#3B82F6" },
+              { label: "Shooting Accuracy", value: 72, color: "#697279" },
+              { label: "Pass Completion",   value: 84, color: "#697279" },
               { label: "Dribble Success",   value: 61, color: "#7C3AEC" },
               { label: "Aerial Duels Won",  value: 55, color: "#7C3AEC" },
               { label: "Distance Covered",  value: 88, color: "#00C853" },

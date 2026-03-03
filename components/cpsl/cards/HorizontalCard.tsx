@@ -12,7 +12,7 @@ export function HorizontalCard({
   label = "Horizontal",
   title,
   description,
-  thumbnailBg = "#EEF4FF",
+  thumbnailBg = "#F2F4F5",
   thumbnailWidth = 96,
 }: HorizontalCardProps) {
   return (

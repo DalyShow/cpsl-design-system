@@ -5,17 +5,17 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ── CPSL Blue scale (approved primary) ── */
-  --cpsl-blue-50:  #EFF6FF;
-  --cpsl-blue-100: #DBEAFE;
-  --cpsl-blue-200: #BFDBFE;
-  --cpsl-blue-300: #93C5FD;
-  --cpsl-blue-400: #60A5FA;
-  --cpsl-blue-500: #3B82F6;
-  --cpsl-blue-600: #2563EB;
-  --cpsl-blue-700: #1D4ED8;
-  --cpsl-blue-800: #1E40AF;
-  --cpsl-blue-900: #1E3A8A;
+  /* ── CPSL Steel scale (secondary — midpoint #697279) ── */
+  --cpsl-steel-50:  #F2F4F5;
+  --cpsl-steel-100: #E3E7E9;
+  --cpsl-steel-200: #C8CED2;
+  --cpsl-steel-300: #A7AFB5;
+  --cpsl-steel-400: #8A9299;
+  --cpsl-steel-500: #697279;
+  --cpsl-steel-600: #505960;
+  --cpsl-steel-700: #3A4248;
+  --cpsl-steel-800: #262D32;
+  --cpsl-steel-900: #161B1E;
 
   /* ── CPSL Purple scale (approved) ── */
   --cpsl-purple-400: #A78BFA;
@@ -52,7 +52,7 @@
   --cpsl-success: #00C853;
   --cpsl-warning: #FFB300;
   --cpsl-error:   #FF1744;
-  --cpsl-info:    #0288D1;
+  --cpsl-info:    #697279;
 
   --surface-1:    #FFFFFF;
   --surface-2:    #F4F6FA;
@@ -124,10 +124,10 @@
 
   /* ── Chart colors → CPSL palette ── */
   --chart-1: #C9A74C;
-  --chart-2: #3B82F6;
+  --chart-2: #697279;
   --chart-3: #7C3AEC;
   --chart-4: #00C853;
-  --chart-5: #0288D1;
+  --chart-5: #8A9299;
 
   /* ── Sidebar (deep navy) ── */
   --sidebar: #091628;
@@ -149,16 +149,16 @@ pre { overflow-x: auto; }
 
 @theme inline {
   /* ── CPSL brand colors as Tailwind utilities ── */
-  --color-cpsl-blue-50:  var(--cpsl-blue-50);
-  --color-cpsl-blue-100: var(--cpsl-blue-100);
-  --color-cpsl-blue-200: var(--cpsl-blue-200);
-  --color-cpsl-blue-300: var(--cpsl-blue-300);
-  --color-cpsl-blue-400: var(--cpsl-blue-400);
-  --color-cpsl-blue-500: var(--cpsl-blue-500);
-  --color-cpsl-blue-600: var(--cpsl-blue-600);
-  --color-cpsl-blue-700: var(--cpsl-blue-700);
-  --color-cpsl-blue-800: var(--cpsl-blue-800);
-  --color-cpsl-blue-900: var(--cpsl-blue-900);
+  --color-cpsl-steel-50:  var(--cpsl-steel-50);
+  --color-cpsl-steel-100: var(--cpsl-steel-100);
+  --color-cpsl-steel-200: var(--cpsl-steel-200);
+  --color-cpsl-steel-300: var(--cpsl-steel-300);
+  --color-cpsl-steel-400: var(--cpsl-steel-400);
+  --color-cpsl-steel-500: var(--cpsl-steel-500);
+  --color-cpsl-steel-600: var(--cpsl-steel-600);
+  --color-cpsl-steel-700: var(--cpsl-steel-700);
+  --color-cpsl-steel-800: var(--cpsl-steel-800);
+  --color-cpsl-steel-900: var(--cpsl-steel-900);
   --color-cpsl-purple-400: var(--cpsl-purple-400);
   --color-cpsl-purple-500: var(--cpsl-purple-500);
   --color-cpsl-purple-600: var(--cpsl-purple-600);
@@ -240,10 +240,10 @@ pre { overflow-x: auto; }
   --input: #0D1B3E;
   --ring: #D8B85E;
   --chart-1: #D8B85E;
-  --chart-2: #60A5FA;
+  --chart-2: #8A9299;
   --chart-3: #A78BFA;
   --chart-4: #00C853;
-  --chart-5: #29B6F6;
+  --chart-5: #A7AFB5;
   --sidebar: #091628;
   --sidebar-foreground: #F4F6FA;
   --sidebar-primary: #D8B85E;

@@ -4,17 +4,17 @@ import CodeBlock from "@/components/CodeBlock";
 
 const tokenJson = `{
   "color": {
-    "primary": {
-      "50":  "#EEF4FF",
-      "100": "#DDEAFF",
-      "200": "#BEDAFF",
-      "300": "#8ABAFF",
-      "400": "#6A9AF2",
-      "500": "#3B82F6",
-      "600": "#3761CC",
-      "700": "#284BAA",
-      "800": "#1B3488",
-      "900": "#0F2066"
+    "steel": {
+      "50":  "#F2F4F5",
+      "100": "#E3E7E9",
+      "200": "#C8CED2",
+      "300": "#A7AFB5",
+      "400": "#8A9299",
+      "500": "#697279",
+      "600": "#505960",
+      "700": "#3A4248",
+      "800": "#262D32",
+      "900": "#161B1E"
     },
     "accent": {
       "400": "#B08CF5",
@@ -45,7 +45,7 @@ const tokenJson = `{
       "success": "#00C853",
       "warning": "#FFB300",
       "error":   "#FF1744",
-      "info":    "#0288D1"
+      "info":    "#697279"
     }
   },
   "spacing": {
@@ -86,10 +86,10 @@ const tokenJson = `{
 
 const cssVars = `:root {
   /* Color — Primary */
-  --cpsl-blue-50:  #EEF4FF;
-  --cpsl-blue-500: #3B82F6;
-  --cpsl-blue-600: #3761CC;
-  --cpsl-blue-900: #0F2066;
+  --cpsl-steel-50:  #F2F4F5;
+  --cpsl-steel-500: #697279;
+  --cpsl-steel-600: #505960;
+  --cpsl-steel-900: #161B1E;
 
   /* Color — Accent */
   --cpsl-purple-500: #7C3AEC;
@@ -115,7 +115,7 @@ const cssVars = `:root {
   --cpsl-success: #00C853;
   --cpsl-warning: #FFB300;
   --cpsl-error:   #FF1744;
-  --cpsl-info:    #0288D1;
+  --cpsl-info:    #697279;
 
   /* Surface tokens (swap in dark mode) */
   --surface-1:     #FFFFFF;
@@ -194,9 +194,9 @@ export default function TokensPage() {
       <div style={{ background: "#091628", borderBottom: "1px solid #1E2D45" }}>
         <div className="px-12 pt-12 pb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div style={{ width: "4px", height: "40px", background: "#3B82F6", borderRadius: "2px" }} />
+            <div style={{ width: "4px", height: "40px", background: "#697279", borderRadius: "2px" }} />
             <div>
-              <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: "#3B82F6" }}>11 — Tokens &amp; Dev Guide</div>
+              <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: "#697279" }}>11 — Tokens &amp; Dev Guide</div>
               <h1 className="text-4xl font-bold" style={{ color: "#F4F6FA", letterSpacing: "-0.5px" }}>Design Tokens &amp; Dev Guide</h1>
             </div>
           </div>
@@ -220,8 +220,8 @@ export default function TokensPage() {
             <div className="grid grid-cols-2 gap-3">
               {checklist.map((item) => (
                 <div key={item} className="flex items-start gap-3 p-3.5 rounded-xl" style={{ background: "#0A1628", border: "1px solid #1E2D45" }}>
-                  <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#3B82F622", border: "1.5px solid #3B82F6" }}>
-                    <svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#3B82F6" strokeWidth="1.8" fill="none" strokeLinecap="round"/></svg>
+                  <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#69727922", border: "1.5px solid #697279" }}>
+                    <svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#697279" strokeWidth="1.8" fill="none" strokeLinecap="round"/></svg>
                   </div>
                   <span className="text-sm leading-relaxed" style={{ color: "#94A3B8" }}>{item}</span>
                 </div>
@@ -246,7 +246,7 @@ export default function TokensPage() {
           <div className="rounded-2xl p-6 border" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <div className="flex flex-wrap gap-3">
               {["React", "Next.js", "Vue 3", "Svelte", "Remix", "Vanilla CSS", "Tailwind CSS", "CSS Modules"].map(s => (
-                <span key={s} className="px-4 py-2 rounded-lg text-sm font-semibold border" style={{ background: "#3B82F622", borderColor: "#3B82F644", color: "#8ABAFF" }}>{s}</span>
+                <span key={s} className="px-4 py-2 rounded-lg text-sm font-semibold border" style={{ background: "#69727922", borderColor: "#69727944", color: "#A7AFB5" }}>{s}</span>
               ))}
             </div>
           </div>
@@ -254,11 +254,11 @@ export default function TokensPage() {
 
         <div className="flex items-center justify-between p-6 rounded-2xl border mt-4" style={{ background: "#091628", borderColor: "#1E2D45" }}>
           <div>
-            <div className="text-xl font-bold mb-1" style={{ color: "#F4F6FA" }}>CPSL Design System <span style={{ color: "#3B82F6" }}>v1.0</span></div>
+            <div className="text-xl font-bold mb-1" style={{ color: "#F4F6FA" }}>CPSL Design System <span style={{ color: "#697279" }}>v1.0</span></div>
             <div className="text-sm" style={{ color: "#475569" }}>11 sections · 30+ components · 3 patterns · Publish-ready · 2026</div>
           </div>
           <div className="flex gap-2.5 items-center">
-            {["#3B82F6","#C9A74C","#7C3AEC","#F4EFE6","#F4F6FA"].map(c => (
+            {["#697279","#C9A74C","#7C3AEC","#F4EFE6","#F4F6FA"].map(c => (
               <div key={c} className="w-8 h-8 rounded-full border-2" style={{ background: c, borderColor: "#1E2D45" }} />
             ))}
           </div>

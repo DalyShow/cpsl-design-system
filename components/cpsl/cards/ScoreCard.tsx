@@ -26,7 +26,7 @@ export function ScoreCard({
   status = "FT",
   homeTeam,
   homeInitials,
-  homeColor = "#3B82F6",
+  homeColor = "#697279",
   awayTeam,
   awayInitials,
   awayColor = "#7C3AEC",

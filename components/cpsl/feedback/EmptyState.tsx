@@ -14,14 +14,14 @@ export interface EmptyStateProps {
 
 const DefaultIcon = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-    <circle cx="14" cy="14" r="12" stroke="#3B82F6" strokeWidth="2" />
-    <path d="M9 14h10M14 9v10" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="14" cy="14" r="12" stroke="#697279" strokeWidth="2" />
+    <path d="M9 14h10M14 9v10" stroke="#697279" strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
 
 export function EmptyState({
   icon = <DefaultIcon />,
-  iconBg = "#EEF4FF",
+  iconBg = "#F2F4F5",
   title,
   description,
   cta,
@@ -43,7 +43,7 @@ export function EmptyState({
         <button
           onClick={onCta}
           className="px-5 py-2.5 rounded-xl text-sm font-bold text-white"
-          style={{ background: "#3B82F6" }}
+          style={{ background: "#697279" }}
         >
           {cta}
         </button>

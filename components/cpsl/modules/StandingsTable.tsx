@@ -40,7 +40,7 @@ export function StandingsTable({ rows, promotionSpots = 2 }: StandingsTableProps
           </TableHeader>
           <TableBody>
             {rows.map((row) => (
-              <TableRow key={row.club} className="border-b border-[#F1F5F9]" style={{ background: row.pos === 1 ? "#EEF4FF" : "white" }}>
+              <TableRow key={row.club} className="border-b border-[#F1F5F9]" style={{ background: row.pos === 1 ? "#F2F4F5" : "white" }}>
                 <TableCell className="text-center">
                   <span className="text-xs font-mono text-[#94A3B8]">{row.pos}</span>
                 </TableCell>
@@ -59,7 +59,7 @@ export function StandingsTable({ rows, promotionSpots = 2 }: StandingsTableProps
                 ))}
                 <TableCell className="hidden sm:table-cell text-center text-sm text-[#475569]">{row.gd}</TableCell>
                 <TableCell className="text-center">
-                  <span className="text-sm font-bold text-[#3B82F6]">{row.pts}</span>
+                  <span className="text-sm font-bold text-[#697279]">{row.pts}</span>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
                   <div className="flex gap-1">

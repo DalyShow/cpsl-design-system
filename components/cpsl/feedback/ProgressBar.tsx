@@ -10,7 +10,7 @@ export interface ProgressBarProps {
 export function ProgressBar({
   label,
   value,
-  color = "#3B82F6",
+  color = "#697279",
   trackColor = "#E2E8F0",
 }: ProgressBarProps) {
   const clamped = Math.min(100, Math.max(0, value));

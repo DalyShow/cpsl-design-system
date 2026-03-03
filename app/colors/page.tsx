@@ -1,17 +1,17 @@
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 
-const primaryColors = [
-  { token: "--cpsl-blue-50", hex: "#EEF4FF", name: "Blue 50" },
-  { token: "--cpsl-blue-100", hex: "#DDEAFF", name: "Blue 100" },
-  { token: "--cpsl-blue-200", hex: "#BEDAFF", name: "Blue 200" },
-  { token: "--cpsl-blue-300", hex: "#8ABAFF", name: "Blue 300" },
-  { token: "--cpsl-blue-400", hex: "#6A9AF2", name: "Blue 400" },
-  { token: "--cpsl-blue-500", hex: "#3B82F6", name: "Blue 500" },
-  { token: "--cpsl-blue-600", hex: "#3761CC", name: "Blue 600" },
-  { token: "--cpsl-blue-700", hex: "#284BAA", name: "Blue 700" },
-  { token: "--cpsl-blue-800", hex: "#1B3488", name: "Blue 800" },
-  { token: "--cpsl-blue-900", hex: "#0F2066", name: "Blue 900" },
+const steelColors = [
+  { token: "--cpsl-steel-50",  hex: "#F2F4F5", name: "Steel 50" },
+  { token: "--cpsl-steel-100", hex: "#E3E7E9", name: "Steel 100" },
+  { token: "--cpsl-steel-200", hex: "#C8CED2", name: "Steel 200" },
+  { token: "--cpsl-steel-300", hex: "#A7AFB5", name: "Steel 300" },
+  { token: "--cpsl-steel-400", hex: "#8A9299", name: "Steel 400" },
+  { token: "--cpsl-steel-500", hex: "#697279", name: "Steel 500", main: true },
+  { token: "--cpsl-steel-600", hex: "#505960", name: "Steel 600" },
+  { token: "--cpsl-steel-700", hex: "#3A4248", name: "Steel 700" },
+  { token: "--cpsl-steel-800", hex: "#262D32", name: "Steel 800" },
+  { token: "--cpsl-steel-900", hex: "#161B1E", name: "Steel 900" },
 ];
 const accentColors = [
   { token: "--cpsl-purple-400", hex: "#B08CF5", name: "Purple 400" },
@@ -19,17 +19,17 @@ const accentColors = [
   { token: "--cpsl-purple-600", hex: "#7333B8", name: "Purple 600" },
 ];
 const goldColors = [
-  { token: "--cpsl-gold-300", hex: "#E0C88A", name: "Gold 300" },
-  { token: "--cpsl-gold-400", hex: "#CDB268", name: "Gold 400" },
+  { token: "--cpsl-gold-300", hex: "#E5C97A", name: "Gold 300" },
+  { token: "--cpsl-gold-400", hex: "#D8B85E", name: "Gold 400" },
   { token: "--cpsl-gold-500", hex: "#C9A74C", name: "Gold 500", main: true },
-  { token: "--cpsl-gold-600", hex: "#A58840", name: "Gold 600" },
-  { token: "--cpsl-gold-700", hex: "#8C7030", name: "Gold 700" },
+  { token: "--cpsl-gold-600", hex: "#B08A34", name: "Gold 600" },
+  { token: "--cpsl-gold-700", hex: "#8C6E24", name: "Gold 700" },
 ];
 const semanticColors = [
   { token: "--cpsl-success", hex: "#00C853", name: "Success", bg: "#E8FFF2", label: "Wins, confirmations, uploads" },
   { token: "--cpsl-warning", hex: "#FFB300", name: "Warning", bg: "#FFF8E1", label: "Postponed, cautions, yellow cards" },
-  { token: "--cpsl-error", hex: "#FF1744", name: "Error", bg: "#FFF0F0", label: "Losses, failures, red cards" },
-  { token: "--cpsl-info", hex: "#0288D1", name: "Info", bg: "#E3F2FD", label: "Informational states" },
+  { token: "--cpsl-error",   hex: "#FF1744", name: "Error",   bg: "#FFF0F0", label: "Losses, failures, red cards" },
+  { token: "--cpsl-info",    hex: "#697279", name: "Info",    bg: "#F2F4F5", label: "Informational states" },
 ];
 const neutralColors = [
   { hex: "#F4F6FA", name: "N-50" }, { hex: "#E2E8F0", name: "N-200" },
@@ -39,8 +39,8 @@ const neutralColors = [
 ];
 
 const contrastRows = [
-  ["White on Blue-500 (#3B82F6)",       "3.7:1",  "❌", "✅", "❌"],
-  ["Dark (#091628) on Blue-500",        "5.2:1",  "✅", "✅", "❌"],
+  ["White on Steel-500 (#697279)",      "4.6:1",  "✅", "✅", "❌"],
+  ["Dark (#091628) on Steel-500",       "4.6:1",  "✅", "✅", "❌"],
   ["White on Dark (#091628)",           "18.9:1", "✅", "✅", "✅"],
   ["N-900 on N-50",                     "14.2:1", "✅", "✅", "✅"],
   ["N-600 on White",                    "5.74:1", "✅", "✅", "❌"],
@@ -54,16 +54,21 @@ export default function ColorsPage() {
   return (
     <div style={{ background: "#F4F6FA", minHeight: "100vh" }}>
       <PageHeader section="01 — Foundations" title="Color System"
-        description="Championship Gold (#C9A74C) is the primary brand color. CPSL Blue (#3B82F6) and Purple (#7C3AEC) serve as supporting interactive colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
+        description="Championship Gold (#C9A74C) is the primary brand color. CPSL Steel (#697279) and Purple (#7C3AEC) serve as supporting interactive colors. Cream (#F4EFE6) adds warmth to premium surfaces. All colors ship as CSS custom properties and design token JSON." />
       <div className="px-12 py-12">
-        <Section title="Supporting Interactive — CPSL Blue">
+        <Section title="Secondary — CPSL Steel">
+          <p className="text-xs text-muted-foreground mb-4">
+            Steel is a cool blue-grey secondary color centered on <strong>#697279</strong>. Used for informational states, secondary badges, promotion zones, and UI chrome accents.
+          </p>
           <div className="flex rounded-2xl overflow-hidden h-20 mb-4 shadow-sm">
-            {primaryColors.map((c) => (
-              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }} />
+            {steelColors.map((c) => (
+              <div key={c.hex} className="flex-1 relative" style={{ background: c.hex }}>
+                {c.main && <div className="absolute inset-0 flex items-end p-2"><span className="text-xs font-bold px-1.5 py-0.5 rounded bg-black/10" style={{ color: "white" }}>Steel</span></div>}
+              </div>
             ))}
           </div>
           <div className="grid grid-cols-5 gap-3">
-            {primaryColors.map((c) => (
+            {steelColors.map((c) => (
               <div key={c.hex} className="rounded-xl p-3 border" style={{ background: "white", borderColor: "#E2E8F0" }}>
                 <div className="w-full h-10 rounded-lg mb-2" style={{ background: c.hex }} />
                 <div className="text-xs font-bold" style={{ color: "#091628" }}>{c.name}</div>
@@ -124,7 +129,7 @@ export default function ColorsPage() {
           <div className="grid grid-cols-2 gap-4">
             {[
               { token: "--cpsl-cream",      hex: "#F4EFE6", name: "Cream",      label: "Premium backgrounds, feature panels" },
-              { token: "--cpsl-cream-dark",  hex: "#EDE4CC", name: "Cream Dark", label: "Borders, dividers on cream surfaces" },
+              { token: "--cpsl-cream-dark",  hex: "#EBE3D0", name: "Cream Dark", label: "Borders, dividers on cream surfaces" },
             ].map((c) => (
               <div key={c.hex} className="rounded-xl overflow-hidden border" style={{ borderColor: "#E2E8F0" }}>
                 <div className="h-20 border-b" style={{ background: c.hex, borderColor: "#E2E8F0" }} />
@@ -172,7 +177,7 @@ export default function ColorsPage() {
 
         <Section title="WCAG Contrast Ratios">
           <p className="text-xs text-muted-foreground mb-4">
-            Gold (#C9A74C) is the primary color and always requires dark navy text — it achieves 8:1 (AAA). Blue (#3B82F6) passes AA for <strong>large text</strong> with white; use dark text on blue buttons to hit 5.2:1 (AA Normal).
+            Gold (#C9A74C) is the primary color and always requires dark navy text — it achieves 8:1 (AAA). Steel-500 (#697279) passes AA for both white and dark text, making it flexible for UI elements.
           </p>
           <div className="rounded-2xl overflow-hidden border" style={{ borderColor: "#E2E8F0" }}>
             <table className="w-full text-sm" style={{ background: "white" }}>
@@ -212,7 +217,7 @@ export default function ColorsPage() {
                 { token: "--border",       light: "#E2E8F0",  dark: "#1E2D45" },
               ].map((t) => (
                 <div key={t.token} className="rounded-xl p-3" style={{ background: "#0A1628", border: "1px solid #1E2D45" }}>
-                  <div className="text-xs font-mono mb-2" style={{ color: "#8ABAFF" }}>{t.token}</div>
+                  <div className="text-xs font-mono mb-2" style={{ color: "#A7AFB5" }}>{t.token}</div>
                   <div className="flex gap-2">
                     <div className="flex-1 h-6 rounded" style={{ background: t.light, border: "1px solid #1E2D45" }} />
                     <div className="flex-1 h-6 rounded" style={{ background: t.dark, border: "1px solid #334155" }} />

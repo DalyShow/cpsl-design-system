@@ -27,14 +27,14 @@ export function MagazineHero({
     <div className="relative min-h-[480px] md:h-[540px] overflow-hidden" style={{ background: "#F4F6FA" }}>
 
       {/* Accent stripe */}
-      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "4px", background: "linear-gradient(to bottom, #3B82F6, #7C3AEC)" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "4px", background: "linear-gradient(to bottom, #697279, #7C3AEC)" }} />
 
       {/* Right — photo slot (hidden on mobile) */}
       <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[55%] overflow-hidden">
         {imageSrc ? (
           <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #003AB0 0%, #3B82F6 40%, #1A60FF 70%, #284BAA 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #1A2A35 0%, #697279 40%, #3A4248 70%, #262D32 100%)" }} />
         )}
         {/* Jersey watermark */}
         <div style={{ position: "absolute", right: "-40px", top: "50%", transform: "translateY(-52%)", fontFamily: "'Barlow Condensed', sans-serif", fontSize: "320px", fontWeight: 800, color: "rgba(255,255,255,0.07)", lineHeight: 1, letterSpacing: "-10px", userSelect: "none" }}>9</div>
@@ -45,14 +45,14 @@ export function MagazineHero({
       {/* Left — text content (full width on mobile) */}
       <div className="relative z-10 flex flex-col justify-center px-6 md:pl-14 md:pr-8 py-12 md:py-0 md:max-w-[600px]">
         {/* Season pill */}
-        <div style={{ display: "inline-flex", alignItems: "center", background: "#3B82F6", padding: "5px 12px", borderRadius: "4px", marginBottom: "20px", width: "fit-content" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", background: "#697279", padding: "5px 12px", borderRadius: "4px", marginBottom: "20px", width: "fit-content" }}>
           <span style={{ color: "white", fontSize: "10px", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase" }}>{season}</span>
         </div>
 
         {/* Headline */}
         <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-display-xl)", fontWeight: 800, lineHeight: 0.88, letterSpacing: "-3px", color: "#091628", marginBottom: "28px" }}>
           {headline}<br />
-          <span style={{ color: "#3B82F6" }}>{headlineAccent}</span><br />
+          <span style={{ color: "#697279" }}>{headlineAccent}</span><br />
           {headlineSub}
         </h1>
 
@@ -60,7 +60,7 @@ export function MagazineHero({
         <div className="flex flex-wrap gap-x-6 gap-y-4 mb-8 md:mb-9">
           {stats.map((s, i) => (
             <div key={s.label} className={`pr-6 ${i < stats.length - 1 ? "border-r border-[#CBD5E1]" : ""}`}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-h2)", fontWeight: 800, color: "#3B82F6", lineHeight: 1 }}>{s.value}</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "var(--text-h2)", fontWeight: 800, color: "#697279", lineHeight: 1 }}>{s.value}</div>
               <div style={{ fontSize: "10px", fontWeight: 600, color: "#64748B", letterSpacing: "1.5px", textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}

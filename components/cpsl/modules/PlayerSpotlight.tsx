@@ -43,14 +43,14 @@ export function PlayerSpotlight({
   position    = "Forward",
   club        = "Charlotte FC",
   initials    = "RT",
-  color       = "#3B82F6",
+  color       = "#697279",
   goals       = 14,
   assists     = 7,
   games       = 18,
   badges      = [{ label: "Premiership", variant: "premier" }, { label: "Top Scorer", variant: "gold" }],
   stats       = [
-    { label: "Shooting Accuracy", value: 72, color: "#3B82F6" },
-    { label: "Pass Completion",   value: 84, color: "#3B82F6" },
+    { label: "Shooting Accuracy", value: 72, color: "#697279" },
+    { label: "Pass Completion",   value: 84, color: "#697279" },
     { label: "Dribble Success",   value: 61, color: "#7C3AEC" },
     { label: "Aerial Duels Won",  value: 55, color: "#7C3AEC" },
     { label: "Distance Covered",  value: 88, color: "#00C853" },
@@ -114,9 +114,9 @@ export function PlayerSpotlight({
               <div key={stat.label}>
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="text-xs font-semibold text-[#475569]">{stat.label}</span>
-                  <span className="text-xs font-bold tabular-nums" style={{ color: stat.color ?? "#3B82F6" }}>{stat.value}%</span>
+                  <span className="text-xs font-bold tabular-nums" style={{ color: stat.color ?? "#697279" }}>{stat.value}%</span>
                 </div>
-                <Progress value={stat.value} className="h-2" style={{ "--progress-color": stat.color ?? "#3B82F6" } as React.CSSProperties} />
+                <Progress value={stat.value} className="h-2" style={{ "--progress-color": stat.color ?? "#697279" } as React.CSSProperties} />
               </div>
             ))}
           </div>

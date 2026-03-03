@@ -9,10 +9,10 @@ export interface ElevatedCardProps {
 
 export function ElevatedCard({
   label = "Elevated",
-  labelColor = "#3B82F6",
+  labelColor = "#697279",
   title,
   description,
-  placeholderBg = "#EEF4FF",
+  placeholderBg = "#F2F4F5",
 }: ElevatedCardProps) {
   return (
     <div

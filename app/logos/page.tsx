@@ -92,7 +92,7 @@ export default function LogosPage() {
         <div className="rounded-2xl border overflow-hidden mb-10" style={{ borderColor: "#E2E8F0" }}>
           <div className="px-6 py-3 border-b flex items-center justify-between" style={{ background: "#091628", borderColor: "#1E2D45" }}>
             <span className="text-xs font-bold text-white">Required delivery specs</span>
-            <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#3B82F6" }}>Send to designer</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#697279" }}>Send to designer</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x" style={{ background: "white", borderColor: "#F1F5F9" }}>
             <div className="px-6 py-5">
@@ -164,7 +164,7 @@ export default function LogosPage() {
             <LogoPlaceholder label="Brandmark — Colour"  bg="#F4F6FA" note="SVG" />
             <LogoPlaceholder label="Brandmark — White"   bg="#091628" border="#1E2D45" note="SVG" />
             <LogoPlaceholder label="Brandmark — Mono"    bg="#F4F6FA" note="SVG" />
-            <LogoPlaceholder label="Favicon — Square"    bg="#3B82F6" border="#3B82F6" note="ICO + PNG" />
+            <LogoPlaceholder label="Favicon — Square"    bg="#697279" border="#697279" note="ICO + PNG" />
           </div>
         </Section>
 
@@ -196,7 +196,7 @@ export default function LogosPage() {
               { rule: "Don't crop", desc: "The crest shield must never be cropped — all elements inside the shield must remain fully visible." },
             ].map((r) => (
               <div key={r.rule} className="rounded-xl p-5 border bg-white border-[#E2E8F0]">
-                <div className="text-sm font-bold mb-1.5" style={{ color: "#3B82F6" }}>✓ {r.rule}</div>
+                <div className="text-sm font-bold mb-1.5" style={{ color: "#697279" }}>✓ {r.rule}</div>
                 <div className="text-xs leading-relaxed text-muted-foreground">{r.desc}</div>
               </div>
             ))}

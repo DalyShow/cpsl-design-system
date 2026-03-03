@@ -15,7 +15,7 @@ const ALERT_STYLES: Record<AlertType, { bg: string; border: string; color: strin
   success: { bg: "#E8FFF2", border: "#A7F3D0", color: "#00875A", icon: "✓" },
   warning: { bg: "#FFF8E1", border: "#FFE082", color: "#E65100", icon: "⚠" },
   error:   { bg: "#FFF0F0", border: "#FFC5CC", color: "#FF1744", icon: "✕" },
-  info:    { bg: "#E3F2FD", border: "#90CAF9", color: "#0288D1", icon: "ℹ" },
+  info:    { bg: "#E3F2FD", border: "#90CAF9", color: "#697279", icon: "ℹ" },
 };
 
 export function AlertBanner({ type, title, message, dismissible = true }: AlertBannerProps) {

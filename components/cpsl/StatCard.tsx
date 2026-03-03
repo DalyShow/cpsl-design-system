@@ -30,7 +30,7 @@ export function StatCard({
   subLabel,
   trend,
   icon,
-  accentColor = "#3B82F6",
+  accentColor = "#697279",
   className,
 }: StatCardProps) {
   const trendColor =

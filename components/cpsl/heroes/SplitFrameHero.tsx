@@ -22,7 +22,7 @@ export function SplitFrameHero({
   primaryCta = { label: "Buy Tickets" },
   secondaryCta = { label: "Match Preview" },
   imageSrc,
-  homeTeam   = { abbr: "CFA", color: "#3B82F6" },
+  homeTeam   = { abbr: "CFA", color: "#697279" },
   awayTeam   = { abbr: "RLH", color: "#7C3AEC" },
 }: SplitFrameHeroProps) {
   return (
@@ -30,8 +30,8 @@ export function SplitFrameHero({
 
       {/* Left — content */}
       <div className="w-full md:w-1/2 shrink-0 flex flex-col justify-center p-8 md:p-14" style={{ background: "#091628" }}>
-        <div style={{ color: "#3B82F6", fontSize: "10px", fontWeight: 700, letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={{ width: "20px", height: "2px", background: "#3B82F6", display: "inline-block" }} />
+        <div style={{ color: "#697279", fontSize: "10px", fontWeight: 700, letterSpacing: "4px", textTransform: "uppercase", marginBottom: "20px", display: "flex", alignItems: "center", gap: "8px" }}>
+          <span style={{ width: "20px", height: "2px", background: "#697279", display: "inline-block" }} />
           {eyebrow}
         </div>
 
@@ -61,7 +61,7 @@ export function SplitFrameHero({
         {imageSrc ? (
           <img src={imageSrc} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #0A2040 0%, #1A4080 35%, #3B82F6 65%, #284BAA 100%)" }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #0A2040 0%, #1E2D35 35%, #697279 65%, #2D3A42 100%)" }} />
         )}
 
         {/* Jersey number watermark — hidden on mobile */}

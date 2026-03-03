@@ -21,7 +21,7 @@ const severityConfig: Record<
   info: {
     bg: "bg-[#EFF6FF]",
     border: "border-[#BFDBFE]",
-    iconColor: "#0288D1",
+    iconColor: "#697279",
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
         <circle cx="12" cy="12" r="10" />

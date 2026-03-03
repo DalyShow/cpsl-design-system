@@ -25,8 +25,8 @@ export function NewsGrid({ articles }: NewsGridProps) {
             {n.imageSrc ? (
               <img src={n.imageSrc} alt={n.title} className="w-full h-full object-cover" />
             ) : (
-              <div className="h-full flex items-center justify-center" style={{ background: "linear-gradient(135deg, #EEF4FF 0%, #DDEAFF 100%)" }}>
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "40px", fontWeight: 800, color: "#BEDAFF", letterSpacing: "-1px" }}>CPSL</div>
+              <div className="h-full flex items-center justify-center" style={{ background: "linear-gradient(135deg, #F2F4F5 0%, #DDEAFF 100%)" }}>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "40px", fontWeight: 800, color: "#C8CED2", letterSpacing: "-1px" }}>CPSL</div>
               </div>
             )}
           </div>

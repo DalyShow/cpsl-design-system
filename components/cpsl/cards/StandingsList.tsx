@@ -40,7 +40,7 @@ export function StandingsList({ rows, highlightLeader = true }: StandingsListPro
           <div
             key={row.team}
             className="flex items-center px-5 py-3.5 border-b"
-            style={{ borderColor: "#F1F5F9", background: isLeader ? "#EEF4FF" : "white" }}
+            style={{ borderColor: "#F1F5F9", background: isLeader ? "#F2F4F5" : "white" }}
           >
             <div className="flex-1 flex items-center gap-3">
               <span className="text-xs font-mono w-4" style={{ color: "#94A3B8" }}>{i + 1}</span>
@@ -57,7 +57,7 @@ export function StandingsList({ rows, highlightLeader = true }: StandingsListPro
                 key={j}
                 className="w-10 text-center text-sm"
                 style={{
-                  color: j === 5 ? "#3B82F6" : "#475569",
+                  color: j === 5 ? "#697279" : "#475569",
                   fontWeight: j === 5 ? 700 : 400,
                 }}
               >

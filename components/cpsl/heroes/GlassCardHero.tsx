@@ -17,7 +17,7 @@ export function GlassCardHero({
   imageSrc,
   competition     = "CPSL Premiership",
   minute          = 67,
-  homeTeam        = { name: "Charlotte FC",    abbr: "CFA", color: "#3B82F6", score: 3 },
+  homeTeam        = { name: "Charlotte FC",    abbr: "CFA", color: "#697279", score: 3 },
   awayTeam        = { name: "Raleigh Athletic", abbr: "RLH", color: "#7C3AEC", score: 1 },
   leadingLabel    = "Charlotte Leading",
   homePossession  = 54,
