@@ -1,10 +1,12 @@
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
+import CodeBlock from "@/components/CodeBlock";
 import { TopNav } from "@/components/cpsl/navigation/TopNav";
 import { TabBar } from "@/components/cpsl/navigation/TabBar";
 import { Breadcrumb } from "@/components/cpsl/navigation/Breadcrumb";
 import { Pagination } from "@/components/cpsl/navigation/Pagination";
 import { MobileTabBar } from "@/components/cpsl/navigation/MobileTabBar";
+import { FlyoutMenu, type FlyoutItem, type FlyoutAction } from "@/components/cpsl/navigation/FlyoutMenu";
 
 export default function NavigationPage() {
   return (
@@ -69,6 +71,166 @@ export default function NavigationPage() {
           <MobileTabBar variant="mobile" />
         </Section>
 
+        {/* 5. Flyout Menu */}
+        <Section title="5 — Flyout Menu">
+          <p className="text-xs text-muted-foreground mb-4">
+            Dropdown flyout panel with icon rows, descriptions, and optional footer actions. Closes on outside click, Escape key, or item selection. Styled with CPSL deep navy, gold accents, and Barlow Condensed labels.
+          </p>
+
+          {/* Live demo on dark surface */}
+          <div
+            className="rounded-2xl p-10 mb-4 flex items-start gap-8"
+            style={{ background: "#091628", border: "1px solid #1E2D45" }}
+          >
+            <FlyoutMenu
+              label="League Information"
+              items={[
+                {
+                  label: "About the CPSL",
+                  description: "History, mission, governance, and membership.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 16v-4M12 8h.01" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Competition Formats",
+                  description: "Premiership, NPL, CPSL Cup, and age group structures.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Season Calendar",
+                  description: "Key dates, matchday windows, and cup rounds.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                      <line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" />
+                      <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Rules & Regulations",
+                  description: "CPSL handbook, discipline procedures, and appeals.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" /><line x1="16" x2="8" y1="13" y2="13" />
+                      <line x1="16" x2="8" y1="17" y2="17" /><polyline points="10 9 9 9 8 9" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Member Clubs",
+                  description: "Full directory of CPSL clubs across NC and SC.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  ),
+                },
+              ] satisfies FlyoutItem[]}
+              actions={[
+                {
+                  label: "View Handbook",
+                  href: "#",
+                  icon: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Contact League",
+                  href: "#",
+                  icon: (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.4a16 16 0 0 0 6.72 6.72l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  ),
+                },
+              ] satisfies FlyoutAction[]}
+            />
+
+            <FlyoutMenu
+              label="For Teams"
+              size="sm"
+              items={[
+                {
+                  label: "Game Day Standards",
+                  description: "Field prep and match-day protocols.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" /><path d="m4.93 4.93 4.24 4.24" /><path d="m14.83 9.17 4.24-4.24" /><path d="m14.83 14.83 4.24 4.24" /><path d="m9.17 14.83-4.24 4.24" /><circle cx="12" cy="12" r="4" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Report Scores",
+                  description: "Submit final results after each match.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Discipline & Appeals",
+                  description: "Cards, bans, and the appeals process.",
+                  href: "#",
+                  icon: (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  ),
+                },
+              ] satisfies FlyoutItem[]}
+            />
+          </div>
+
+          <CodeBlock
+            language="tsx"
+            code={`import { FlyoutMenu } from "@/components/cpsl/navigation/FlyoutMenu"
+
+<FlyoutMenu
+  label="League Information"
+  size="md"                  // "sm" | "md" | "lg"
+  items={[
+    {
+      label: "About the CPSL",
+      description: "History, mission, governance, and membership.",
+      href: "/about",
+      icon: <InfoIcon />,
+    },
+    // …more items
+  ]}
+  actions={[
+    { label: "View Handbook", href: "/handbook", icon: <DocIcon /> },
+    { label: "Contact League", href: "/contact", icon: <PhoneIcon /> },
+  ]}
+/>`}
+          />
+        </Section>
+
         {/* ─────────────────────────────────────────── FULL-WIDTH VARIANTS ─── */}
 
         <div className="mt-12 mb-6">
@@ -119,6 +281,24 @@ export default function NavigationPage() {
         <Section title="Component API">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
+              {
+                title: "FlyoutMenu",
+                code: `<FlyoutMenu
+  label="League Information"
+  size="md"   // "sm" | "md" | "lg"
+  items={[
+    {
+      label: "About the CPSL",
+      description: "History and governance.",
+      href: "/about",
+      icon: <InfoIcon />,
+    },
+  ]}
+  actions={[
+    { label: "View Handbook", href: "/handbook", icon: <DocIcon /> },
+  ]}
+/>`,
+              },
               {
                 title: "TopNav",
                 code: `<TopNav
