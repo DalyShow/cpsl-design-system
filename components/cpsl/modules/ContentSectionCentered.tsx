@@ -1,5 +1,15 @@
 "use client";
 
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
+export interface LottieMedia {
+  src: string;        // URL to a .lottie or .json animation file
+  loop?: boolean;     // defaults to true
+  autoplay?: boolean; // defaults to true
+  width?: number | string;
+  height?: number | string;
+}
+
 export interface ContentSectionCenteredProps {
   /** Small eyebrow label above the heading */
   eyebrow?: string;
@@ -9,7 +19,12 @@ export interface ContentSectionCenteredProps {
    * Renders full-width within the centered max-w-2xl header column.
    */
   image?: { src: string; alt?: string };
-  /** Lead paragraph centered below the heading (and image, if present) */
+  /**
+   * Optional Lottie animation (.lottie or .json) displayed in the same slot
+   * as `image` — between heading and lead. Takes precedence over `image` if both provided.
+   */
+  lottie?: LottieMedia;
+  /** Lead paragraph centered below the heading (and image/lottie, if present) */
   lead?: string;
   /**
    * Body paragraphs below the header block.
@@ -24,6 +39,8 @@ export interface ContentSectionCenteredProps {
   columns?: 1 | 2;
   /** Optional image displayed at the very bottom of the section, 120px below the last content. */
   bottomImage?: { src: string; alt?: string };
+  /** Optional Lottie animation at the very bottom — same position as bottomImage. Takes precedence over bottomImage if both provided. */
+  bottomLottie?: LottieMedia;
 }
 
 const defaultParagraphs = [
@@ -37,11 +54,13 @@ export function ContentSectionCentered({
   eyebrow = "About the League",
   heading = "Competitive Soccer Across the Carolinas",
   image,
+  lottie,
   lead = "From the Piedmont to the coast, CPSL brings together the best clubs in North and South Carolina under one banner — raising the standard for competitive soccer at every level.",
   paragraphs = defaultParagraphs,
   background = "cream",
   columns = 2,
   bottomImage,
+  bottomLottie,
 }: ContentSectionCenteredProps) {
   const bgColor   = background === "navy"    ? "#091628"
                   : background === "surface" ? "#F4F6FA"
@@ -89,14 +108,24 @@ export function ContentSectionCentered({
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
               color: headColor,
-              marginBottom: image ? "32px" : "24px",
+              marginBottom: (image || lottie) ? "32px" : "24px",
             }}
           >
             {heading}
           </h2>
 
-          {/* ── Optional image — sits between heading and lead ───────── */}
-          {image?.src && (
+          {/* ── Optional media — sits between heading and lead ─────────
+               Lottie takes precedence over image if both provided      */}
+          {lottie?.src ? (
+            <div style={{ margin: "0 auto 32px", width: lottie.width ?? "100%", maxWidth: "100%" }}>
+              <DotLottieReact
+                src={lottie.src}
+                loop={lottie.loop ?? true}
+                autoplay={lottie.autoplay ?? true}
+                style={{ width: "100%", height: lottie.height ?? 320 }}
+              />
+            </div>
+          ) : image?.src ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={image.src}
@@ -109,7 +138,7 @@ export function ContentSectionCentered({
                 margin: "0 auto 32px",
               }}
             />
-          )}
+          ) : null}
 
           {lead && (
             <p
@@ -165,8 +194,18 @@ export function ContentSectionCentered({
           )
         )}
 
-        {/* ── Bottom image — 120px below last content ────────────────── */}
-        {bottomImage?.src && (
+        {/* ── Bottom media — 120px below last content ────────────────────
+             bottomLottie takes precedence over bottomImage if both provided */}
+        {bottomLottie?.src ? (
+          <div style={{ margin: "120px auto 0", width: bottomLottie.width ?? "100%", maxWidth: "100%" }}>
+            <DotLottieReact
+              src={bottomLottie.src}
+              loop={bottomLottie.loop ?? true}
+              autoplay={bottomLottie.autoplay ?? true}
+              style={{ width: "100%", height: bottomLottie.height ?? 400 }}
+            />
+          </div>
+        ) : bottomImage?.src ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={bottomImage.src}
@@ -179,7 +218,7 @@ export function ContentSectionCentered({
               margin: "120px auto 0",
             }}
           />
-        )}
+        ) : null}
       </div>
     </section>
   );
