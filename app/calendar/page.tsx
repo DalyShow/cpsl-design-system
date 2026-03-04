@@ -1,3 +1,4 @@
+import { conferenceFor } from "@/lib/clubConferences";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import CodeBlock from "@/components/CodeBlock";
@@ -21,43 +22,43 @@ const MATCH_DAYS: MatchDay[] = [
 
 const MATCHES = [
   // March 1
-  { day: 1, kickoff: "12:00", status: "fulltime" as const, competition: "Central", matchday: 22,
+  { day: 1, kickoff: "12:00", status: "fulltime" as const, competition: conferenceFor("Charlotte FC"), matchday: 22,
     home: { name: "Charlotte FC", position: 1, score: 3 },
     away: { name: "Durham United", position: 3, score: 1 },
     venue: "Matthews Sportsplex, Charlotte NC" },
-  { day: 1, kickoff: "14:00", status: "fulltime" as const, competition: "Northeast", matchday: 22,
+  { day: 1, kickoff: "14:00", status: "fulltime" as const, competition: conferenceFor("Raleigh Athletic"), matchday: 22,
     home: { name: "Raleigh Athletic", position: 2, score: 2 },
     away: { name: "Triangle FC", position: 4, score: 2 },
     venue: "Dix Park Fields, Raleigh NC" },
-  { day: 1, kickoff: "16:00", status: "fulltime" as const, competition: "Midwest", matchday: 22,
+  { day: 1, kickoff: "16:00", status: "fulltime" as const, competition: conferenceFor("Winston-Salem SC"), matchday: 22,
     home: { name: "Winston-Salem SC", position: 6, score: 1 },
     away: { name: "Greensboro FC", position: 5, score: 2 },
     venue: "Truist Stadium, Winston-Salem NC" },
   // March 7
-  { day: 7, kickoff: "14:00", status: "upcoming" as const, competition: "Northeast", matchday: 23,
+  { day: 7, kickoff: "14:00", status: "upcoming" as const, competition: conferenceFor("Durham United"), matchday: 23,
     home: { name: "Durham United", position: 3 },
     away: { name: "Raleigh Athletic", position: 2 },
     venue: "Durham Soccer Complex, Durham NC" },
-  { day: 7, kickoff: "16:00", status: "upcoming" as const, competition: "Central", matchday: 23,
+  { day: 7, kickoff: "16:00", status: "upcoming" as const, competition: conferenceFor("Charlotte FC"), matchday: 23,
     home: { name: "Charlotte FC", position: 1 },
     away: { name: "Greensboro FC", position: 5 },
     venue: "Matthews Sportsplex, Charlotte NC" },
   // March 8
-  { day: 8, kickoff: "15:00", status: "live" as const, competition: "Northeast", matchday: 23, minute: 34,
+  { day: 8, kickoff: "15:00", status: "live" as const, competition: conferenceFor("Triangle FC"), matchday: 23, minute: 34,
     home: { name: "Triangle FC", position: 4, score: 1 },
     away: { name: "Winston-Salem SC", position: 6, score: 0 },
     venue: "WakeMed Soccer Park, Cary NC" },
   // March 14
-  { day: 14, kickoff: "14:00", status: "upcoming" as const, competition: "Central", matchday: 24,
+  { day: 14, kickoff: "14:00", status: "upcoming" as const, competition: conferenceFor("Charlotte FC"), matchday: 24,
     home: { name: "Charlotte FC", position: 1 },
     away: { name: "Triangle FC", position: 4 },
     venue: "Matthews Sportsplex, Charlotte NC" },
-  { day: 14, kickoff: "16:00", status: "upcoming" as const, competition: "Northeast", matchday: 24,
+  { day: 14, kickoff: "16:00", status: "upcoming" as const, competition: conferenceFor("Raleigh Athletic"), matchday: 24,
     home: { name: "Raleigh Athletic", position: 2 },
     away: { name: "Durham United", position: 3 },
     venue: "Dix Park Fields, Raleigh NC" },
   // March 21
-  { day: 21, kickoff: "14:00", status: "upcoming" as const, competition: "Midwest", matchday: 25,
+  { day: 21, kickoff: "14:00", status: "upcoming" as const, competition: conferenceFor("Greensboro FC"), matchday: 25,
     home: { name: "Greensboro FC", position: 5 },
     away: { name: "Charlotte FC", position: 1 },
     venue: "Bryan Park, Greensboro NC" },
@@ -163,7 +164,7 @@ export default function CalendarPage() {
           >
             <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#475569" }}>Upcoming</div>
             <CalendarMatchCard
-              kickoff="14:00" status="upcoming" competition="Central" matchday={23}
+              kickoff="14:00" status="upcoming" competition={conferenceFor("Charlotte FC")} matchday={23}
               home={{ name: "Charlotte FC", position: 1 }}
               away={{ name: "Durham United", position: 3 }}
               venue="Matthews Sportsplex, Charlotte NC"
@@ -171,7 +172,7 @@ export default function CalendarPage() {
 
             <div className="text-xs font-semibold uppercase tracking-widest mt-2 mb-1" style={{ color: "#475569" }}>Live</div>
             <CalendarMatchCard
-              kickoff="16:00" status="live" minute={34} competition="Northeast" matchday={23}
+              kickoff="16:00" status="live" minute={34} competition={conferenceFor("Triangle FC")} matchday={23}
               home={{ name: "Triangle FC", position: 4, score: 1 }}
               away={{ name: "Winston-Salem SC", position: 6, score: 0 }}
               venue="WakeMed Soccer Park, Cary NC"
@@ -179,7 +180,7 @@ export default function CalendarPage() {
 
             <div className="text-xs font-semibold uppercase tracking-widest mt-2 mb-1" style={{ color: "#475569" }}>Full Time</div>
             <CalendarMatchCard
-              kickoff="12:00" status="fulltime" competition="Central" matchday={22}
+              kickoff="12:00" status="fulltime" competition={conferenceFor("Charlotte FC")} matchday={22}
               home={{ name: "Charlotte FC", position: 1, score: 3 }}
               away={{ name: "Durham United", position: 3, score: 1 }}
               venue="Matthews Sportsplex, Charlotte NC"
@@ -195,7 +196,7 @@ export default function CalendarPage() {
 
             <div className="text-xs font-semibold uppercase tracking-widest mt-2 mb-1" style={{ color: "#475569" }}>Postponed</div>
             <CalendarMatchCard
-              kickoff="13:00" status="postponed" competition="Midwest" matchday={22}
+              kickoff="13:00" status="postponed" competition={conferenceFor("Greensboro FC")} matchday={22}
               home={{ name: "Greensboro FC", position: 5 }}
               away={{ name: "Triangle FC", position: 4 }}
               venue="Bryan Park, Greensboro NC"
