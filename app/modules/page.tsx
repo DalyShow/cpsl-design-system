@@ -4,6 +4,7 @@ import { StatsBar } from "@/components/cpsl/modules/StatsBar"
 import { FeatureHighlights } from "@/components/cpsl/modules/FeatureHighlights"
 import { ResultsFixturesTabs } from "@/components/cpsl/modules/ResultsFixturesTabs"
 import { StandingsTable } from "@/components/cpsl/modules/StandingsTable"
+import { StandingsTable as MLSStandingsTable } from "@/components/cpsl/modules/MLSStandingsTable"
 import { ClubDirectory } from "@/components/cpsl/modules/ClubDirectory"
 import { NewsGrid } from "@/components/cpsl/modules/NewsGrid"
 import { PlayerSpotlight } from "@/components/cpsl/modules/PlayerSpotlight"
@@ -112,6 +113,15 @@ export default function ModulesPage() {
             shadcn <code className="bg-secondary px-1.5 py-0.5 rounded">Table</code> skinned with CPSL tokens. Leader row highlighted in primary blue. Points in bold blue.
           </p>
           <StandingsTable rows={standingsRows} promotionSpots={2} />
+        </Section>
+
+        <Section title="4b — MLS-Style Standings (Conference Tabs)">
+          <p className="text-xs text-muted-foreground mb-4">
+            Full-bleed dark standings block with 8 conference tabs. Barlow Condensed headlines — gold for PTS, crimson for negative GD. First-place row marked with a 3px gold left border. Drop directly below a Hero-slim section header.
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-[#E2E8F0]">
+            <MLSStandingsTable seasonLabel="2024–25 Season" />
+          </div>
         </Section>
 
         <Section title="5 — Club Directory">
