@@ -5,6 +5,7 @@ import { SplitFrameHero } from "@/components/cpsl/heroes/SplitFrameHero"
 import { GlassCardHero } from "@/components/cpsl/heroes/GlassCardHero"
 import { MagazineHero } from "@/components/cpsl/heroes/MagazineHero"
 import { FullWidthImageHero } from "@/components/cpsl/heroes/FullWidthImageHero"
+import { SectionHeader } from "@/components/cpsl/heroes/SectionHeader"
 
 export default function HeroesPage() {
   return (
@@ -59,6 +60,26 @@ export default function HeroesPage() {
           </p>
           <div className="rounded-2xl overflow-hidden border border-[#E2E8F0]">
             <FullWidthImageHero />
+          </div>
+        </Section>
+
+        <Section title="6 — Section Header">
+          <p className="text-xs text-muted-foreground mb-4">
+            Compact module-level header — sits above data-heavy sections like Standings, Schedule, or Club Directory. Large Barlow Condensed title with an optional gold badge and muted subtitle. Gold accent bar anchors bottom-left. Dark and light variants.
+          </p>
+          <div className="flex flex-col gap-3 rounded-2xl overflow-hidden border border-[#E2E8F0]">
+            <SectionHeader
+              title="Standings"
+              badge="2024–25 Season"
+              subtitle="Select a conference and age group to view division standings"
+              variant="dark"
+            />
+            <SectionHeader
+              title="Schedule"
+              badge="Spring 2025"
+              subtitle="Upcoming fixtures across all age groups and divisions"
+              variant="light"
+            />
           </div>
         </Section>
 
