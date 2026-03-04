@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader"
 import Section from "@/components/Section"
+import { MatchdayBlock } from "@/components/cpsl/modules/MatchdayBlock"
 import { StatsBar } from "@/components/cpsl/modules/StatsBar"
 import { FeatureHighlights } from "@/components/cpsl/modules/FeatureHighlights"
 import { ResultsFixturesTabs } from "@/components/cpsl/modules/ResultsFixturesTabs"
@@ -211,7 +212,17 @@ export default function ModulesPage() {
       <ContentSectionCentered background="surface" />
       <ContentSectionCentered background="gold" />
       <ContentSectionCentered background="navy" />
-      <div className="px-12 py-12" />
+
+      <div className="px-12 py-12">
+        <Section title="11 — Matchday">
+          <p className="text-xs text-muted-foreground mb-6">
+            Conference-scoped matchday view. Dropdown selects the active conference — scores default to 0-0 for upcoming fixtures. Live matches surface a red accent bar and a LIVE badge in the toolbar. Designed to hold 20-40 cards per conference with flex-wrap.
+          </p>
+          <div className="rounded-2xl overflow-hidden border border-[#1E2D45]">
+            <MatchdayBlock />
+          </div>
+        </Section>
+      </div>
 
     </div>
   )
