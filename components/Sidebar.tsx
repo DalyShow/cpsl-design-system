@@ -20,6 +20,7 @@ const components = [
   { label: "Body Modules",         href: "/modules",      icon: "13" },
   { label: "Calendar — Day View",  href: "/calendar",     icon: "14" },
   { label: "Club Directory",       href: "/clubs",        icon: "15" },
+  { label: "Logo Ticker",          href: "/ticker",       icon: "16" },
 ];
 const resources = [
   { label: "Patterns",             href: "/patterns",     icon: "10" },
