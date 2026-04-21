@@ -43,7 +43,7 @@ const buttonVariants = cva(
          * Used in TopNav and hero sections.
          */
         "cpsl-gold":
-          "bg-[#C9A74C] text-[#091628] shadow-sm font-['Barlow_Condensed'] [font-weight:700] text-[14px] tracking-[0.04em] hover:bg-[#B89640] focus-visible:ring-[#C9A74C]/40",
+          "bg-[#C9A74C] text-[#091628] shadow-sm font-['Barlow_Condensed'] [font-weight:700] text-[14px] uppercase tracking-[0.04em] hover:bg-[#B89640] focus-visible:ring-[#C9A74C]/40",
         /** Gold ghost — outlined version for use on light surfaces */
         "cpsl-outline-gold":
           "border-2 border-[#C9A74C] text-[#C9A74C] bg-transparent hover:bg-[#C9A74C] hover:text-[#091628] focus-visible:ring-[#C9A74C]/40",
