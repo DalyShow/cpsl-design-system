@@ -2,6 +2,7 @@ import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import CodeBlock from "@/components/CodeBlock";
 import { TopNav } from "@/components/cpsl/navigation/TopNav";
+import { SubNav } from "@/components/cpsl/navigation/SubNav";
 import { TabBar } from "@/components/cpsl/navigation/TabBar";
 import { Breadcrumb } from "@/components/cpsl/navigation/Breadcrumb";
 import { Pagination } from "@/components/cpsl/navigation/Pagination";
@@ -26,6 +27,26 @@ export default function NavigationPage() {
             Dark-navy bar with brand mark, interactive nav links, live badge, and user avatar. Nav links use <strong>Barlow Condensed SemiBold, 14 px, uppercase, 0.11 em letter-spacing</strong>. Click any link to switch the active state. Use <code className="bg-secondary px-1.5 py-0.5 rounded">variant="card"</code> (default) inside modals, drawers, or preview frames.
           </p>
           <TopNav variant="card" showLive={true} />
+        </Section>
+
+        {/* 1.5 Sub Navigation */}
+        <Section title="2 — Sub Navigation">
+          <p className="text-xs text-muted-foreground mb-4">
+            Sits directly below the main Top Nav. Lists child pages of the active section. Smaller type treatment — <strong>Barlow Condensed SemiBold, 12 px, uppercase, 0.12 em letter-spacing</strong> — so it reads as secondary to the main nav above it. Same gold underline pattern marks the active page.
+          </p>
+          <div className="flex flex-col">
+            <TopNav variant="card" />
+            <SubNav
+              variant="card"
+              items={[
+                { label: "Overview" },
+                { label: "Rules" },
+                { label: "Handbook" },
+                { label: "Clubs" },
+                { label: "Contact" },
+              ]}
+            />
+          </div>
         </Section>
 
         {/* 2. Tab Bar Variants — card */}
