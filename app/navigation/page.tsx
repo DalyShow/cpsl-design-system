@@ -23,7 +23,7 @@ export default function NavigationPage() {
         {/* 1. Top Navigation Bar — card */}
         <Section title="1 — Top Navigation Bar">
           <p className="text-xs text-muted-foreground mb-4">
-            Dark-navy bar with brand mark, interactive nav links, live badge, and user avatar. Nav items and buttons use <strong>Barlow Condensed Medium</strong> to match the brand wordmark. Click any link to switch the active state. Use <code className="bg-secondary px-1.5 py-0.5 rounded">variant="card"</code> (default) inside modals, drawers, or preview frames.
+            Dark-navy bar with brand mark, interactive nav links, live badge, and user avatar. Nav links use <strong>Barlow Condensed SemiBold, 18 px, uppercase, 0.11 em letter-spacing</strong>. Click any link to switch the active state. Use <code className="bg-secondary px-1.5 py-0.5 rounded">variant="card"</code> (default) inside modals, drawers, or preview frames.
           </p>
           <TopNav variant="card" showLive={true} />
         </Section>

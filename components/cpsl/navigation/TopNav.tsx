@@ -57,15 +57,17 @@ export function TopNav({
             <button
               key={item.label}
               onClick={() => setActiveIndex(i)}
-              className="px-4 py-4 text-sm font-medium border-b-2 transition-colors"
+              className="px-4 py-4 border-b-2 transition-colors"
               style={{
                 color: i === activeIndex ? "white" : "#64748B",
                 borderColor: i === activeIndex ? "#C9A74C" : "transparent",
                 background: "none",
                 cursor: "pointer",
                 fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 500,
-                fontSize: "16px",
+                fontWeight: 600,
+                fontSize: "18px",
+                textTransform: "uppercase",
+                letterSpacing: "0.11em",
               }}
             >
               {item.label}
