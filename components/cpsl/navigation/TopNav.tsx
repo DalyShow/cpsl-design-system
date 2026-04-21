@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export interface TopNavItem {
   label: string;
@@ -65,7 +68,7 @@ export function TopNav({
                 cursor: "pointer",
                 fontFamily: "'Barlow Condensed', sans-serif",
                 fontWeight: 600,
-                fontSize: "18px",
+                fontSize: "14px",
                 textTransform: "uppercase",
                 letterSpacing: "0.11em",
               }}
@@ -87,6 +90,24 @@ export function TopNav({
             Live
           </div>
         )}
+
+        <div className="relative">
+          <Search
+            aria-hidden
+            className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4"
+            style={{ color: "#64748B" }}
+          />
+          <Input
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            className="h-9 w-52 pl-8 bg-transparent text-white placeholder:text-[#64748B]"
+            style={{ borderColor: "#1E2D45" }}
+          />
+        </div>
+
+        <Button variant="cpsl-gold" size="default">Apply Now</Button>
+
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white"
           style={{ background: "#C9A74C", color: "#091628" }}

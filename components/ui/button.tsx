@@ -5,7 +5,7 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[6px] text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
@@ -43,7 +43,7 @@ const buttonVariants = cva(
          * Used in TopNav and hero sections.
          */
         "cpsl-gold":
-          "bg-[#C9A74C] text-[#091628] shadow-sm font-bold hover:bg-[#B89640] focus-visible:ring-[#C9A74C]/40",
+          "bg-[#C9A74C] text-[#091628] shadow-sm font-['Barlow_Condensed'] [font-weight:700] text-[14px] tracking-[0.04em] hover:bg-[#B89640] focus-visible:ring-[#C9A74C]/40",
         /** Gold ghost — outlined version for use on light surfaces */
         "cpsl-outline-gold":
           "border-2 border-[#C9A74C] text-[#C9A74C] bg-transparent hover:bg-[#C9A74C] hover:text-[#091628] focus-visible:ring-[#C9A74C]/40",
